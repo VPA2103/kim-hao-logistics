@@ -24,8 +24,7 @@ const AboutPage = () => {
             src={bannergioithieu}
             alt="Banner giới thiệu công ty"
             layout="responsive"
-            width={1920}
-            height={550}
+
             priority
           />
         </div>

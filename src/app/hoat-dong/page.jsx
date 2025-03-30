@@ -20,7 +20,6 @@ const AirTransportSection = () => {
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-                width={2000}
                 className="banner-image"
                 priority
                 style={{ objectFit: "contain" }}

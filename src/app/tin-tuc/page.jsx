@@ -16,15 +16,42 @@ const AirTransportSection = () => {
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
-            <div className="banner-image-container">
+            <div
+              className="banner-image-container"
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "100vh" /* Full viewport height */,
+                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
+                overflow: "hidden",
+              }}
+            >
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-                width={2000}
-                className="banner-image"
+                fill /* Tự động lấp đầy container */
                 priority
-                style={{ objectFit: "contain" }}
+                className="banner-image"
+                style={{
+                  objectFit: "cover" /* Phủ kín container */,
+                  objectPosition: "center" /* Căn giữa hình */,
+                  width: "100%",
+                  height: "100%",
+                }}
+                quality={100} /* Chất lượng hình ảnh tốt nhất */
+                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
               />
+              {/* Có thể thêm overlay hoặc text nếu cần */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
+                }}
+              ></div>
             </div>
             <div className="banner-content">
               <div className="text-box">

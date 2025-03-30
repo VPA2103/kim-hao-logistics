@@ -25,14 +25,26 @@ const WaterTransportPage = () => {
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
-            <div className="banner-image-container">
+            jsx Copy
+            <div
+              className="banner-image-container"
+              style={{
+                width: "100vw",
+                height: "100vh",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-                width={2000}
                 className="banner-image"
                 priority
-                style={{ objectFit: "contain" }}
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
               />
             </div>
             <div className="banner-content">
