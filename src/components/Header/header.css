@@ -23,6 +23,30 @@
   --container-width: 1200px;
 }
 
+/* ========== RESET LIST STYLES ========== */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Hoặc cụ thể hơn cho menu */
+.header-nav-main,
+.sub-menu,
+.mobile-nav,
+.dropdown-content {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.header-nav-main li,
+.sub-menu li,
+.mobile-menu-item,
+.dropdown-content li {
+  list-style: none;
+}
+
 /* ========== BASE RESET ========== */
 * {
   margin: 0;
