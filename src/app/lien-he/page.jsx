@@ -1,52 +1,63 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ContactPage = () => {
-  function switchLocation(location) {
-    // Hide all maps and info
-    document.querySelectorAll(".map-container, .office-info").forEach((el) => {
-      el.classList.remove("active");
-    });
+  useEffect(() => {
+    function switchLocation(location) {
+      // Hide all maps and info
+      document
+        .querySelectorAll(".map-container, .office-info")
+        .forEach((el) => {
+          el.classList.remove("active");
+        });
 
-    // Deactivate all tabs
+      // Deactivate all tabs
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      // Activate selected tab
+      document
+        .querySelector(`.tab-btn[data-location="${location}"]`)
+        .classList.add("active");
+
+      // Show selected map and info
+      document.getElementById(`${location}-map`).classList.add("active");
+      document.getElementById(`${location}-info`).classList.add("active");
+    }
+
+    // Gán sự kiện click cho các tab
     document.querySelectorAll(".tab-btn").forEach((btn) => {
-      btn.classList.remove("active");
+      btn.addEventListener("click", (e) => {
+        const location = e.currentTarget.dataset.location;
+        switchLocation(location);
+      });
     });
 
-    // Activate selected tab
-    document
-      .querySelector(`.tab-btn[data-location="${location}"]`)
-      .classList.add("active");
+    // Form validation
+    const forms = document.querySelectorAll(".needs-validation");
+    Array.from(forms).forEach((form) => {
+      form.addEventListener(
+        "submit",
+        (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add("was-validated");
+        },
+        false
+      );
+    });
 
-    // Show selected map and info
-    document.getElementById(`${location}-map`).classList.add("active");
-    document.getElementById(`${location}-info`).classList.add("active");
-  }
-
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-  
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
+    // Khởi tạo mặc định
+    switchLocation("hcm");
+  }, []);
 
   return (
     <>
