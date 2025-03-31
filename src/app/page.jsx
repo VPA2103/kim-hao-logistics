@@ -87,7 +87,7 @@ export default function Home() {
                                                     TẢI KIM HẢO là một trong
                                                     những công ty hàng đầu trong
                                                     ngành vận tải và giao nhận.
-                                                    Scanwell cung cấp nhiều giải
+                                                    Kim Hải cung cấp nhiều giải
                                                     pháp vận tải và giao nhận
                                                     bao gồm vận tải và giao nhận
                                                     quốc tế, phân phối nội địa
@@ -113,7 +113,7 @@ export default function Home() {
                                       }}
                                     />
                                     <Link
-                                      href="/gioi-thieu.html"
+                                      href="/gioi-thieu"
                                       target="_self"
                                       className="button primary is-large reveal-icon"
                                     >

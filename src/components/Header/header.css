@@ -109,7 +109,7 @@ html {
 
 .header-logo {
   transition: var(--transition);
-  height: auto;
+  height: 150px;
 }
 
 .header.scrolled .header-logo {
@@ -217,8 +217,19 @@ html {
 .language-flag {
   border-radius: 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
+   transition: opacity 0.3s ease;
+  cursor: pointer;
 }
+.language-flag.active {
+  opacity: 1 !important;
+  border-color: #007bff;
+}
+
+.language-flag:not(.active) {
+  opacity: 0.7;
+}
+
+
 
 .ct-language:hover .language-flag {
   transform: scale(1.05);
@@ -276,6 +287,7 @@ html {
 }
 
 .search-dropdown {
+  display: none;
   position: absolute;
   top: 100%;
   right: 0;
@@ -292,6 +304,7 @@ html {
 }
 
 .header-search.active .search-dropdown {
+  display: block;
   opacity: 1;
   visibility: visible;
   transform: translateY(8px);
@@ -338,17 +351,17 @@ html {
   color: var(--text-light);
   border: none;
   border-radius: var(--border-radius);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
-  margin-left: 15px;
+  /* margin-left: 15px; */
 }
 
 .track-trace-btn:hover {
   background: var(--primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-2px);  
   box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
 }
 
@@ -515,11 +528,16 @@ html {
 .mobile-language-selector {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+  justify-content: center;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 10px 0;
   border-radius: var(--border-radius);
   background: var(--bg-light);
+}
+
+.current-language {
+  cursor: pointer;
 }
 
 .mobile-track-trace-btn {
@@ -563,6 +581,7 @@ html {
   .logo {
     flex: 1;
     text-align: center;
+    /* margin-top: 20px; */
   }
   
   .mobile-menu-container {
@@ -608,5 +627,49 @@ nav a:hover,
   text-decoration: none !important;
 }
 
+/* Language Switcher */
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
 
+.language-trigger {
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.language-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.language-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.language-dropdown button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Mobile version */
+.mobile .language-dropdown {
+  position: static;
+  width: 100%;
+  margin-top: 10px;
+}
 
