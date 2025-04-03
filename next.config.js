@@ -18,6 +18,7 @@ module.exports = {
       resolveAlias: {
         '@/*': ['./src/*']
       }
-    }
+    },
+    appDir: true,
   }
 }

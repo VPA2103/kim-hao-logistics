@@ -44,8 +44,8 @@ const DichVuHangDuAn = () => {
               {/* Content Sections */}
               <div className="space-y-8">
                 {[
-                  "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/1.png",
-                  "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/VOLUME.PNG",
+                  "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/12.png",
+                  "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/13.png",
                   "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/3(1).png",
                   "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OCEAN%20FREIGHT.png",
                 ].map((imageUrl, index) => (

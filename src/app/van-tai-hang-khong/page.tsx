@@ -1,59 +1,52 @@
 "use client";
 
 import React from "react";
-import bannerImage from "../../../public/filemanager/userfiles/hang-k.png";
 import Image from "next/image";
+import Head from "next/head";
+import bannerImage from "../../../public/filemanager/userfiles/hang-k.png";
+import dichvuhangduan from "../../../public/filemanager/userfiles/hang-ly-xach-tay.jpg";
+import tongquanvanchuyen from "../../../public/filemanager/userfiles/hang-k.png";
+import hangnguyhiem from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
-// Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/hang-ly-xach-tay.jpg";
-import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
-
-const AirTransportSection = () => {
+const WaterTransportPage = () => {
   return (
     <>
+      <Head>
+        <title>
+          Vận tải đường thủy - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo
+        </title>
+        <meta
+          name="description"
+          content="Dịch vụ vận tải đường thủy chuyên nghiệp"
+        />
+      </Head>
+
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
+            jsx Copy
             <div
               className="banner-image-container"
               style={{
+                width: "100vw",
+                height: "100vh",
                 position: "relative",
-                width: "100%",
-                height: "100vh" /* Full viewport height */,
-                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
                 overflow: "hidden",
               }}
             >
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-                fill /* Tự động lấp đầy container */
-                priority
                 className="banner-image"
+                priority
+                fill
                 style={{
-                  objectFit: "cover" /* Phủ kín container */,
-                  objectPosition: "center" /* Căn giữa hình */,
-                  width: "100%",
-                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
                 }}
-                quality={100} /* Chất lượng hình ảnh tốt nhất */
-                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
               />
-              {/* Có thể thêm overlay hoặc text nếu cần */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
-                }}
-              ></div>
             </div>
-
             <div className="banner-content">
               <div className="text-box">
                 <div className="text-content"></div>
@@ -70,11 +63,11 @@ const AirTransportSection = () => {
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/hanh-ly-xach-tay" className="service-link">
                 <div className="image-container">
                   <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
+                    src={dichvuhangduan}
+                    alt="Dịch vụ hàng dự án"
                     fill
                     className="service-image"
                     style={{ objectFit: "contain" }}
@@ -90,13 +83,13 @@ const AirTransportSection = () => {
             {/* Service 2 */}
             <div className="service-card">
               <a
-                href="/dich-vu-van-tai-duong-thuy.html"
+                href="/dich-vu-van-tai-hang-khong"
                 className="service-link"
               >
                 <div className="image-container">
                   <Image
-                    src={vanTaiImage}
-                    alt="Tổng quan dịch vụ vận tải hàng không"
+                    src={tongquanvanchuyen}
+                    alt="Tổng quan dịch vụ vận tải đường thủy"
                     fill
                     className="service-image"
                     style={{ objectFit: "contain" }}
@@ -111,10 +104,10 @@ const AirTransportSection = () => {
 
             {/* Service 3 */}
             <div className="service-card">
-              <a href="/hang-nguy-hiem.html" className="service-link">
+              <a href="/hang-nguy-hiem" className="service-link">
                 <div className="image-container">
                   <Image
-                    src={nguyHiemImage}
+                    src={hangnguyhiem}
                     alt="Hàng nguy hiểm"
                     fill
                     className="service-image"
@@ -266,4 +259,4 @@ const AirTransportSection = () => {
   );
 };
 
-export default AirTransportSection;
+export default WaterTransportPage;

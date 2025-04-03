@@ -8,6 +8,7 @@ import Image from "next/image";
 import hanhLyImage from "../../../public/filemanager/userfiles/photo-1586528116311-ad8dd3c8310d-360x.jpg";
 import vanTaiImage from "../../../public/filemanager/userfiles/pasted image 0-360x.png";
 import nguyHiemImage from "../../../public/filemanager/userfiles/63cfd5064555165b4efc44bb_pick-pack-ship-workflow(1)-360x.jpg";
+import Link from "next/link";
 
 const AirTransportSection = () => {
   return (
@@ -20,7 +21,6 @@ const AirTransportSection = () => {
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-
                 className="banner-image"
                 priority
                 style={{ objectFit: "contain" }}
@@ -42,7 +42,7 @@ const AirTransportSection = () => {
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/khach-hang-scanwell" className="service-link">
                 <div className="image-container">
                   <Image
                     src={hanhLyImage}
@@ -53,7 +53,7 @@ const AirTransportSection = () => {
                   />
                 </div>
                 <div className="service-content">
-                  <h2>KHÁCH HÀNG</h2>
+                  <h2>KHÁCH HÀNG KIM HẢO</h2>
                   <div className="divider"></div>
                 </div>
               </a>
@@ -61,10 +61,7 @@ const AirTransportSection = () => {
 
             {/* Service 2 */}
             <div className="service-card">
-              <a
-                href="/dich-vu-van-tai-duong-thuy.html"
-                className="service-link"
-              >
+              <Link href="/kho-ngoai-quan-kho-thuong" className="service-link">
                 <div className="image-container">
                   <Image
                     src={vanTaiImage}
@@ -78,12 +75,12 @@ const AirTransportSection = () => {
                   <h2>TỔNG QUAN DỊCH VỤ KHO BÃI</h2>
                   <div className="divider"></div>
                 </div>
-              </a>
+              </Link>
             </div>
 
             {/* Service 3 */}
             <div className="service-card">
-              <a href="/hang-nguy-hiem.html" className="service-link">
+              <a href="/phan-loai-va-dong-goi" className="service-link">
                 <div className="image-container">
                   <Image
                     src={nguyHiemImage}

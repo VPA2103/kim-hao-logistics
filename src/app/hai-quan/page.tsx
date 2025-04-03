@@ -42,7 +42,7 @@ const AirTransportSection = () => {
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/hai-quan/blog" className="service-link">
                 <div className="image-container">
                   <Image
                     src={hanhLyImage}

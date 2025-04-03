@@ -226,7 +226,7 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          "fixed inset-0 z-40 bg-white transition-transform md:hidden",
+          "fixed inset-0 z-40 bg-white bg-opacity-90 transition-transform md:hidden", // Added bg-opacity-90 for transparency
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >

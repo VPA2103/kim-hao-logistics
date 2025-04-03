@@ -62,14 +62,14 @@ const AirTransportSection = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">VẬN TẢI ĐƯỜNG HÀNG KHÔNG</h1>
+            <h1 className="section-title-main">VẬN TẢI NỘI ĐỊA</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/van-tai-noi-dia/blog" className="service-link">
                 <div className="image-container">
                   <Image
                     src={hanhLyImage}
