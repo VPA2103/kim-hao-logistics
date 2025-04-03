@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Bundler", // Next.js 13+ recommendation
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@/*": ["./src/*"] // Thêm nếu cần
+    },
+    "types": ["next", "react", "react-dom", "node"], // Thêm type definitions
+    "plugins": [{ "name": "next" }],
+    "forceConsistentCasingInFileNames": true, // Thêm để tránh lỗi case-sensitive
+    "noUnusedLocals": true, // Bật cảnh báo code không dùng
+    "noUnusedParameters": true // Bật cảnh báo param không dùng
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/**/*" // Đảm bảo include cả thư mục src
+, "i18n"  ],
+  "exclude": ["node_modules"]
+}

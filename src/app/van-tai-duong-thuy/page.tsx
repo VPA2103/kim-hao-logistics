@@ -1,28 +1,50 @@
 "use client";
 
 import React from "react";
-import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 import Image from "next/image";
+import Head from "next/head";
+import bannerImage from "../../../public/filemanager/userfiles/banner/bn-gioi-thieu.png";
+import dichvuhangduan from "../../../public/filemanager/userfiles/dich-vu-hang-du-an.jpg";
+import tongquanvanchuyen from "../../../public/filemanager/userfiles/tong-quan-dich-van-tai-duong-thuy.jpg";
+import hangnguyhiem from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
-// Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/LP__7980 (1)-360x.jpg";
-import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
-
-const AirTransportSection = () => {
+const WaterTransportPage = () => {
   return (
     <>
+      <Head>
+        <title>
+          Vận tải đường thủy - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo
+        </title>
+        <meta
+          name="description"
+          content="Dịch vụ vận tải đường thủy chuyên nghiệp"
+        />
+      </Head>
+
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
-            <div className="banner-image-container">
+            jsx Copy
+            <div
+              className="banner-image-container"
+              style={{
+                width: "100vw",
+                height: "100vh",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
                 className="banner-image"
                 priority
-                style={{ objectFit: "contain" }}
+                fill
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
               />
             </div>
             <div className="banner-content">
@@ -34,25 +56,66 @@ const AirTransportSection = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">HOẠT ĐỘNG</h1>
+            <h1 className="section-title-main">VẬN TẢI ĐƯỜNG THỦY</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/dich-vu-hang-du-an" className="service-link">
                 <div className="image-container">
                   <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
+                    src={dichvuhangduan}
+                    alt="Dịch vụ hàng dự án"
                     fill
                     className="service-image"
                     style={{ objectFit: "contain" }}
                   />
                 </div>
                 <div className="service-content">
-                  <h2>HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG</h2>
+                  <h2>DỊCH VỤ HÀNG DỰ ÁN</h2>
+                  <div className="divider"></div>
+                </div>
+              </a>
+            </div>
+
+            {/* Service 2 */}
+            <div className="service-card">
+              <a
+                href="/tong-quan-dich-vu-van-tai-duong-thuy"
+                className="service-link"
+              >
+                <div className="image-container">
+                  <Image
+                    src={tongquanvanchuyen}
+                    alt="Tổng quan dịch vụ vận tải đường thủy"
+                    fill
+                    className="service-image"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <div className="service-content">
+                  <h2>TỔNG QUAN DỊCH VỤ VẬN TẢI ĐƯỜNG THUỶ</h2>
+                  <div className="divider"></div>
+                </div>
+              </a>
+            </div>
+
+            {/* Service 3 */}
+            <div className="service-card">
+              <a href="/hang-nguy-hiem" className="service-link">
+                <div className="image-container">
+                  <Image
+                    src={hangnguyhiem}
+                    alt="Hàng nguy hiểm"
+                    fill
+                    className="service-image"
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <div className="service-content">
+                  <h2>HÀNG NGUY HIỂM</h2>
                   <div className="divider"></div>
                 </div>
               </a>
@@ -196,4 +259,4 @@ const AirTransportSection = () => {
   );
 };
 
-export default AirTransportSection;
+export default WaterTransportPage;

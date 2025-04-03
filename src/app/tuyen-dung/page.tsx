@@ -7,7 +7,7 @@ import Image from "next/image";
 // Import images for services
 import hanhLyImage from "../../../public/filemanager/userfiles/Sales Supervisor-360x.jpg";
 import vanTaiImage from "../../../public/filemanager/userfiles/dang-tin-tuyen-dung-360x.jpg";
-import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
 const AirTransportSection = () => {
   return (

@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import bannerImage from "../../../public/filemanager/userfiles/hai-quan.png";
+import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 import Image from "next/image";
 
 // Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/Customs 5-360x.png";
-import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+import hanhLyImage from "../../../public/filemanager/userfiles/obori2-360x.jpg";
+// import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
+// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
 const AirTransportSection = () => {
   return (
@@ -16,15 +16,42 @@ const AirTransportSection = () => {
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
-            <div className="banner-image-container">
+            <div
+              className="banner-image-container"
+              style={{
+                position: "relative",
+                width: "100%",
+                height: "100vh" /* Full viewport height */,
+                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
+                overflow: "hidden",
+              }}
+            >
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-       
-                className="banner-image"
+                fill /* Tự động lấp đầy container */
                 priority
-                style={{ objectFit: "contain" }}
+                className="banner-image"
+                style={{
+                  objectFit: "cover" /* Phủ kín container */,
+                  objectPosition: "center" /* Căn giữa hình */,
+                  width: "100%",
+                  height: "100%",
+                }}
+                quality={100} /* Chất lượng hình ảnh tốt nhất */
+                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
               />
+              {/* Có thể thêm overlay hoặc text nếu cần */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
+                }}
+              ></div>
             </div>
             <div className="banner-content">
               <div className="text-box">
@@ -35,7 +62,7 @@ const AirTransportSection = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">HẢI QUAN</h1>
+            <h1 className="section-title-main">TIN TỨC</h1>
           </div>
 
           {/* Services Grid */}
@@ -53,7 +80,7 @@ const AirTransportSection = () => {
                   />
                 </div>
                 <div className="service-content">
-                  <h2>TỔNG QUAN DỊCH VỤ HẢI QUAN</h2>
+                  <h2>HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG</h2>
                   <div className="divider"></div>
                 </div>
               </a>

@@ -1,57 +1,27 @@
 "use client";
 
 import React from "react";
-import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 import Image from "next/image";
+import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
+import hanhLyImage from "../../../public/filemanager/userfiles/LP__7980 (1)-360x.jpg";
+// import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
+// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
-// Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/obori2-360x.jpg";
-import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
-
-const AirTransportSection = () => {
+const AirTransportSection: React.FC = () => {
   return (
     <>
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
-            <div
-              className="banner-image-container"
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100vh" /* Full viewport height */,
-                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
-                overflow: "hidden",
-              }}
-            >
+            <div className="banner-image-container">
               <Image
                 src={bannerImage}
                 alt="Banner vận tải đường thủy"
-                fill /* Tự động lấp đầy container */
-                priority
                 className="banner-image"
-                style={{
-                  objectFit: "cover" /* Phủ kín container */,
-                  objectPosition: "center" /* Căn giữa hình */,
-                  width: "100%",
-                  height: "100%",
-                }}
-                quality={100} /* Chất lượng hình ảnh tốt nhất */
-                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
+                priority
+                style={{ objectFit: "contain" }}
               />
-              {/* Có thể thêm overlay hoặc text nếu cần */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
-                }}
-              ></div>
             </div>
             <div className="banner-content">
               <div className="text-box">
@@ -62,7 +32,7 @@ const AirTransportSection = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">TIN TỨC</h1>
+            <h1 className="section-title-main">HOẠT ĐỘNG</h1>
           </div>
 
           {/* Services Grid */}
@@ -161,7 +131,7 @@ const AirTransportSection = () => {
           border-radius: 8px;
           overflow: hidden;
           transition: all 0.3s ease;
-          background-color: #f5f5f5; /* Background for image container */
+          background-color: #f5f5f5;
         }
 
         .service-card:hover {
@@ -178,7 +148,7 @@ const AirTransportSection = () => {
         .image-container {
           position: relative;
           width: 100%;
-          height: 250px; /* Fixed height for service images */
+          height: 250px;
           overflow: hidden;
         }
 
@@ -216,7 +186,7 @@ const AirTransportSection = () => {
           }
 
           .image-container {
-            height: 300px; /* Larger height on desktop */
+            height: 300px;
           }
         }
       `}</style>

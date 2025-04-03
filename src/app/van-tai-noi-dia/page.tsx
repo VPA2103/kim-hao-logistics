@@ -6,8 +6,8 @@ import Image from "next/image";
 
 // Import images for services
 import hanhLyImage from "../../../public/filemanager/userfiles/INLAND 5-360x.png";
-import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+// import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
+// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
 const AirTransportSection = () => {
   return (

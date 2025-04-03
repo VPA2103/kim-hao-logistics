@@ -1,196 +1,59 @@
+/* main.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-#col-1417698564 .banner-trang-chu{
-  width: 60%;
-  margin: 0px auto;
+
+/* Root Variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, Courier, monospace);
 }
 
-/* ========== BANNER SECTION ========== */
-#section_1401180252 {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Body styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* 📌 Fix footer overlay để giống ảnh mẫu */
+.footer {
   position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #000; /* Fallback màu nền */
-}
-
-/* Background Image */
-#banner-619981796 .banner-inner .banner-bg .bg.bg-loaded {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-/* Overlay gradient đậm bên trái */
-#banner-619981796 .banner-bg::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.1) 100%);
-  z-index: 1;
-}
-
-/* Container nội dung chính */
-.banner-layers.container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
-
-/* Khung chứa text */
-.text-box.banner-layer {
-  width: 100%;
-  max-width: 500px;
-  margin-left: 0;
-  padding: 40px 0;
-}
-
-
-
-
-/* Phụ đề - LOGISTICS VIỆT NAM */
-.heading-text h2 {
-  /* font-size: 1.8rem; */
-  line-height: 1.3;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: left;
-  width: 500px;
-  letter-spacing: 1px;
-}
-
-/* Nội dung mô tả */
-.heading-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
-  color: rgba(255,255,255,0.9);
-  text-align: left;
-  width: 400px;
-}
-
-.row #row-1137977585{
-
-}
-
-/* Nút ĐỌC THÊM */
-.button.primary {
-  background-color: #2980b9;
   color: white;
-  padding: 12px 40px;
-  border-radius: 4px;
-  font-weight: 600;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
 }
 
-.button.primary:hover {
-  background-color: #3498db;
-  transform: translateY(-2px);
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* Độ mờ nền */
 }
 
-/* Responsive cho mobile */
-@media (max-width: 768px) {
-  .banner-layers.container {
-    padding: 0 30px;
-  }
-  
-  .text-box.banner-layer {
-    padding: 30px 0;
-  }
-  
-  .heading-text h1 {
-    font-size: 3rem;
-  }
-  
-  .heading-text h2 {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .heading-text p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .button.primary {
-    padding: 10px 30px;
-  }
-}
-
-/*section_1617613151*/
-#section-4 {
-  width: 100%;
-  padding: 40px 0; /* Thêm padding để tạo khoảng cách */
-  background-color: #ffffff; /* Màu nền (có thể thay đổi) */
-}
-
-#section-4 .text {
-  text-align: center; /* Căn giữa tiêu đề */
-  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
-}
-
-#section-4 h2 {
-  font-size: 28px; /* Kích thước tiêu đề */
-  color: #41a0d6; /* Màu chữ */
-  font-weight: bold;
-  text-transform: uppercase; /* Viết hoa */
-  margin: 0;
-}
-
-#section-4 .row {
-  display: flex; /* Sử dụng flexbox để căn chỉnh */
-  flex-wrap: wrap; /* Xuống dòng nếu không đủ chỗ */
-  justify-content: center; /* Căn giữa các cột */
-  gap: 20px; /* Khoảng cách giữa các cột */
-  margin: 0 auto;
-  max-width: 1200px; /* Giới hạn chiều rộng tối đa */
-}
-
-#section-4 .row-slider {
-  width: 100%;
-  overflow: hidden; /* Ẩn phần tràn nếu có */
-}
-
-#section-4 .slider-nav-reveal {
+.footer-content {
   position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-#section-4 .slider-nav-push {
-  margin: 0 -10px; /* Điều chỉnh lề để slider không bị cắt */
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
-#section-4 img {
-  width: 100%; /* Đảm bảo hình ảnh co giãn theo container */
-  height: auto; /* Giữ tỷ lệ */
-  border-radius: 8px; /* Bo góc (tuỳ chọn) */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ (tuỳ chọn) */
+@media (min-width: 768px) {
+  .footer-content {
+    text-align: left;
+  }
 }
-

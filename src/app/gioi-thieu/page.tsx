@@ -5,8 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import bannergioithieu from "../../../public/filemanager/userfiles/banner/bn-gioi-thieu.png";
 
-
-const AboutPage = () => {
+const AboutPage: React.FC = () => {
   return (
     <>
       <Head>
@@ -24,7 +23,6 @@ const AboutPage = () => {
             src={bannergioithieu}
             alt="Banner giới thiệu công ty"
             layout="responsive"
-
             priority
           />
         </div>
@@ -44,7 +42,7 @@ const AboutPage = () => {
               <p>
                 <strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> là một
                 công ty logistics toàn diện. Chúng tôi cung cấp các dịch vụ tối
-                ưu với chuỗi cung ứng hoàn chỉnh "end-to-end" để tiết kiệm thời
+                ưu với chuỗi cung ứng hoàn chỉnh để tiết kiệm thời
                 gian của khách hàng khi lựa chọn nhà vận chuyển trọn gói.
               </p>
 

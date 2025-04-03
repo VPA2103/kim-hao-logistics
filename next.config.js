@@ -1,10 +1,23 @@
-// import i18n from "./next-i18next.config"
-// const i18n = require("./next-i18next.config");
-
 module.exports = {
-  // i18n,
-  typescript: {
-    ignoreBuildErrors: true, // Bỏ qua lỗi TypeScript
+  i18n: {
+    locales: ['en', 'vi'],
+    defaultLocale: 'vi',
   },
-};
-
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'scanwelllogistics.vn',
+        port: '',
+        pathname: '/public/filemanager/userfiles/**',
+      },
+    ],
+  },
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        '@/*': ['./src/*']
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "home": "Trang chủ",
+  "about_us": "Về chúng tôi",
+  "services": "Dịch vụ",
+  "services_sub": {
+    "water_transport": "Vận tải đường thủy",
+    "air_transport": "Vận tải hàng không",
+    "warehouse": "Dịch vụ kho bãi và phân phối",
+    "domestic_transport": "Vận tải nội địa",
+    "customs": "Hải quan"
+  },
+  "news": "Tin tức Kim Hảo",
+  "news_sub": {
+    "news": "Tin Tức",
+    "activities": "Hoạt động Kim Hảo",
+    "recruitment": "Tuyển dụng"
+  },
+  "contact": "Liên hệ",
+  "track_trace": "TRACK&TRACE",
+  "search_placeholder": "Tìm kiếm...",
+  
+  "locations": {
+    "hanoi": {
+      "title": "SCANWELL HÀ NỘI",
+      "address": "Tầng 3, Tòa nhà Intracom, Lô C2F, Cầu Giấy, Hà Nội",
+      "tel": "Tel: +84 024 3512 2590",
+      "fax": "Fax: +84 024 3795 0702",
+      "email": "han-sales@scanwell.com"
+    },
+    "hcm": {
+      "title": "SCANWELL HỒ CHÍ MINH",
+      "address": "Tầng 13 Pearl Plaza, 561A Điện Biên Phủ, Q. Bình Thạnh, TP.HCM",
+      "tel": "Tel: +84 028 3510 6866",
+      "fax": "Fax: +84 028 3510 6880",
+      "email": "hcm-sales@scanwell.com"
+    },
+    "haiphong": {
+      "title": "SCANWELL HẢI PHÒNG",
+      "address": "Phòng 803, Tầng 8, Tòa nhà Thành Đạt, Hải Phòng",
+      "tel": "Tel: +84 0225 325 0779",
+      "fax": "Fax: +84 0225 325 0780",
+      "email": "han-sales@scanwell.com"
+    }
+  },
+  "copyright": "© 2016 Scanwell Logistics Viet Nam. All rights reserved."
+}
+

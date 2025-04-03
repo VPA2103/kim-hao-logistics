@@ -1,0 +1,46 @@
+{
+  "home": "Home",
+  "about_us": "About Us",
+  "services": "Services",
+  "services_sub": {
+    "water_transport": "Water Transport",
+    "air_transport": "Air Transport",
+    "warehouse": "Warehousing and Distribution Services",
+    "domestic_transport": "Domestic Transport",
+    "customs": "Customs"
+  },
+  "news": "Kim Hao News",
+  "news_sub": {
+    "news": "News",
+    "activities": "Kim Hao Activities",
+    "recruitment": "Recruitment"
+  },
+  "contact": "Contact",
+  "track_trace": "TRACK&TRACE",
+  "search_placeholder": "Search...",
+
+  "locations": {
+    "hanoi": {
+      "title": "SCANWELL HANOI",
+      "address": "3rd Floor, Intracom Building, Lot C2F, Cau Giay, Hanoi",
+      "tel": "Tel: +84 024 3512 2590",
+      "fax": "Fax: +84 024 3795 0702",
+      "email": "han-sales@scanwell.com"
+    },
+    "hcm": {
+      "title": "SCANWELL HO CHI MINH",
+      "address": "13th Floor, Pearl Plaza, 561A Dien Bien Phu, Binh Thanh District, HCMC",
+      "tel": "Tel: +84 028 3510 6866",
+      "fax": "Fax: +84 028 3510 6880",
+      "email": "hcm-sales@scanwell.com"
+    },
+    "haiphong": {
+      "title": "SCANWELL HAIPHONG",
+      "address": "Room 803, 8th Floor, Thanh Dat Building, Hai Phong",
+      "tel": "Tel: +84 0225 325 0779",
+      "fax": "Fax: +84 0225 325 0780",
+      "email": "han-sales@scanwell.com"
+    }
+  },
+  "copyright": "© 2016 Scanwell Logistics Vietnam. All rights reserved."
+}
