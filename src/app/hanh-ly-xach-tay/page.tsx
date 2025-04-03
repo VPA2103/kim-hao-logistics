@@ -1,5 +1,6 @@
 import React from "react";
 import RelatedPosts from "./RelatedPosts";
+import Image from "next/image";
 
 const BlogPost = () => {
   return (
@@ -33,10 +34,12 @@ const BlogPost = () => {
                 <div className="entry-content single-page text-gray-800">
                   <div id="main-detail-body" className="content">
                     <p>
-                      <img
-                        alt="Hành lý xách tay"
+                      <Image
                         src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg"
-                        className="w-full rounded-lg shadow-md"
+                        alt="Vận chuyển hàng nguy hiểm"
+                        width={850} // You can specify the width
+                        height={442} // You can specify the height
+                        className="rounded-lg shadow-md mt-4"
                       />
                     </p>
                     <p className="mt-4 font-bold text-lg">
@@ -53,10 +56,13 @@ const BlogPost = () => {
                       ngày hôm sau tùy khu vực vận chuyển.
                     </p>
                     <p className="mt-4">
-                      <img
-                        alt="Hành lý xách tay"
+                   
+                      <Image
                         src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg"
-                        className="w-full rounded-lg shadow-md"
+                        alt="Vận chuyển hàng nguy hiểm"
+                        width={850} // You can specify the width
+                        height={442} // You can specify the height
+                        className="rounded-lg shadow-md mt-4"
                       />
                     </p>
                     <div className="space-y-2 mt-4 text-blue-600">

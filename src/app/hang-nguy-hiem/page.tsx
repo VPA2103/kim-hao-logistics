@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const BlogPost = () => {
@@ -35,10 +36,13 @@ const BlogPost = () => {
                 <div className="entry-content single-page">
                   <div id="main-detail-body" className="content fck">
                     <p>
-                      <img
+
+                      <Image
                         src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/images2641-5c32b9fab0cfc-1024x683.jpg"
-                        alt="Hàng Nguy Hiểm"
-                        className="w-full h-auto rounded-lg shadow-md"
+                        alt="Vận chuyển hàng nguy hiểm"
+                        width={850} // You can specify the width
+                        height={442} // You can specify the height
+                        className="rounded-lg shadow-md mt-4"
                       />
                     </p>
                     <ol className="list-decimal pl-6 mt-4 text-lg font-semibold">
@@ -71,10 +75,12 @@ const BlogPost = () => {
                       nguy hiểm của Scanwell gồm:
                     </p>
                     <p>
-                      <img
+                      <Image
                         src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/7.png"
                         alt="Vận chuyển hàng nguy hiểm"
-                        className="w-full h-auto rounded-lg shadow-md mt-4"
+                        width={850} // You can specify the width
+                        height={442} // You can specify the height
+                        className="rounded-lg shadow-md mt-4"
                       />
                     </p>
                     <p className="text-base mt-2 leading-relaxed">

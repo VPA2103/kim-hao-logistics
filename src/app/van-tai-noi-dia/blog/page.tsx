@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const RelatedPost = () => {
@@ -31,18 +32,23 @@ const RelatedPost = () => {
                     id="main-detail-body"
                     className="content fck text-center"
                   >
-                    <img
-                      alt=""
+                    <Image
                       src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%201.png"
-                      className="w-full max-w-2xl mx-auto mb-4"
+                      alt="Vận chuyển hàng nguy hiểm"
+                      width={850} // You can specify the width
+                      height={442} // You can specify the height
+                      className="rounded-lg shadow-md mt-4"
                     />
                     <h2 className="text-xl text-blue-500 underline mb-4">
                       DỊCH VỤ VẬN TẢI NỘI ĐỊA
                     </h2>
-                    <img
-                      alt=""
+
+                    <Image
                       src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%202.png"
-                      className="w-full max-w-2xl mx-auto mb-6"
+                      alt="Vận chuyển hàng nguy hiểm"
+                      width={850} // You can specify the width
+                      height={442} // You can specify the height
+                      className="rounded-lg shadow-md mt-4"
                     />
                     <ul className="text-left mx-auto space-y-4 max-w-2xl">
                       <li>
@@ -105,10 +111,13 @@ const RelatedPost = () => {
                     <h2 className="text-xl text-blue-500 underline mb-4">
                       DỊCH VỤ VẬN TẢI XUYÊN BIÊN GIỚI
                     </h2>
-                    <img
-                      alt=""
+
+                    <Image
                       src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%203.png"
-                      className="w-full max-w-2xl mx-auto mb-6"
+                      alt="Vận chuyển hàng nguy hiểm"
+                      width={850} // You can specify the width
+                      height={442} // You can specify the height
+                      className="rounded-lg shadow-md mt-4"
                     />
                     <ul className="text-left mx-auto space-y-4 max-w-2xl">
                       <li>
@@ -140,10 +149,13 @@ const RelatedPost = () => {
                     <h2 className="text-xl text-blue-500 underline mb-4">
                       GIAO HÀNG CHẶN CUỐI (LAST MILE DELIVERY)
                     </h2>
-                    <img
-                      alt=""
+
+                    <Image
                       src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%204.png"
-                      className="w-full max-w-2xl mx-auto mb-6"
+                      alt="Vận chuyển hàng nguy hiểm"
+                      width={850} // You can specify the width
+                      height={442} // You can specify the height
+                      className="rounded-lg shadow-md mt-4"
                     />
                   </div>
                 </div>
