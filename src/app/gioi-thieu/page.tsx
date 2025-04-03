@@ -3,77 +3,72 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
+import { useTranslation } from "react-i18next";
 import bannergioithieu from "../../../public/filemanager/userfiles/banner/bn-gioi-thieu.png";
 
 const AboutPage: React.FC = () => {
+  const { t,ready } = useTranslation();
+
+  if (!ready) {
+  return <div>Loading translations...</div>;
+}
   return (
     <>
       <Head>
-        <title>Giới thiệu - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</title>
-        <meta
-          name="description"
-          content="Giới thiệu về CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo"
-        />
+        <title>{t("about.title")}</title>
+        <meta name="description" content={t("about.metaDescription")} />
       </Head>
 
       <main id="main">
-        {/* Banner Section - Hiển thị trên cùng */}
+        {/* Banner Section */}
         <div className="banner" id="banner-about">
           <Image
             src={bannergioithieu}
-            alt="Banner giới thiệu công ty"
+            alt={t("about.bannerAlt")}
             layout="responsive"
             priority
           />
         </div>
 
-        {/* Content Section - Bố cục 2 cột */}
+        {/* Content Section */}
         <div className="content-container">
           <div className="left-column">
             <div className="company-description">
-              <p>
-                <strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> được
-                thành lập vào năm 1981, có trụ sở chính đặt tại Hồng Kông. Trong
-                hơn 35 năm qua, chúng tôi đã phát triển để trở thành một trong
-                những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành
-                viên được hiệp hội IATA hoàn toàn tín nhiệm.
-              </p>
+              <p
+                dangerouslySetInnerHTML={{ __html: t("about.sections.intro1") }}
+              />
+
+              <p
+                dangerouslySetInnerHTML={{ __html: t("about.sections.intro2") }}
+              />
 
               <p>
-                <strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> là một
-                công ty logistics toàn diện. Chúng tôi cung cấp các dịch vụ tối
-                ưu với chuỗi cung ứng hoàn chỉnh để tiết kiệm thời
-                gian của khách hàng khi lựa chọn nhà vận chuyển trọn gói.
-              </p>
-
-              <p>
-                <strong>Các dịch vụ chúng tôi cung cấp:</strong>
+                <strong>{t("about.sections.servicesTitle")}</strong>
               </p>
 
               <ul className="services-list">
-                <li>Vận Tải Biển – Xuất Nhập khẩu</li>
-                <li>Vận Tải Hàng Không – Xuất Nhập khẩu</li>
-                <li>Vận Tải Đường Bộ và đa phương thức</li>
-                <li>Quản lý kho vận</li>
-                <li>Thủ tục hải quan</li>
+                {Array.isArray(
+                  t("about.servicesList", { returnObjects: true })
+                ) &&
+                  (
+                    t("about.servicesList", { returnObjects: true }) as string[]
+                  ).map((service, index) => <li key={index}>{service}</li>)}
               </ul>
 
-              <p>
-                <strong>Phương châm của chúng tôi</strong> là luôn luôn tập
-                trung vào nhu cầu của khách hàng, cống hiến hết mình, tiết kiệm
-                chi phí, và giao hàng đúng hạn.
-              </p>
+              <p
+                dangerouslySetInnerHTML={{ __html: t("about.sections.motto") }}
+              />
             </div>
           </div>
 
           <div className="right-column">
             <h1>
-              <strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong>
+              <strong>{t("about.companyName")}</strong>
             </h1>
             <div className="company-logo">
               <Image
                 src={bannergioithieu}
-                alt="Logo Công ty Kim Hảo"
+                alt={t("about.logoAlt")}
                 width={400}
                 height={100}
                 layout="responsive"

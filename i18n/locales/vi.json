@@ -18,7 +18,7 @@
   "contact": "Liên hệ",
   "track_trace": "TRACK&TRACE",
   "search_placeholder": "Tìm kiếm...",
-  
+
   "locations": {
     "hanoi": {
       "title": "SCANWELL HÀ NỘI",
@@ -42,6 +42,317 @@
       "email": "han-sales@scanwell.com"
     }
   },
-  "copyright": "© 2016 Scanwell Logistics Viet Nam. All rights reserved."
-}
+  "copyright": "© 2016 Scanwell Logistics Viet Nam. All rights reserved.",
 
+  "homepage": {
+    "banner": {
+      "title": "CHÀO MỪNG ĐẾN VỚI SCANWELL LOGISTICS VIỆT NAM",
+      "description": "Scanwell Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. Scanwell cung cấp nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế giới.",
+      "button": "ĐỌC THÊM"
+    },
+    "about": {
+      "title": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO",
+      "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO được thành lập vào năm 1981, có trụ sở chính đặt tại Hồng Kông. Trong hơn 35 năm qua, chúng tôi đã phát triển để trở thành một trong những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng tôi có hệ thống chi nhánh tại hầu hết các châu lục như: Châu Mỹ, Châu Á, Châu Âu, Châu Úc ... và hàng trăm đại lý ở các thành phố lớn trên toàn thế giới, mục đích tạo điều kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch vụ và sự an toàn trong chuyên chở hàng hóa."
+    },
+    "services": {
+      "title": "DỊCH VỤ",
+      "list": [
+        {
+          "id": 1,
+          "title": "VẬN TẢI BIỂN",
+          "description": "Scanwell Logistics là một trong những NVOCC lớn nhất tại Hong Kong, với hơn 30 năm kinh nghiệm vận tải đường thủy gồm LCL (hàng lẻ) và FCL (hàng container).",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png"
+        },
+        {
+          "id": 2,
+          "title": "VẬN TẢI HÀNG KHÔNG",
+          "description": "Scanwell Logistics hân hạnh là thành viên của hiệp hội vận tải hàng không Quốc Tế (IATA), sở hữu dày dặn kinh nghiệm trong vận tải hàng hóa hàng không.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png"
+        },
+        {
+          "id": 3,
+          "title": "DỊCH VỤ KHO BÃI",
+          "description": "Hiện đang vận hành các kho dịch vụ và kho ngoại quan tại trung tâm TP. HCM và các vùng lân cận như Biên Hòa, Đồng Nai, Nhơn Trạch, v.v.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png"
+        },
+        {
+          "id": 4,
+          "title": "DỊCH VỤ HẢI QUAN",
+          "description": "Hơn 20 năm kinh nghiệm làm việc và xử lý các thủ tục hải quan tại Việt Nam.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png"
+        },
+        {
+          "id": 5,
+          "title": "VẬN TẢI NỘI ĐỊA",
+          "description": "Sở hữu mạng lưới hệ thống xe tải nhỏ và containers trên Toàn Quốc.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png"
+        },
+        {
+          "id": 6,
+          "title": "PHÂN LOẠI VÀ ĐÓNG GÓI",
+          "description": "Scanwell được trang bị hệ thống thông tin quản lý kho toàn diện có thể cung cấp các giải pháp hậu cần chuỗi cung ứng toàn diện cho quý khách hàng.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png"
+        }
+      ],
+      "button": "ĐỌC THÊM"
+    },
+    "management": {
+      "title": "MANAGEMENT SYSTEM",
+      "subtitle": "Streamline your business operations with our comprehensive management solution"
+    },
+    "network": {
+      "title": "Network",
+      "button": "Tìm văn phòng gần bạn"
+    },
+    "partners": {
+      "title": "Hiệp hội đối tác"
+    },
+    "contact": {
+      "title": "Liên hệ chúng tôi",
+      "form": {
+        "name": "Họ và tên",
+        "email": "Email",
+        "phone": "Số điện thoại",
+        "content": "Nội dung",
+        "button": "Gửi liên hệ"
+      }
+    }
+  },
+
+  "about": {
+    "title": "Giới thiệu - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
+    "metaDescription": "Giới thiệu về CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
+    "bannerAlt": "Banner giới thiệu công ty",
+    "sections": {
+      "intro1": "<strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> được thành lập vào năm 1981...",
+      "intro2": "<strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> là một công ty logistics toàn diện...",
+      "servicesTitle": "Các dịch vụ chúng tôi cung cấp:",
+      "motto": "<strong>Phương châm của chúng tôi</strong> là luôn luôn tập trung vào nhu cầu của khách hàng..."
+    },
+    "servicesList": [
+      "Vận Tải Biển - Xuất Nhập khẩu",
+      "Vận Tải Hàng Không - Xuất Nhập khẩu",
+      "Vận Tải Đường Bộ và đa phương thức",
+      "Quản lý kho vận",
+      "Thủ tục hải quan"
+    ],
+    "companyName": "CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
+    "logoAlt": "Logo Công ty Kim Hảo"
+  },
+
+  "waterTransport": {
+    "sectionTitle": "VẬN TẢI ĐƯỜNG THỦY",
+    "services": [
+      {
+        "title": "DỊCH VỤ HÀNG DỰ ÁN",
+        "alt": "Dịch vụ hàng dự án",
+        "href": "/dich-vu-hang-du-an"
+      },
+      {
+        "title": "TỔNG QUAN DỊCH VỤ VẬN TẢI ĐƯỜNG THUỶ",
+        "alt": "Tổng quan dịch vụ vận tải đường thủy",
+        "href": "/tong-quan-dich-vu-van-tai-duong-thuy"
+      },
+      {
+        "title": "HÀNG NGUY HIỂM",
+        "alt": "Hàng nguy hiểm",
+        "href": "/hang-nguy-hiem"
+      }
+    ]
+  },
+  "projectCargo": {
+    "title": "DỊCH VỤ HÀNG DỰ ÁN",
+    "shareLabel": "Chia sẻ:",
+    "relatedServices": "DỊCH VỤ KHÁC",
+    "sectionTitles": {
+      "1": "CHỨNG NHẬN",
+      "2": "CHUYÊN CÁC DỰ ÁN",
+      "3": "CHUYÊN TUYẾN",
+      "5": "VĂN PHÒNG ĐẠI DIỆN",
+      "6": "HÌNH ẢNH THI CÔNG",
+      "8": "HÌNH ẢNH THI CÔNG"
+    },
+    "imageAlts": {
+      "1": "Chứng nhận của công ty",
+      "2": "Các dự án chuyên nghiệp",
+      "3": "Chuyên tuyến vận chuyển",
+      "5": "Văn phòng đại diện",
+      "6": "Hình ảnh thi công",
+      "8": "Hình ảnh thực tế của dự án"
+    },
+    "socialPlatforms": {
+      "whatsapp": "WhatsApp",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "common": {
+    "services": {
+      "seaTransport": "VẬN TẢI ĐƯỜNG BIỂN",
+      "airTransport": "VẬN TẢI HÀNG KHÔNG",
+      "multimodalTransport": "VẬN TẢI ĐA PHƯƠNG THỨC"
+    }
+  },
+  "specialTransport": {
+    "header": {
+      "link": "VẬN TẢI ĐƯỜNG THỦY",
+      "title": "DỊCH VỤ HÀNG DỰ ÁN"
+    },
+    "sections": {
+      "titles": {
+        "1": "CÁC HÃNG TÀU ĐỐI TÁC",
+        "2": "KHỐI LƯỢNG",
+        "3": "CHUYÊN TUYẾN",
+        "5": "VĂN PHÒNG"
+      },
+      "alts": {
+        "1": "Chứng nhận của công ty",
+        "2": "Các dự án chuyên nghiệp",
+        "3": "Chuyên tuyến vận chuyển",
+        "5": "Văn phòng đại diện"
+      }
+    },
+    "social": {
+      "shareTitle": "Chia sẻ bài viết",
+      "platforms": {
+        "whatsapp": "WhatsApp",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "relatedPosts": {
+      "title": "Bài viết liên quan",
+      "postTitle": "HÀNG NGUY HIỂM"
+    }
+  },
+
+  "blog": {
+    "category": "VẬN TẢI ĐƯỜNG THỦY",
+    "categoryLink": "/van-tai-duong-thuy",
+    "title": "HÀNG NGUY HIỂM",
+    "content": {
+      "image1": {
+        "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/images2641-5c32b9fab0cfc-1024x683.jpg",
+        "alt": "Vận chuyển hàng nguy hiểm"
+      },
+      "sections": [
+        {
+          "type": "list",
+          "title": "Hàng hóa nguy hiểm là gì?",
+          "items": [
+            "Hàng hóa nguy hiểm là hàng hóa có chứa các chất nguy hiểm...",
+            "Chất nguy hiểm là những chất hoặc hợp chất ở dạng khí..."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/7.png",
+          "alt": "Vận chuyển hàng nguy hiểm",
+          "width": 850,
+          "height": 442
+        }
+      ]
+    },
+    "sidebar": {
+      "title": "Bài viết liên quan",
+      "posts": [
+        {
+          "title": "HÀNG NGUY HIỂM",
+          "link": "/hang-nguy-hiem",
+          "image": "/public/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg"
+        }
+      ]
+    }
+  },
+  "blog_hk": {
+    "category": "VẬN TẢI HÀNG KHÔNG",
+    "categoryLink": "/van-tai-hang-khong",
+    "title": "HÀNH LÝ SÁCH TAY",
+    "content": {
+      "images": [
+        {
+          "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg",
+          "alt": "Vận chuyển hàng nguy hiểm"
+        },
+        {
+          "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg",
+          "alt": "Vận chuyển hàng nguy hiểm"
+        }
+      ],
+      "intro": "Dịch vụ chuyển phát nhanh, dịch vụ xách tay cho các lô hàng mang tính chất cấp bách về thời gian.",
+      "description": "Hành lý xách tay – Chuyển phát nhanh trên máy bay là dịch vụ Scanwell cung cấp với đội ngũ nhân viên đặc biệt và quy trình nhanh chóng hỗ trợ vận chuyển đúng nghĩa đen XÁCH TAY hàng hóa của bạn lên máy bay...",
+      "features": [
+        "Dịch vụ 24/7/365",
+        "Giao hàng trong cùng ngày hoặc ngày hôm sau tùy thuộc vào điểm đến",
+        "Mua vé máy bay",
+        "Tóm tắt thành viên nhóm được chọn",
+        "Nhận hàng gửi hàng",
+        "Thủ tục hải quan",
+        "Giao hàng cá nhân cho người nhận hàng đã thỏa thuận",
+        "Xác nhận giao hàng"
+      ],
+      "cta": {
+        "text": "HÃY LIÊN HỆ CHÚNG TÔI NGAY!",
+        "link": "/lien-he"
+      }
+    }
+  },
+  "lien_he": {
+    "title": "Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM",
+    "contact": {
+      "title": "LIÊN HỆ VĂN PHÒNG & CHI NHÁNH",
+      "subtitle": "Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM",
+      "instruction": "Vui lòng chọn văn phòng Quý Khách cần liên hệ và điền đầy đủ thông tin theo bảng phía dưới.",
+      "locations": {
+        "hcm": "Hồ Chí Minh",
+        "hanoi": "Hà Nội",
+        "haiphong": "Hải Phòng"
+      },
+      "offices": {
+        "hcm": {
+          "title": "Văn phòng Hồ Chí Minh",
+          "address": "94 Bùi Thanh Khiết, Tân Túc, Bình Chánh, HCM",
+          "phone": "+84 93 806 5499",
+          "email": "hcm-sales@kimhao.com"
+        },
+        "hanoi": {
+          "title": "Văn phòng Hà Nội",
+          "address": "Tầng 13 Pearl Plaza, 561A Điện Biên Phủ, Q. Bình Thạnh, Hà Nội",
+          "phone": "+84 028 3510 6866",
+          "email": "hanoi-sales@kimhao.com"
+        },
+        "haiphong": {
+          "title": "Văn phòng Hải Phòng",
+          "address": "Phòng 803, Tòa nhà Thành Đạt, số 3 Lê Thánh Tông, Q. Ngô Quyền, Hải Phòng",
+          "phone": "+84 0225 325 0779",
+          "email": "haiphong-sales@kimhao.com"
+        }
+      },
+      "form": {
+        "title": "Gửi yêu cầu liên hệ",
+        "fields": {
+          "fullName": {
+            "label": "Họ và tên",
+            "placeholder": ""
+          },
+          "phone": {
+            "label": "Số điện thoại",
+            "placeholder": ""
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": ""
+          },
+          "message": {
+            "label": "Tin nhắn",
+            "placeholder": ""
+          }
+        },
+        "required": "*",
+        "submit": "Gửi"
+      }
+    }
+  }
+}

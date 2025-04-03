@@ -1,198 +1,164 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
+type ContentSection =
+  | {
+      type: "list";
+      title: string;
+      items: string[];
+    }
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+      width?: number;
+      height?: number;
+    }
+  | {
+      type: "paragraph";
+      content: string;
+    };
+
+interface BlogContent {
+  image1: {
+    src: string;
+    alt: string;
+  };
+  sections: ContentSection[];
+}
+
+interface RelatedPost {
+  title: string;
+  link: string;
+  image: string;
+}
 
 const BlogPost = () => {
-  return (
-    <main className="pt-20 pb-10 bg-gray-100 flex justify-center">
-      <div
-        id="content"
-        className="blog-wrapper blog-single page-wrapper max-w-7xl w-full"
-      >
-        <div className="flex flex-wrap lg:flex-nowrap gap-6">
-          {/* Main content */}
-          <div className="lg:w-2/3 w-full">
-            <article
-              id="post-2413"
-              className="post-2413 post type-post status-publish format-standard has-post-thumbnail hentry category-tin-tuc"
-            >
-              <div className="article-inner bg-white p-6 rounded-lg shadow-md">
-                <header className="entry-header">
-                  <div className="entry-header-text text-left">
-                    <h6 className="entry-category text-xs text-gray-500">
-                      <a
-                        href="/van-tai-duong-thuy"
-                        rel="category tag"
-                        className="text-blue-600 hover:text-blue-800"
-                      >
-                        VẬN TẢI ĐƯỜNG THỦY
-                      </a>
-                    </h6>
-                    <h1 className="entry-title text-3xl font-bold mt-2 mb-4">
-                      HÀNG NGUY HIỂM
-                    </h1>
-                    <div className="entry-divider border-t border-gray-300 my-2" />
-                  </div>
-                </header>
-                <div className="entry-content single-page">
-                  <div id="main-detail-body" className="content fck">
-                    <p>
+  const { t } = useTranslation();
 
-                      <Image
-                        src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/images2641-5c32b9fab0cfc-1024x683.jpg"
-                        alt="Vận chuyển hàng nguy hiểm"
-                        width={850} // You can specify the width
-                        height={442} // You can specify the height
-                        className="rounded-lg shadow-md mt-4"
-                      />
-                    </p>
-                    <ol className="list-decimal pl-6 mt-4 text-lg font-semibold">
-                      <li>Hàng hóa nguy hiểm là gì?</li>
-                    </ol>
-                    <p className="text-base mt-2 leading-relaxed">
-                      Hàng hóa nguy hiểm là hàng hóa có chứa các chất nguy hiểm
-                      khi chở trên đường bộ hoặc đường thủy nội địa có khả năng
-                      gây nguy hại tới tính mạng, sức khỏe con người, môi
-                      trường, an toàn và an ninh quốc gia.
-                    </p>
-                    <p className="text-base mt-2 leading-relaxed">
-                      Chất nguy hiểm là những chất hoặc hợp chất ở dạng khí,
-                      dạng lỏng hoặc dạng rắn có khả năng gây nguy hại tới tính
-                      mạng, sức khỏe con người, môi trường, an toàn và an ninh
-                      quốc gia.
-                    </p>
-                    <ol
-                      start={2}
-                      className="list-decimal pl-6 mt-4 text-lg font-semibold"
-                    >
-                      <li>
-                        Dịch vụ vận chuyển hàng hóa nguy hiểm của Scanwell:
-                      </li>
-                    </ol>
-                    <p className="text-base mt-2 leading-relaxed">
-                      Kể từ khi thành lập, Scanwell đã nỗ lực để cung cấp chất
-                      lượng dịch vụ cao nhất đến khách hàng trong lĩnh vực
-                      logistics cho hàng hóa nguy hiểm. Dịch vụ vận chuyển hàng
-                      nguy hiểm của Scanwell gồm:
-                    </p>
-                    <p>
-                      <Image
-                        src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/7.png"
-                        alt="Vận chuyển hàng nguy hiểm"
-                        width={850} // You can specify the width
-                        height={442} // You can specify the height
-                        className="rounded-lg shadow-md mt-4"
-                      />
-                    </p>
-                    <p className="text-base mt-2 leading-relaxed">
-                      Nhờ vào mạng lưới đại lý Công ty TNHH Thương Mại Vận Tải
-                      Kim Hảo hoạt động ở hơn 80 quốc gia, đủ đáp ứng tất cả nhu
-                      cầu của khách hàng trên toàn cầu. Tất cả các đại lí của
-                      chúng tôi đều được chứng nhận bởi IATA, FIATA cho hoạt
-                      động vận chuyển hàng nguy hiểm tại quốc gia, vùng có trụ
-                      sở. Vì thế, Công ty TNHH Thương Mại Vận Tải Kim Hảo tự tin
-                      sẽ mang đến một dịch vụ vận chuyển hàng nguy hiểm từ Việt
-                      Nam đi các nước trên thế giới và ngược lại cho Quý khách
-                      với độ an toàn và đáp ứng đầy đủ yêu cầu của các địa
-                      phương trên toàn cầu.
-                    </p>
-                  </div>
+  const renderContentSection = (section: ContentSection, index: number) => {
+    switch (section.type) {
+      case "list":
+        return (
+          <div key={index} className="mt-4">
+            <ol className="list-decimal pl-6 text-lg font-semibold">
+              <li>{section.title}</li>
+            </ol>
+            {section.items.map((item, i) => (
+              <p key={i} className="text-base mt-2 leading-relaxed">
+                {item}
+              </p>
+            ))}
+          </div>
+        );
+      case "image":
+        return (
+          <div key={index} className="mt-4">
+            <Image
+              src={section.src}
+              alt={section.alt}
+              width={section.width || 850}
+              height={section.height || 442}
+              className="rounded-lg shadow-md"
+              priority={index === 0}
+            />
+          </div>
+        );
+      case "paragraph":
+        return (
+          <p key={index} className="text-base mt-4 leading-relaxed">
+            {section.content}
+          </p>
+        );
+      default:
+        return null;
+    }
+  };
+
+  // Get content data with type safety
+  const content = t("blog.content", { returnObjects: true }) as BlogContent;
+  const {sections } = content;
+
+  // Get sidebar data
+  const sidebarTitle = t("blog.sidebar.title");
+  const relatedPosts = t("blog.sidebar.posts", { returnObjects: true }) as RelatedPost[];
+
+  // Get header data
+  const categoryLink = t("blog.categoryLink");
+  const category = t("blog.category");
+  const title = t("blog.title");
+
+  return (
+    <main className="pt-20 pb-10 bg-gray-100">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Main Content */}
+          <div className="lg:w-2/3">
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <header className="bg-blue-50 py-8 px-6 text-center">
+                <h6 className="text-xs text-gray-500 mb-2">
+                  <Link
+                    href={categoryLink}
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    {category}
+                  </Link>
+                </h6>
+                <h1 className="text-3xl font-bold text-gray-800 mb-4">
+                  {title}
+                </h1>
+                <div className="border-t border-gray-300 w-24 mx-auto"></div>
+              </header>
+
+              <div className="p-6">
+                <Image
+                  src={t("blog.content.image1.src")}
+                  alt={t("blog.content.image1.alt")}
+                  width={850}
+                  height={442}
+                  className="rounded-lg shadow-md w-full"
+                  priority
+                />
+
+                <div className="mt-6 space-y-6">
+                  {sections.map((section, index) =>
+                    renderContentSection(section, index)
+                  )}
                 </div>
               </div>
             </article>
           </div>
 
-          {/* Sidebar content */}
-          <div className="lg:w-1/3 w-full">
-            <div id="secondary" className="widget-area">
-              <aside
-                id="flatsome_recent_posts-2"
-                className="widget flatsome_recent_posts bg-white p-6 rounded-lg shadow-md"
-              >
-                <span className="widget-title text-xl font-semibold mb-4">
-                  Bài viết liên quan
-                </span>
-                <div className="is-divider my-4" />
-                <ul>
-                  {/* Related post 1 */}
-                  <li className="recent-blog-posts-li mb-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="badge post-date badge-outline">
-                          <div
-                            className="badge-inner bg-fill"
-                            style={{
-                              background:
-                                "url(/public/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg)",
-                              border: 0,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="flex-grow">
-                        <a
-                          href="/hang-nguy-hiem"
-                          title="HÀNG NGUY HIỂM"
-                          className="text-lg font-medium text-blue-600 hover:text-blue-800"
-                        >
-                          HÀNG NGUY HIỂM
-                        </a>
-                      </div>
+          {/* Sidebar */}
+          <div className="lg:w-1/3">
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                {sidebarTitle}
+              </h3>
+              <div className="space-y-4">
+                {relatedPosts.map((post, index) => (
+                  <Link
+                    key={index}
+                    href={post.link}
+                    className="flex items-start gap-4 group hover:bg-gray-50 p-3 rounded-lg transition"
+                  >
+                    <div className="flex-shrink-0 w-16 h-16 relative rounded overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </li>
-                  {/* Related post 2 */}
-                  <li className="recent-blog-posts-li mb-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="badge post-date badge-outline">
-                          <div
-                            className="badge-inner bg-fill"
-                            style={{
-                              background:
-                                "url(/public/filemanager/userfiles/Tommy/IMAGE.jpg)",
-                              border: 0,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="flex-grow">
-                        <a
-                          href="/dich-vu-van-tai-duong-thuy"
-                          title="TỔNG QUAN DỊCH VỤ VẬN TẢI ĐƯỜNG THUỶ"
-                          className="text-lg font-medium text-blue-600 hover:text-blue-800"
-                        >
-                          TỔNG QUAN DỊCH VỤ VẬN TẢI ĐƯỜNG THUỶ
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  {/* Related post 3 */}
-                  <li className="recent-blog-posts-li mb-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="badge post-date badge-outline">
-                          <div
-                            className="badge-inner bg-fill"
-                            style={{
-                              background:
-                                "url(/public/filemanager/userfiles/Tommy/PROJECTCARGO7.jpg)",
-                              border: 0,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                      <div className="flex-grow">
-                        <a
-                          href="/dich-vu-hang-du-an"
-                          title="DỊCH VỤ HÀNG DỰ ÁN"
-                          className="text-lg font-medium text-blue-600 hover:text-blue-800"
-                        >
-                          DỊCH VỤ HÀNG DỰ ÁN
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </aside>
+                    <span className="font-medium text-gray-700 group-hover:text-blue-600">
+                      {post.title}
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

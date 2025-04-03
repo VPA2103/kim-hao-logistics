@@ -56,7 +56,6 @@ const BlogPost = () => {
                       ngày hôm sau tùy khu vực vận chuyển.
                     </p>
                     <p className="mt-4">
-                   
                       <Image
                         src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg"
                         alt="Vận chuyển hàng nguy hiểm"

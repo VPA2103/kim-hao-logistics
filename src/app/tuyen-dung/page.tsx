@@ -69,10 +69,7 @@ const AirTransportSection = () => {
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a
-                href="/hcm-tuyen-dung-sales-supervisor"
-                className="service-link"
-              >
+              <a href="/tuyen-dung/blog1" className="service-link">
                 <div className="image-container">
                   <Image
                     src={hanhLyImage}
@@ -90,7 +87,7 @@ const AirTransportSection = () => {
             </div>
 
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/tuyen-dung/blog2" className="service-link">
                 <div className="image-container">
                   <Image
                     src={vanTaiImage}

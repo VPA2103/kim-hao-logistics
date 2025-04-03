@@ -17,7 +17,7 @@ interface SocialButtonProps {
   title: string;
 }
 
-const DichVuHangDuAn = () => {
+const VanTaiHangKhong = () => {
   return (
     <main className="pt-20 pb-10 bg-gray-100">
       <div className="container mx-auto px-4 lg:px-8">
@@ -32,11 +32,11 @@ const DichVuHangDuAn = () => {
                     href="/van-tai-duong-thuy"
                     className="inline-block px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
                   >
-                    VẬN TẢI ĐƯỜNG THỦY
+                    VẬN TẢI HÀNG KHÔNG
                   </Link>
                 </div>
                 <h1 className="text-4xl font-bold text-gray-800">
-                  DỊCH VỤ HÀNG DỰ ÁN
+                  TỔNG QUAN DỊCH VỤ VẬN TẢI HÀNG KHÔNG
                 </h1>
                 <div className="mt-4 border-b-2 border-gray-300"></div>
               </header>
@@ -85,10 +85,7 @@ const DichVuHangDuAn = () => {
             </article>
           </div>
 
-          {/* Sidebar */}
-          <aside className="bg-white shadow rounded-lg p-6">
-            <RelatedPosts />
-          </aside>
+          
         </div>
       </div>
     </main>
@@ -114,55 +111,12 @@ const SocialButton = ({ platform, url, title }: SocialButtonProps) => {
   );
 };
 
-// RelatedPosts Component
-const RelatedPosts = () => {
-  const posts = [
-    {
-      title: "HÀNG NGUY HIỂM",
-      url: "/hang-nguy-hiem",
-      image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
-    },
-    {
-      title: "HÀNG NGUY HIỂM",
-      url: "/hang-nguy-hiem",
-      image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
-    },
-    {
-      title: "HÀNG NGUY HIỂM",
-      url: "/hang-nguy-hiem",
-      image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
-    },
-  ];
 
-  return (
-    <div>
-      <h5 className="text-lg font-bold mb-4">Bài viết liên quan</h5>
-      <div className="space-y-4">
-        {posts.map((post, index) => (
-          <Link
-            key={index}
-            href={post.url}
-            className="flex items-center gap-4 bg-gray-100 rounded p-4 shadow-md hover:bg-gray-200 transition"
-          >
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={80}
-              height={60}
-              className="rounded object-cover"
-            />
-            <span className="font-medium text-gray-800">{post.title}</span>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // Helper Functions
 const getSectionTitle = (num: number): string => {
   const titles: Record<number, string> = {
-    1: "CÁC HÃNG TÀU ĐỐI TÁC",
+    1: "CÁC ĐỐI TÁC HÃNG BAY",
     2: "KHỐI LƯỢNG",
     3: "CHUYÊN TUYẾN",
     5: "VĂN PHÒNG",
@@ -205,4 +159,4 @@ const socialPlatforms: SocialPlatform[] = [
   },
 ];
 
-export default DichVuHangDuAn;
+export default VanTaiHangKhong;

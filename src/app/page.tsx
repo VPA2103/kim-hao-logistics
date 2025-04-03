@@ -12,60 +12,29 @@ import section2 from "../../image/1.jpg";
 import crm3 from "../../public/filemanager/userfiles/banner/crm3.png";
 import map3 from "../../public/filemanager/userfiles/banner/map3.png";
 import sectionBg from "../../public/filemanager/userfiles/_thumbs/_thumbs/global-logistics-disruption-new.jpg";
+import { useTranslation } from "react-i18next";
+// import { useMemo } from "react";
+
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+  iconUrl: string;
+}
+
 
 export default function Home() {
 
+   const { t } = useTranslation();
   
-  const services = [
-    {
-      id: 1,
-      title: "VẬN TẢI BIỂN",
-      description:
-        "Scanwell Logistics là một trong những NVOCC lớn nhất tại Hong Kong, với hơn 30 năm kinh nghiệm vận tải đường thủy gồm LCL (hàng lẻ) và FCL (hàng container).",
-      iconUrl:
-        "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png", // Replace with your actual icon path
-    },
-    {
-      id: 2,
-      title: "VẬN TẢI HÀNG KHÔNG",
-      description:
-        "Scanwell Logistics hân hạnh là thành viên của hiệp hội vận tải hàng không Quốc Tế (IATA), sở hữu dày dặn kinh nghiệm trong vận tải hàng hóa hàng không.",
-      iconUrl:
-        "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png", // Replace with your actual icon path
-    },
-    {
-      id: 3,
-      title: "DỊCH VỤ KHO BÃI",
-      description:
-        "Hiện đang vận hành các kho dịch vụ và kho ngoại quan tại trung tâm TP. HCM và các vùng lân cận như Biên Hòa, Đồng Nai, Nhơn Trạch, v.v.",
-      iconUrl:
-        "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png", // Replace with your actual icon path
-    },
-    {
-      id: 4,
-      title: "DỊCH VỤ HẢI QUAN",
-      description:
-        "Hơn 20 năm kinh nghiệm làm việc và xử lý các thủ tục hải quan tại Việt Nam.",
-      iconUrl:
-        "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png", // Replace with your actual icon path
-    },
-    {
-      id: 5,
-      title: "VẬN TẢI NỘI ĐỊA",
-      description:
-        "Sở hữu mạng lưới hệ thống xe tải nhỏ và containers trên Toàn Quốc.",
-      iconUrl:
-        "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png", // Replace with your actual icon path
-    },
-    {
-      id: 6,
-      title: "PHÂN LOẠI VÀ ĐÓNG GÓI",
-      description:
-        "Scanwell được trang bị hệ thống thông tin quản lý kho toàn diện có thể cung cấp các giải pháp hậu cần chuỗi cung ứng toàn diện cho quý khách hàng.",
-      iconUrl:
-        "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png", // Replace with your actual icon path
-    },
-  ];
+  const services = t("homepage.services.list", {
+    returnObjects: true,
+  }) as Service[];
+
+  if (!t) {
+    return <div>Loading...</div>; // Hoặc bất kỳ UI loading nào bạn muốn
+  }
+
   return (
     <>
       <main id="main" className="homepage">
@@ -74,7 +43,7 @@ export default function Home() {
             {/* Banner background */}
             <div className="relative h-screen max-h-[600px] w-full overflow-hidden bg-gray-900">
               <Image
-                src={banner}
+                src={banner} // Cập nhật với đường dẫn đúng của banner
                 alt="Scanwell Logistics Việt Nam"
                 className="object-cover w-full h-full"
                 width={1200}
@@ -93,19 +62,16 @@ export default function Home() {
                   <div className="w-full md:w-1/2 lg:w-5/12 p-6">
                     <div className="text-left">
                       <h2 className="text-2xl md:text-3xl font-bold text-blue-400 mb-4">
-                        CHÀO MỪNG ĐẾN VỚI SCANWELL LOGISTICS VIỆT NAM
+                        {t("homepage.banner.title")}{" "}
+                        {/* Lấy chuỗi title từ JSON */}
                       </h2>
                       <p className="text-white mb-6">
-                        Scanwell Logistics là một trong những công ty hàng đầu
-                        trong ngành vận tải và giao nhận. Scanwell cung cấp
-                        nhiều giải pháp vận tải và giao nhận bao gồm vận tải và
-                        giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu cần
-                        chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh
-                        chóng, an toàn và đúng thời gian trên toàn thế giới.
+                        {t("homepage.banner.description")}{" "}
+                        {/* Lấy chuỗi description từ JSON */}
                       </p>
                       <Link href="/gioi-thieu">
                         <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded transition duration-300">
-                          ĐỌC THÊM
+                          {t("homepage.banner.button")} {/* Lấy chuỗi button từ JSON */}
                         </button>
                       </Link>
                     </div>
@@ -114,6 +80,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section className="py-20 bg-gray-100">
             <div className="container mx-auto px-4">
               <div className="flex flex-wrap -mx-4">
@@ -121,20 +88,11 @@ export default function Home() {
                 <div className="w-full md:w-1/2 px-4">
                   <div className="p-10">
                     <h2 className="text-2xl md:text-3xl font-bold text-blue-500 mb-5 uppercase leading-tight">
-                      CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO
+                      {t("homepage.about.title")}
                     </h2>
 
                     <p className="text-gray-800 text-base leading-relaxed mb-5">
-                      CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO được thành lập vào
-                      năm 1981, có trụ sở chính đặt tại Hồng Kông. Trong hơn 35
-                      năm qua, chúng tôi đã phát triển để trở thành một trong
-                      những công ty lớn nhất về dịch vụ vận tải và giao nhận, là
-                      thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng
-                      tôi có hệ thống chi nhánh tại hầu hết các châu lục như:
-                      Châu Mỹ, Châu Á, Châu Âu, Châu Úc ... và hàng trăm đại lý
-                      ở các thành phố lớn trên toàn thế giới, mục đích tạo điều
-                      kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch
-                      vụ và sự an toàn trong chuyên chở hàng hóa.
+                      {t("homepage.about.description")}
                     </p>
                   </div>
                 </div>
@@ -143,8 +101,8 @@ export default function Home() {
                 <div className="w-full md:w-1/2 px-4">
                   <div className="relative h-full min-h-64 md:min-h-full">
                     <Image
-                      src={section2}
-                      alt="Công ty TNHH Thương Mại Vận Tải Kim Hảo"
+                      src={section2} // Đảm bảo cung cấp đúng đường dẫn hình ảnh từ JSON nếu cần
+                      alt={t("homepage.about.title")}
                       className="rounded shadow-md"
                       fill
                       style={{
@@ -156,17 +114,16 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4 max-w-6xl">
-              {/* Section title */}
               <div className="text-center mb-10">
                 <h2 className="text-3xl font-bold text-blue-500 uppercase mb-4">
-                  DỊCH VỤ
+                  {t("homepage.services.title")}
                 </h2>
                 <div className="w-16 h-1 bg-blue-500 mx-auto"></div>
               </div>
 
-              {/* Services grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service) => (
                   <div
@@ -195,11 +152,10 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Read more button */}
               <div className="text-center mt-10">
                 <Link href="/gioi-thieu">
                   <span className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold uppercase py-3 px-8 rounded transition-colors duration-300">
-                    ĐỌC THÊM
+                    {t("homepage.services.button")}
                   </span>
                 </Link>
               </div>
@@ -725,25 +681,6 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-
-              {/* Find Office Button */}
-              <div className="text-center">
-                <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition duration-300 shadow-md flex items-center mx-auto">
-                  <svg
-                    className="h-5 w-5 mr-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Tìm văn phòng gần bạn
-                </button>
-              </div>
             </div>
           </section>
           <section className="partner-section" id="section_1974571113">
@@ -807,7 +744,7 @@ export default function Home() {
             <div className="section-content">
               <div className="partner-title">
                 <h2>
-                  <span>Hiệp hội đối tác</span>
+                  <span>{t("homepage.partners.title")}</span>
                 </h2>
                 <div className="divider"></div>
               </div>
@@ -847,7 +784,7 @@ export default function Home() {
             </div>
           </section>
           <section className="contact-section" id="section_1631451535">
-            <style jsx>{`
+            <style jsx global>{`
               .contact-section {
                 position: relative;
                 padding: 60px 0;
@@ -984,7 +921,9 @@ export default function Home() {
                 {/* Right side - Form */}
                 <div className="contact-form">
                   <div className="text-center">
-                    <h2 className="contact-title">Liên hệ chúng tôi</h2>
+                    <h2 className="contact-title">
+                      {t("homepage.contact.title")}
+                    </h2>
                   </div>
 
                   <form className="wpcf7-form">
@@ -993,7 +932,7 @@ export default function Home() {
                         type="text"
                         name="name"
                         className="form-control"
-                        placeholder="Họ và tên"
+                        placeholder={t("homepage.contact.form.name")}
                         required
                       />
                     </div>
@@ -1003,7 +942,7 @@ export default function Home() {
                         type="email"
                         name="email"
                         className="form-control"
-                        placeholder="Email"
+                        placeholder={t("homepage.contact.form.email")}
                         required
                       />
                     </div>
@@ -1013,7 +952,7 @@ export default function Home() {
                         type="tel"
                         name="phone"
                         className="form-control"
-                        placeholder="Số điện thoại"
+                        placeholder={t("homepage.contact.form.phone")}
                         required
                       />
                     </div>
@@ -1022,14 +961,14 @@ export default function Home() {
                       <textarea
                         name="content"
                         className="form-control"
-                        placeholder="Nội dung"
+                        placeholder={t("homepage.contact.form.content")}
                         required
                       />
                     </div>
 
                     <div className="text-center">
                       <button type="submit" className="submit-btn">
-                        Gửi liên hệ
+                        {t("homepage.contact.form.button")}
                       </button>
                     </div>
                   </form>

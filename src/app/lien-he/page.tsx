@@ -4,15 +4,17 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
   const [activeLocation, setActiveLocation] = useState("hcm");
   const formRef = useRef<HTMLFormElement>(null);
+  const { t } = useTranslation();
 
   const switchLocation = useCallback((location: string) => {
     setActiveLocation(location);
   }, []);
-  
+
   useEffect(() => {
     const form = formRef.current;
     if (!form) return;
@@ -32,7 +34,7 @@ const ContactPage = () => {
   return (
     <>
       <Head>
-        <title>Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM</title>
+        <title>{t("lien_he.title")}</title>
       </Head>
 
       <main id="main">
@@ -62,15 +64,10 @@ const ContactPage = () => {
           <section id="contact" className="py-16">
             <div className="container mx-auto text-center">
               <h2 className="text-3xl font-semibold mb-2">
-                LIÊN HỆ VĂN PHÒNG & CHI NHÁNH
+                {t("lien_he.title")}
               </h2>
-              <p className="text-lg mb-6">
-                Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM
-              </p>
-              <p className="mb-8">
-                Vui lòng chọn văn phòng Quý Khách cần liên hệ và điền đầy đủ
-                thông tin theo bảng phía dưới.
-              </p>
+              <p className="text-lg mb-6">{t("lien_he.contact.subtitle")}</p>
+              <p className="mb-8">{t("lien_he.contact.instruction")}</p>
 
               {/* Office Tabs */}
               <div className="flex justify-center gap-4 mb-8">
@@ -84,9 +81,7 @@ const ContactPage = () => {
                     }`}
                     onClick={() => switchLocation(location)}
                   >
-                    {location === "hcm" && "Hồ Chí Minh"}
-                    {location === "hanoi" && "Hà Nội"}
-                    {location === "haiphong" && "Hải Phòng"}
+                    {t(`lien_he.contact.locations.${location}`)}
                   </button>
                 ))}
               </div>
@@ -123,54 +118,36 @@ const ContactPage = () => {
 
                 {/* Right Column - Contact Info */}
                 <div className="info-column">
-                  {[
-                    {
-                      id: "hcm",
-                      title: "Văn phòng Hồ Chí Minh",
-                      address: "94 Bùi Thanh Khiết, Tân Túc, Bình Chánh, HCM",
-                      phone: "+84 93 806 5499",
-                      email: "hcm-sales@kimhao.com",
-                    },
-                    {
-                      id: "hanoi",
-                      title: "Văn phòng Hà Nội",
-                      address:
-                        "Tầng 13 Pearl Plaza, 561A Điện Biên Phủ, Q. Bình Thạnh, Hà Nội",
-                      phone: "+84 028 3510 6866",
-                      email: "hanoi-sales@kimhao.com",
-                    },
-                    {
-                      id: "haiphong",
-                      title: "Văn phòng Hải Phòng",
-                      address:
-                        "Phòng 803, Tòa nhà Thành Đạt, số 3 Lê Thánh Tông, Q. Ngô Quyền, Hải Phòng",
-                      phone: "+84 0225 325 0779",
-                      email: "haiphong-sales@kimhao.com",
-                    },
-                  ].map((office) => (
+                  {["hcm", "hanoi", "haiphong"].map((officeId) => (
                     <div
-                      key={office.id}
+                      key={officeId}
                       className={`office-info ${
-                        activeLocation === office.id ? "active block" : "hidden"
+                        activeLocation === officeId ? "active block" : "hidden"
                       }`}
                     >
                       <h3 className="text-2xl font-semibold mb-4">
-                        {office.title}
+                        {t(`lien_he.contact.offices.${officeId}.title`)}
                       </h3>
 
                       <div className="flex items-center mb-4">
                         <i className="fas fa-map-marker-alt mr-2 text-blue-500"></i>
-                        <span className="text-gray-700">{office.address}</span>
+                        <span className="text-gray-700">
+                          {t(`lien_he.contact.offices.${officeId}.address`)}
+                        </span>
                       </div>
 
                       <div className="flex items-center mb-4">
                         <i className="fas fa-phone-alt mr-2 text-blue-500"></i>
-                        <span className="text-gray-700">{office.phone}</span>
+                        <span className="text-gray-700">
+                          {t(`lien_he.contact.offices.${officeId}.phone`)}
+                        </span>
                       </div>
 
                       <div className="flex items-center">
                         <i className="fas fa-envelope mr-2 text-blue-500"></i>
-                        <span className="text-gray-700">{office.email}</span>
+                        <span className="text-gray-700">
+                          {t(`lien_he.contact.offices.${officeId}.email`)}
+                        </span>
                       </div>
                     </div>
                   ))}
@@ -180,13 +157,16 @@ const ContactPage = () => {
               {/* Contact Form */}
               <div className="contact-form-container">
                 <h3 className="text-xl font-semibold mb-4">
-                  Gửi yêu cầu liên hệ
+                  {t("lien_he.contact.form.title")}
                 </h3>
                 <form ref={formRef} className="needs-validation" noValidate>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                     <div>
                       <label htmlFor="fullName" className="form-label">
-                        Họ và tên <span className="text-red-500">*</span>
+                        {t("lien_he.contact.form.fields.fullName.label")}{" "}
+                        <span className="text-red-500">
+                          {t("lien_he.contact.form.required")}
+                        </span>
                       </label>
                       <input
                         type="text"
@@ -197,7 +177,10 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <label htmlFor="phone" className="form-label">
-                        Số điện thoại <span className="text-red-500">*</span>
+                        {t("lien_he.contact.form.fields.phone.label")}{" "}
+                        <span className="text-red-500">
+                          {t("lien_he.contact.form.required")}
+                        </span>
                       </label>
                       <input
                         type="tel"
@@ -210,7 +193,7 @@ const ContactPage = () => {
 
                   <div className="mb-4">
                     <label htmlFor="email" className="form-label">
-                      Email
+                      {t("lien_he.contact.form.fields.email.label")}
                     </label>
                     <input
                       type="email"
@@ -221,12 +204,14 @@ const ContactPage = () => {
 
                   <div className="mb-4">
                     <label htmlFor="message" className="form-label">
-                      Tin nhắn <span className="text-red-500">*</span>
+                      {t("lien_he.contact.form.fields.message.label")}{" "}
+                      <span className="text-red-500">
+                        {t("lien_he.contact.form.required")}
+                      </span>
                     </label>
                     <textarea
                       className="form-control form-control-lg rounded-lg p-3 w-full border border-gray-300"
                       id="message"
-                      // rows="4"
                       required
                     ></textarea>
                   </div>
@@ -235,7 +220,7 @@ const ContactPage = () => {
                     type="submit"
                     className="btn btn-primary px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
                   >
-                    Gửi
+                    {t("lien_he.contact.form.submit")}
                   </button>
                 </form>
               </div>

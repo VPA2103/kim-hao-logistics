@@ -39,7 +39,7 @@ const AirTransportSection: React.FC = () => {
           <div className="services-grid">
             {/* Service 1 */}
             <div className="service-card">
-              <a href="/dich-vu-hang-du-an.html" className="service-link">
+              <a href="/hoat-dong/blog" className="service-link">
                 <div className="image-container">
                   <Image
                     src={hanhLyImage}
@@ -50,7 +50,7 @@ const AirTransportSection: React.FC = () => {
                   />
                 </div>
                 <div className="service-content">
-                  <h2>HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG</h2>
+                  <h2>TIỆC TÂN NIÊN KIM HẢO</h2>
                   <div className="divider"></div>
                 </div>
               </a>

@@ -3,21 +3,47 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
+import { useTranslation } from "react-i18next";
 import bannerImage from "../../../public/filemanager/userfiles/banner/bn-gioi-thieu.png";
 import dichvuhangduan from "../../../public/filemanager/userfiles/dich-vu-hang-du-an.jpg";
 import tongquanvanchuyen from "../../../public/filemanager/userfiles/tong-quan-dich-van-tai-duong-thuy.jpg";
 import hangnguyhiem from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
 const WaterTransportPage = () => {
+  const { t, ready } = useTranslation();
+
+  if (!ready) return <div>Loading...</div>;
+
+  // Thêm type assertion và kiểm tra mảng
+  const services = t("waterTransport.services", {
+    returnObjects: true,
+    defaultValue: [], // Giá trị mặc định nếu không tìm thấy
+  }) as Array<{
+    title: string;
+    alt: string;
+    href: string;
+  }>;
+
+  if (!Array.isArray(services)) {
+    console.error("Invalid services data:", services);
+    return <div>Error loading services</div>;
+  }
+
+  console.log("Final services data:", {
+    services,
+    type: typeof services,
+    isArray: Array.isArray(services),
+    keys: Object.keys(services),
+  });
+
+
   return (
     <>
       <Head>
-        <title>
-          Vận tải đường thủy - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo
-        </title>
+        <title>{t("waterTransport.title")}</title>
         <meta
           name="description"
-          content="Dịch vụ vận tải đường thủy chuyên nghiệp"
+          content={t("waterTransport.metaDescription")}
         />
       </Head>
 
@@ -25,7 +51,6 @@ const WaterTransportPage = () => {
         <div id="content" role="main">
           {/* Banner Section */}
           <div className="banner" id="banner-water-transport">
-            jsx Copy
             <div
               className="banner-image-container"
               style={{
@@ -37,7 +62,7 @@ const WaterTransportPage = () => {
             >
               <Image
                 src={bannerImage}
-                alt="Banner vận tải đường thủy"
+                alt={t("waterTransport.bannerAlt")}
                 className="banner-image"
                 priority
                 fill
@@ -47,79 +72,42 @@ const WaterTransportPage = () => {
                 }}
               />
             </div>
-            <div className="banner-content">
-              <div className="text-box">
-                <div className="text-content"></div>
-              </div>
-            </div>
           </div>
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">VẬN TẢI ĐƯỜNG THỦY</h1>
+            <h1 className="section-title-main">
+              {t("waterTransport.sectionTitle")}
+            </h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/dich-vu-hang-du-an" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={dichvuhangduan}
-                    alt="Dịch vụ hàng dự án"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
+            {services.length > 0 ? (
+              services.map((service, index) => (
+                <div className="service-card" key={index}>
+                  <a href={service.href} className="service-link">
+                    <div className="image-container">
+                      <Image
+                        src={getServiceImage(index)}
+                        alt={service.alt}
+                        fill
+                        className="service-image"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
+                    <div className="service-content">
+                      <h2>{service.title}</h2>
+                      <div className="divider"></div>
+                    </div>
+                  </a>
                 </div>
-                <div className="service-content">
-                  <h2>DỊCH VỤ HÀNG DỰ ÁN</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
-
-            {/* Service 2 */}
-            <div className="service-card">
-              <a
-                href="/tong-quan-dich-vu-van-tai-duong-thuy"
-                className="service-link"
-              >
-                <div className="image-container">
-                  <Image
-                    src={tongquanvanchuyen}
-                    alt="Tổng quan dịch vụ vận tải đường thủy"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>TỔNG QUAN DỊCH VỤ VẬN TẢI ĐƯỜNG THUỶ</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
-
-            {/* Service 3 */}
-            <div className="service-card">
-              <a href="/hang-nguy-hiem" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hangnguyhiem}
-                    alt="Hàng nguy hiểm"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>HÀNG NGUY HIỂM</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+              ))
+            ) : (
+              <div className="text-center p-8 text-red-500">
+                Chưa có dịch vụ nào được cập nhật
+              </div>
+            )}
           </div>
         </div>
       </main>
@@ -257,6 +245,20 @@ const WaterTransportPage = () => {
       `}</style>
     </>
   );
+};
+
+// Hàm helper để lấy ảnh tương ứng
+const getServiceImage = (index: number) => {
+  switch (index) {
+    case 0:
+      return dichvuhangduan;
+    case 1:
+      return tongquanvanchuyen;
+    case 2:
+      return hangnguyhiem;
+    default:
+      return dichvuhangduan;
+  }
 };
 
 export default WaterTransportPage;
