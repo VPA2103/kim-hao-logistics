@@ -172,9 +172,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-4">
               <LanguageSwitcher />
-              <span className="text-blue-600 font-medium">
-                +84 028 3510 6866
-              </span>
+              
             </div>
 
             {/* Track & Trace */}
