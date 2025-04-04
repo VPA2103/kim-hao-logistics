@@ -20,5 +20,6 @@ module.exports = {
       }
     },
     appDir: true,
-  }
+  },
+  // output: 'export',
 }
