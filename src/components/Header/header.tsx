@@ -7,6 +7,8 @@ import Image from "next/image";
 import clsx from "clsx";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import logo from "../../../public/filemanager/userfiles/logologo.png";
+// import { TracingChannel } from "node:diagnostics_channel";
+import TrackTraceButton from "@/app/TrackTraceButton";
 
 interface NavItem {
   href: string;
@@ -102,8 +104,8 @@ const Header = () => {
             <Image
               src={logo}
               alt="SCANWELL LOGISTICS VIETNAM"
-              width={180}
-              height={50}
+              width={160}
+              height={40}
               priority
               className={clsx(
                 "h-auto transition-transform duration-300",
@@ -176,17 +178,8 @@ const Header = () => {
             </div>
 
             {/* Track & Trace */}
-            <Link
-              href="#tracking"
-              className={clsx(
-                "inline-flex items-center rounded-md px-4 py-2 text-sm font-bold uppercase transition-colors",
-                "bg-blue-600 text-white hover:bg-blue-700" // Consistent button style
-              )}
-            >
-              {t("track_trace")}
-            </Link>
+            <TrackTraceButton/>
 
-            {/* Mobile Menu Toggle */}
             <button
               onClick={toggleMobileMenu}
               className="p-2 text-gray-800 hover:text-blue-600 md:hidden"

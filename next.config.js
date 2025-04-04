@@ -7,6 +7,11 @@ module.exports = {
         port: '',
         pathname: '/public/filemanager/userfiles/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'amg-vietnam.com',
+        port: '',
+      },
     ],
   },
   experimental: {

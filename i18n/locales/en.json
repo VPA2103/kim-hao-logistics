@@ -125,11 +125,11 @@
     "metaDescription": "Introduction to KIM HAO Trading & Transport Co., Ltd.",
     "bannerAlt": "Company introduction banner",
     "sections": {
-    "intro1": "<strong>KIM HAO Trading and Transport Co., Ltd.</strong> was established in 1981 with its headquarters located in Hong Kong. For over 35 years, we have grown to become one of the largest companies in the transportation and freight forwarding industry, fully accredited by IATA. We have branch networks across most continents including America, Asia, Europe, and Australia, along with hundreds of agents in major cities around the world. This extensive network ensures the best quality control and the highest level of safety in cargo transportation.",
-    "intro2": "<strong>KIM HAO Trading and Transport Co., Ltd.</strong> is a comprehensive logistics company. We offer optimal services with a complete end-to-end supply chain, saving our customers time when choosing an all-in-one transportation provider. We are capable of offering integrated transport and logistics solutions, handling shipments of all sizes to any location worldwide, with full responsibility for the safe transportation of each package and additional logistics services such as packing, warehousing, and distribution.",
-    "servicesTitle": "Our Services Include:",
-    "motto": "<strong>Our Motto</strong> is to always focus on customer needs, dedicate ourselves fully, reduce costs, and deliver on time. Therefore, we ensure that SCANWELL LOGISTICS VIETNAM can meet all your transportation and freight forwarding needs anytime and anywhere in the world at the most reasonable prices."
-  },
+      "intro1": "<strong>KIM HAO Trading and Transport Co., Ltd.</strong> was established in 1981 with its headquarters located in Hong Kong. For over 35 years, we have grown to become one of the largest companies in the transportation and freight forwarding industry, fully accredited by IATA. We have branch networks across most continents including America, Asia, Europe, and Australia, along with hundreds of agents in major cities around the world. This extensive network ensures the best quality control and the highest level of safety in cargo transportation.",
+      "intro2": "<strong>KIM HAO Trading and Transport Co., Ltd.</strong> is a comprehensive logistics company. We offer optimal services with a complete end-to-end supply chain, saving our customers time when choosing an all-in-one transportation provider. We are capable of offering integrated transport and logistics solutions, handling shipments of all sizes to any location worldwide, with full responsibility for the safe transportation of each package and additional logistics services such as packing, warehousing, and distribution.",
+      "servicesTitle": "Our Services Include:",
+      "motto": "<strong>Our Motto</strong> is to always focus on customer needs, dedicate ourselves fully, reduce costs, and deliver on time. Therefore, we ensure that SCANWELL LOGISTICS VIETNAM can meet all your transportation and freight forwarding needs anytime and anywhere in the world at the most reasonable prices."
+    },
     "servicesList": [
       "Sea Freight - Import & Export",
       "Air Freight - Import & Export",
@@ -150,17 +150,17 @@
       {
         "title": "PROJECT CARGO SERVICES",
         "alt": "Project cargo service",
-        "href": "/project-cargo-services"
+        "href": "/dich-vu-hang-du-an"
       },
       {
         "title": "OVERVIEW OF WATER TRANSPORT SERVICES",
         "alt": "Overview of water transport services",
-        "href": "/overview-water-transport-services"
+        "href": "/tong-quan-dich-vu-van-tai-duong-thuy"
       },
       {
         "title": "DANGEROUS GOODS",
         "alt": "Dangerous goods",
-        "href": "/dangerous-goods"
+        "href": "/hang-nguy-hiem"
       }
     ]
   },
@@ -233,7 +233,7 @@
   },
   "blog": {
     "category": "MARITIME TRANSPORTATION",
-    "categoryLink": "/maritime-transport",
+    "categoryLink": "/van-tai-duong-thuy",
     "title": "DANGEROUS GOODS",
     "content": {
       "image1": {
@@ -294,7 +294,7 @@
   },
   "blog_hk": {
     "category": "AIR FREIGHT",
-    "categoryLink": "/air-freight",
+    "categoryLink": "/van-tai-hang-khong",
     "title": "HAND-CARRIED LUGGAGE",
     "content": {
       "images": [
@@ -321,15 +321,82 @@
       ],
       "cta": {
         "text": "CONTACT US NOW!",
-        "link": "/contact"
+        "link": "/lien-he"
       }
     },
     "social": {
       "shareText": "Share this post",
-      "platforms": [
-   
-      ]
+      "platforms": []
     }
+  },
+  "vantaihangkhong": {
+    "title": "AIR FREIGHT",
+    "services": [
+      {
+        "id": 1,
+        "title": "Air freight service",
+        "description": "Shipping goods by air from Vietnam to countries worldwide."
+      },
+      {
+        "id": 2,
+        "title": "Delivery service",
+        "description": "Providing door-to-door cargo pickup and delivery services."
+      },
+      {
+        "id": 3,
+        "title": "Warehousing service",
+        "description": "Offering storage and distribution solutions for goods."
+      }
+    ]
+  },
+  "dichvukhobaivaphanphoi": {
+    "title": "WAREHOUSE AND DISTRIBUTION SERVICES",
+    "services": [
+      {
+        "id": 1,
+        "title": "WAREHOUSE SERVICES OVERVIEW",
+        "description": "Providing door-to-door cargo delivery services."
+      },
+      {
+        "id": 2,
+        "title": "WAREHOUSING SERVICES",
+        "description": "Offering storage and distribution solutions for goods."
+      },
+      {
+        "id": 3,
+        "title": "DANGEROUS GOODS",
+        "description": "Providing specialized storage and distribution for hazardous materials."
+      }
+    ]
+  },
+  "vantainoidia": {
+    "title": "DOMESTIC TRANSPORTATION",
+    "services": [
+      {
+        "id": 1,
+        "title": "DOMESTIC TRANSPORTATION OVERVIEW",
+        "description": "Providing door-to-door cargo delivery services nationwide."
+      }
+    ]
+  },
+  "haiquan": {
+    "title": "CUSTOMS SERVICES",
+    "services": [
+      {
+        "id": 1,
+        "title": "CUSTOMS SERVICES OVERVIEW",
+        "description": "Providing comprehensive customs clearance services."
+      },
+      {
+        "id": 2,
+        "description": "Professional customs brokerage and documentation services."
+      },
+      {
+        "id": 3,
+        "title": "DANGEROUS GOODS CLEARANCE",
+        "description": "Specialized customs handling for hazardous materials."
+      }
+    ]
   },
   "lien_he": {
     "title": "KIM HAO VIET NAM TRANSPORT TRADING COMPANY LIMITED",

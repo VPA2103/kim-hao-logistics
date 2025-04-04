@@ -1,19 +1,61 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Head from "next/head";
 import bannerImage from "../../../public/filemanager/userfiles/hang-k.png";
 import dichvuhangduan from "../../../public/filemanager/userfiles/hang-ly-xach-tay.jpg";
 import tongquanvanchuyen from "../../../public/filemanager/userfiles/hang-k.png";
 import hangnguyhiem from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+import { useTranslation } from "react-i18next";
+
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface AirFreightContent {
+  title: string;
+  services: Service[];
+}
+
 
 const WaterTransportPage = () => {
+
+  const {t } = useTranslation();
+
+  const airFreightData = t("vantaihangkhong", {
+    returnObjects: true,
+  }) as AirFreightContent;
+
+  // Ensure we have the expected structure
+  const content: AirFreightContent = airFreightData?.services
+    ? airFreightData
+    : {
+        title: "VẬN TẢI HÀNG KHÔNG",
+        services: [],
+      };
+
+
+  const serviceImages: Record<number, StaticImageData> = {
+    1: dichvuhangduan,
+    2: tongquanvanchuyen,
+    3: hangnguyhiem,
+  };
+
+  // Link mapping based on service ID
+  const serviceLinks: Record<number, string> = {
+    1: "/hanh-ly-xach-tay",
+    2: "/dich-vu-van-tai-hang-khong",
+    3: "/hang-nguy-hiem",
+  };
+
   return (
     <>
       <Head>
         <title>
-          Vận tải đường thủy - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo
+          Vận tải hàng không - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo
         </title>
         <meta
           name="description"
@@ -56,70 +98,31 @@ const WaterTransportPage = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">VẬN TẢI ĐƯỜNG HÀNG KHÔNG</h1>
+            <h1 className="section-title-main">{t("vantaihangkhong.title")}</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/hanh-ly-xach-tay" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={dichvuhangduan}
-                    alt="Dịch vụ hàng dự án"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>HÀNH LÝ XÁCH TAY</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
-
-            {/* Service 2 */}
-            <div className="service-card">
-              <a
-                href="/dich-vu-van-tai-hang-khong"
-                className="service-link"
-              >
-                <div className="image-container">
-                  <Image
-                    src={tongquanvanchuyen}
-                    alt="Tổng quan dịch vụ vận tải đường thủy"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>TỔNG QUAN DỊCH VỤ VẬN TẢI HÀNG KHÔNG</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
-
-            {/* Service 3 */}
-            <div className="service-card">
-              <a href="/hang-nguy-hiem" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hangnguyhiem}
-                    alt="Hàng nguy hiểm"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>HÀNG NGUY HIỂM</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+            {content.services.map((service) => (
+              <div className="service-card" key={service.id}>
+                <a href={serviceLinks[service.id]} className="service-link">
+                  <div className="image-container">
+                    <Image
+                      src={serviceImages[service.id]}
+                      alt={service.title}
+                      fill
+                      className="service-image"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="service-content">
+                    <h2>{service.title}</h2>
+                    <p>{service.description}</p>
+                    <div className="divider"></div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </main>

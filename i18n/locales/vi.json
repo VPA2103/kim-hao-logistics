@@ -299,6 +299,76 @@
       }
     }
   },
+  "vantaihangkhong": {
+    "title": "VẬN TẢI HÀNG KHÔNG",
+    "services": [
+      {
+        "id":1,
+        "title": "HÀNH LÝ XÁCH TAY",
+        "description": "Vận chuyển hàng hóa bằng đường hàng không từ Việt Nam đi các nước trên thế giới."
+      },
+      {
+        "id":2,
+        "title": "TỔNG QUAN DỊCH VỤ VẬN TẢI HÀNG KHÔNG",
+        "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
+      },
+      {
+        "id":3,
+        "title": "HÀNG NGUY HIỂM",
+        "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
+      }
+    ]
+  },
+  "dichvukhobaivaphanphoi": {
+    "title": "DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI",
+    "services": [
+      {
+        "id":1,
+        "title": "TỔNG QUAN DỊCH VỤ KHO BÃI",
+        "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
+      },
+      {
+        "id":2,
+        "title": "DỊCH VỤ KHO BÃI",
+        "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
+      },
+      {
+        "id":3,
+        "title": "HÀNG NGUY HIỂM",
+        "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
+      }
+    ]
+  },
+  "vantainoidia": {
+    "title": "VẬN TẢI NỘI ĐỊA",
+    "services": [
+      {
+        "id":1,
+        "title": "TỔNG QUAN DỊCH VỤ VẬN TẢI NỘI ĐỊA",
+        "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
+      }
+    ]
+  },
+  "haiquan": {
+    "title": "DỊCH VỤ HẢI QUAN",
+    "services": [
+      {
+        "id":1,
+        "title": "TỔNG QUAN DỊCH VỤ HẢI QUAN",
+        "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
+      },
+      {
+        "id":2,
+        "title": "DỊCH VỤ HẢI QUAN",
+        "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
+      },
+      {
+        "id":3,
+        "title": "HÀNG NGUY HIỂM",
+        "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
+      }
+    ]
+  },
   "lien_he": {
     "title": "Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM",
     "contact": {

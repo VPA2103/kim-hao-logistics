@@ -1,28 +1,69 @@
 "use client";
 
 import React from "react";
+import { StaticImageData } from "next/image";
 import bannerImage from "../../../public/filemanager/userfiles/kho.png";
 import Image from "next/image";
-
-// Import images for services
 import hanhLyImage from "../../../public/filemanager/userfiles/photo-1586528116311-ad8dd3c8310d-360x.jpg";
 import vanTaiImage from "../../../public/filemanager/userfiles/pasted image 0-360x.png";
 import nguyHiemImage from "../../../public/filemanager/userfiles/63cfd5064555165b4efc44bb_pick-pack-ship-workflow(1)-360x.jpg";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
-const AirTransportSection = () => {
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+}
+
+interface WarehouseContent {
+  title: string;
+  services: Service[];
+}
+
+const WarehouseSection = () => {
+  const { t } = useTranslation();
+
+  // Get the translated content with proper typing
+  const warehouseData = t("dichvukhobaivaphanphoi", {
+    returnObjects: true,
+  }) as WarehouseContent;
+
+  // Provide fallback content if needed
+  const content: WarehouseContent = warehouseData?.services
+    ? warehouseData
+    : {
+        title: "DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI",
+        services: [],
+      };
+
+  // Image mapping based on service ID
+  const serviceImages: Record<number, StaticImageData> = {
+    1: hanhLyImage,
+    2: vanTaiImage,
+    3: nguyHiemImage,
+  };
+
+  // Link mapping based on service ID
+  const serviceLinks: Record<number, string> = {
+    1: "/khach-hang-scanwell",
+    2: "/kho-ngoai-quan-kho-thuong",
+    3: "/phan-loai-va-dong-goi",
+  };
+
   return (
     <>
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
+          <div className="banner" id="banner-warehouse">
             <div className="banner-image-container">
               <Image
                 src={bannerImage}
-                alt="Banner vận tải đường thủy"
+                alt={`Banner ${content.title}`}
                 className="banner-image"
                 priority
+                fill
                 style={{ objectFit: "contain" }}
               />
             </div>
@@ -35,67 +76,31 @@ const AirTransportSection = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">DỊCH VỤ KHO VÀ BÃI PHỐI</h1>
+            <h1 className="section-title-main">{content.title}</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/khach-hang-scanwell" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>KHÁCH HÀNG KIM HẢO</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
-
-            {/* Service 2 */}
-            <div className="service-card">
-              <Link href="/kho-ngoai-quan-kho-thuong" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={vanTaiImage}
-                    alt="Tổng quan dịch vụ vận tải hàng không"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>TỔNG QUAN DỊCH VỤ KHO BÃI</h2>
-                  <div className="divider"></div>
-                </div>
-              </Link>
-            </div>
-
-            {/* Service 3 */}
-            <div className="service-card">
-              <a href="/phan-loai-va-dong-goi" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={nguyHiemImage}
-                    alt="Hàng nguy hiểm"
-                    width={400}
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>PHÂN LOẠI VÀ ĐÓNG GÓI</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+            {content.services.map((service: Service) => (
+              <div className="service-card" key={service.id}>
+                <Link href={serviceLinks[service.id]} className="service-link">
+                  <div className="image-container">
+                    <Image
+                      src={serviceImages[service.id]}
+                      alt={service.title}
+                      fill
+                      className="service-image"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="service-content">
+                    <h2>{service.title}</h2>
+                    <p>{service.description}</p>
+                    <div className="divider"></div>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </main>
@@ -114,7 +119,7 @@ const AirTransportSection = () => {
           width: 100%;
           height: 550px;
           overflow: hidden;
-          background-color: #f5f5f5; /* Fallback background */
+          background-color: #f5f5f5;
         }
 
         .banner-image-container {
@@ -172,7 +177,7 @@ const AirTransportSection = () => {
           border-radius: 8px;
           overflow: hidden;
           transition: all 0.3s ease;
-          background-color: #f5f5f5; /* Background for image container */
+          background-color: #f5f5f5;
         }
 
         .service-card:hover {
@@ -189,7 +194,7 @@ const AirTransportSection = () => {
         .image-container {
           position: relative;
           width: 100%;
-          height: 250px; /* Fixed height for service images */
+          height: 250px;
           overflow: hidden;
         }
 
@@ -205,6 +210,11 @@ const AirTransportSection = () => {
         .service-content h2 {
           margin: 0 0 15px;
           font-size: 1.25rem;
+        }
+
+        .service-content p {
+          margin: 0 0 15px;
+          color: #666;
         }
 
         .divider {
@@ -227,7 +237,7 @@ const AirTransportSection = () => {
           }
 
           .image-container {
-            height: 300px; /* Larger height on desktop */
+            height: 300px;
           }
         }
       `}</style>
@@ -235,4 +245,4 @@ const AirTransportSection = () => {
   );
 };
 
-export default AirTransportSection;
+export default WarehouseSection;

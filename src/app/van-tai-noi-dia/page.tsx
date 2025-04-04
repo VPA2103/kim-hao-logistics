@@ -1,47 +1,86 @@
 "use client";
 
 import React from "react";
+import { StaticImageData } from "next/image";
 import bannerImage from "../../../public/filemanager/userfiles/vt-noidia.png";
 import Image from "next/image";
+import inlandImage from "../../../public/filemanager/userfiles/INLAND 5-360x.png";
+import { useTranslation } from "react-i18next";
 
-// Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/INLAND 5-360x.png";
-// import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+}
 
-const AirTransportSection = () => {
+interface TransportContent {
+  title: string;
+  services: Service[];
+}
+
+const InlandTransportSection = () => {
+  const { t } = useTranslation();
+
+  // Get the translated content with proper typing
+  const transportData = t("vantainoidia", {
+    returnObjects: true,
+  }) as TransportContent;
+
+  // Provide fallback content if needed
+  const content: TransportContent = transportData?.services
+    ? transportData
+    : {
+        title: "VẬN TẢI NỘI ĐỊA",
+        services: [
+          {
+            id: 1,
+            title: "TỔNG QUAN DỊCH VỤ VẬN TẢI NỘI ĐỊA",
+            description: "Cung cấp dịch vụ giao nhận hàng hóa tận nơi.",
+          },
+        ],
+      };
+
+  // Image mapping based on service ID
+  const serviceImages: Record<number, StaticImageData> = {
+    1: inlandImage,
+  };
+
+  // Link mapping based on service ID
+  const serviceLinks: Record<number, string> = {
+    1: "/van-tai-noi-dia/blog",
+  };
+
   return (
     <>
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
+          <div className="banner" id="banner-inland-transport">
             <div
               className="banner-image-container"
               style={{
                 position: "relative",
                 width: "100%",
-                height: "100vh" /* Full viewport height */,
-                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
+                height: "100vh",
+                minHeight: "600px",
                 overflow: "hidden",
               }}
             >
               <Image
                 src={bannerImage}
-                alt="Banner vận tải đường thủy"
-                fill /* Tự động lấp đầy container */
+                alt={`${content.title} Banner`}
+                fill
                 priority
                 className="banner-image"
                 style={{
-                  objectFit: "cover" /* Phủ kín container */,
-                  objectPosition: "center" /* Căn giữa hình */,
+                  objectFit: "cover",
+                  objectPosition: "center",
                   width: "100%",
                   height: "100%",
                 }}
-                quality={100} /* Chất lượng hình ảnh tốt nhất */
-                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
+                quality={100}
+                sizes="100vw"
               />
-              {/* Có thể thêm overlay hoặc text nếu cần */}
               <div
                 style={{
                   position: "absolute",
@@ -49,42 +88,39 @@ const AirTransportSection = () => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
+                  backgroundColor: "rgba(0,0,0,0.3)",
                 }}
               ></div>
-            </div>
-            <div className="banner-content">
-              <div className="text-box">
-                <div className="text-content"></div>
-              </div>
             </div>
           </div>
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">VẬN TẢI NỘI ĐỊA</h1>
+            <h1 className="section-title-main">{content.title}</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/van-tai-noi-dia/blog" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>TỔNG QUAN VẬN TẢI NỘI ĐỊA</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+            {content.services.map((service: Service) => (
+              <div className="service-card" key={service.id}>
+                <a href={serviceLinks[service.id]} className="service-link">
+                  <div className="image-container">
+                    <Image
+                      src={serviceImages[service.id]}
+                      alt={service.title}
+                      fill
+                      className="service-image"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="service-content">
+                    <h2>{service.title}</h2>
+                    <p>{service.description}</p>
+                    <div className="divider"></div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </main>
@@ -224,4 +260,4 @@ const AirTransportSection = () => {
   );
 };
 
-export default AirTransportSection;
+export default InlandTransportSection;

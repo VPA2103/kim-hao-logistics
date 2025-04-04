@@ -1,63 +1,112 @@
 "use client";
 
 import React from "react";
+import { StaticImageData } from "next/image";
 import bannerImage from "../../../public/filemanager/userfiles/hai-quan.png";
 import Image from "next/image";
+import customsImage from "../../../public/filemanager/userfiles/Customs 5-360x.png";
+import { useTranslation } from "react-i18next";
 
-// Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/Customs 5-360x.png";
-// import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
-// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+}
 
-const AirTransportSection = () => {
+interface CustomsContent {
+  title: string;
+  services: Service[];
+}
+
+const CustomsServicePage = () => {
+  const { t } = useTranslation();
+
+  // Get the translated content with proper typing
+  const customsData = t("haiquan", { returnObjects: true }) as CustomsContent;
+
+  // Provide fallback content if needed
+  const content: CustomsContent = customsData?.services
+    ? customsData
+    : {
+        title: "DỊCH VỤ HẢI QUAN",
+        services: [
+          {
+            id: 1,
+            title: "TỔNG QUAN DỊCH VỤ HẢI QUAN",
+            description: "Cung cấp dịch vụ giao nhận hàng hóa tận nơi.",
+          },
+          {
+            id: 2,
+            title: "DỊCH VỤ HẢI QUAN",
+            description: "Cung cấp dịch vụ lưu kho và phân phối hàng hóa.",
+          },
+          {
+            id: 3,
+            title: "HÀNG NGUY HIỂM",
+            description: "Cung cấp dịch vụ lưu kho và phân phối hàng hóa.",
+          },
+        ],
+      };
+
+  // Image mapping based on service ID
+  const serviceImages: Record<number, StaticImageData> = {
+    1: customsImage,
+    2: customsImage, // Using same image for now
+    3: customsImage, // Using same image for now
+  };
+
+  // Link mapping based on service ID
+  const serviceLinks: Record<number, string> = {
+    1: "/hai-quan/blog",
+    2: "/hai-quan/dich-vu",
+    3: "/hai-quan/hang-nguy-hiem",
+  };
+
   return (
     <>
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
+          <div className="banner" id="banner-customs">
             <div className="banner-image-container">
               <Image
                 src={bannerImage}
-                alt="Banner vận tải đường thủy"
-       
-                className="banner-image"
+                alt={`${content.title} Banner`}
+                fill
                 priority
-                style={{ objectFit: "contain" }}
+                className="banner-image"
+                style={{ objectFit: "cover" }}
               />
-            </div>
-            <div className="banner-content">
-              <div className="text-box">
-                <div className="text-content"></div>
-              </div>
             </div>
           </div>
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">HẢI QUAN</h1>
+            <h1 className="section-title-main">{content.title}</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/hai-quan/blog" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>TỔNG QUAN DỊCH VỤ HẢI QUAN</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+            {content.services.map((service: Service) => (
+              <div className="service-card" key={service.id}>
+                <a href={serviceLinks[service.id]} className="service-link">
+                  <div className="image-container">
+                    <Image
+                      src={serviceImages[service.id]}
+                      alt={service.title}
+                      fill
+                      className="service-image"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="service-content">
+                    <h2>{service.title}</h2>
+                    <p>{service.description}</p>
+                    <div className="divider"></div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </main>
@@ -197,4 +246,4 @@ const AirTransportSection = () => {
   );
 };
 
-export default AirTransportSection;
+export default CustomsServicePage;
