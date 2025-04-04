@@ -1,8 +1,4 @@
 module.exports = {
-  i18n: {
-    locales: ['en', 'vi'],
-    defaultLocale: 'vi',
-  },
   images: {
     remotePatterns: [
       {
@@ -19,7 +15,11 @@ module.exports = {
         '@/*': ['./src/*']
       }
     },
-    appDir: true,
+    reactRoot: true,
+    concurrentFeatures: true
   },
-  // output: 'export',
+  onDemandEntries: {
+    maxInactiveAge: 1000 * 60 * 60,
+    pagesBufferLength: 5
+  }
 }

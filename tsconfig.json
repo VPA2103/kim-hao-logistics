@@ -20,7 +20,7 @@
       "@styles/*": ["./src/styles/*"],
       "@/*": ["./src/*"] // Thêm nếu cần
     },
-    "types": ["next", "react", "react-dom", "node"], // Thêm type definitions
+    "types": ["next", "react", "react-dom", "node","next/types", "next-intl"], // Thêm type definitions
     "plugins": [{ "name": "next" }],
     "forceConsistentCasingInFileNames": true, // Thêm để tránh lỗi case-sensitive
     "noUnusedLocals": true, // Bật cảnh báo code không dùng

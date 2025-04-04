@@ -34,6 +34,7 @@ export default function Home() {
   if (!t) {
     return <div>Loading...</div>; // Hoặc bất kỳ UI loading nào bạn muốn
   }
+  console.log(services); 
 
   return (
     <>
@@ -191,17 +192,6 @@ export default function Home() {
                       <strong>MANAGEMENT SYSTEM</strong>
                     </span>
                   </h2>
-                  <p
-                    style={{
-                      fontSize: "1.1rem",
-                      maxWidth: "800px",
-                      margin: "20px auto 0",
-                      color: "#555",
-                    }}
-                  >
-                    Streamline your business operations with our comprehensive
-                    management solution
-                  </p>
                 </div>
 
                 <div className="slider-container">

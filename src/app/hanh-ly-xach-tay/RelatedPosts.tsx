@@ -1,4 +1,5 @@
-// src/app/van-tai-hang-khong/RelatedPosts.tsx
+
+"use client";// src/app/van-tai-hang-khong/RelatedPosts.tsx
 import React from "react";
 
 const RelatedPosts = () => {

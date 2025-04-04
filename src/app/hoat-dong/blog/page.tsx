@@ -1,14 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import image1 from '../../../../image/LP__5880.jpg'
+import image1 from "../../../../image/LP__5880.jpg";
 import image2 from "../../../../image/LP__5824.jpg";
 import image3 from "../../../../image/Blank 4 Grids Collage (6).png";
 import image4 from "../../../../image/Blank 4 Grids Collage (3).png";
 import image5 from "../../../../image/Blank 4 Grids Collage (4).png";
 import image6 from "../../../../image/Blank 4 Grids Collage.png";
-
-
-
 
 const NewYearParty2025 = () => {
   return (

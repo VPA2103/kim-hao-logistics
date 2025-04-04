@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import RelatedPosts from "./RelatedPosts";
 import Image from "next/image";
