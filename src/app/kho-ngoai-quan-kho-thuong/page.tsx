@@ -3,8 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { useTranslation } from "react-i18next";
 
 const KhoNgoaiThuong = () => {
+
+   const { t } = useTranslation();
      
   return (
     <main className="pt-20 pb-10 bg-gray-100 flex justify-center">
@@ -17,11 +20,11 @@ const KhoNgoaiThuong = () => {
                 href="/dich-vu-kho-bai-va-phan-phoi"
                 className="inline-block px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
               >
-                DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI
+                {t("khoBai.category")}
               </Link>
             </div>
             <h1 className="text-4xl font-bold text-gray-800">
-              TỔNG QUAN DỊCH VỤ KHO BÃI
+              {t("khoBai.title")}
             </h1>
             <div className="mt-4 border-b-2 border-gray-300"></div>
           </header>
@@ -39,13 +42,13 @@ const KhoNgoaiThuong = () => {
               className="w-full h-auto object-contain"
             />
             <h2 className="text-xl font-semibold text-blue-600 text-center">
-              VÌ SAO CHỌN CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO?
+              {t("khoBai.sections.whyChooseUs.title")}
             </h2>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Mạng lưới kho bãi đặt tại trung tâm các khu công nghiệp.</li>
-              <li>Hệ thống giám sát CCTV và phòng cháy chữa cháy hiện đại.</li>
-              <li>Ứng dụng công nghệ trong quản lý và vận hành kho.</li>
-              <li>Đầy đủ điều kiện bảo quản hàng hóa như nhiệt độ, độ ẩm.</li>
+              <li>{t("khoBai.sections.whyChooseUs.benefits.0")}</li>
+              <li>{t("khoBai.sections.whyChooseUs.benefits.1")}</li>
+              <li>{t("khoBai.sections.whyChooseUs.benefits.2")}</li>
+              <li>{t("khoBai.sections.whyChooseUs.benefits.3")}</li>
             </ul>
             <Image
               src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/4.png"
@@ -55,7 +58,7 @@ const KhoNgoaiThuong = () => {
               className="w-full h-auto object-contain"
             />
             <h2 className="text-xl font-semibold text-blue-600 text-center">
-              HỆ THỐNG QUẢN LÝ KHO
+              {t("khoBai.sections.managementSystem.title")}
             </h2>
             <Image
               src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/2.jpg"
@@ -65,7 +68,7 @@ const KhoNgoaiThuong = () => {
               className="w-full h-auto object-contain"
             />
             <h2 className="text-xl font-semibold text-blue-600 text-center">
-              HÌNH ẢNH KHO
+              {t("khoBai.sections.warehouseImage2.title")}
             </h2>
             <Image
               src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/3.jpg"

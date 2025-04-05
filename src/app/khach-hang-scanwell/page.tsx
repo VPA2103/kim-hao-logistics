@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import RelatedPosts from "../hanh-ly-xach-tay/RelatedPosts";
+import { useTranslation } from "react-i18next";
 
 // interface SocialPlatform {
 //   name: string;
@@ -19,6 +20,7 @@ import RelatedPosts from "../hanh-ly-xach-tay/RelatedPosts";
 // }
 
 const DichVuHangDuAn = () => {
+  const { t } = useTranslation();
   const imageUrls = [
     "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/WH20.jpg",
     "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/WH21.jpg",
@@ -46,11 +48,11 @@ const DichVuHangDuAn = () => {
                     href="/dich-vu-kho-bai-va-phan-phoi"
                     className="inline-block px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
                   >
-                    DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI
+                    {t("khach-hang.title")}
                   </Link>
                 </div>
                 <h1 className="text-4xl font-bold text-gray-800">
-                  KHÁCH HÀNG KIM HẢO
+                  {t("khach-hang.description")}
                 </h1>
                 <div className="mt-4 border-b-2 border-gray-300"></div>
               </header>

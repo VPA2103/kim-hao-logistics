@@ -6,10 +6,25 @@ import Image from "next/image";
 
 // Import images for services
 import hanhLyImage from "../../../public/filemanager/userfiles/obori2-360x.jpg";
+import { useTranslation } from "react-i18next";
 // import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
 // import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
+interface NewsItem {
+  id: number;
+  title: string;
+}
+
+// interface NewsContent {
+//   title: string;
+//   news: NewsItem[];
+// }
+
 const AirTransportSection = () => {
+  const {t} = useTranslation();
+
+
+
   return (
     <>
       <main id="main">
@@ -62,29 +77,32 @@ const AirTransportSection = () => {
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">TIN TỨC</h1>
+            <h1 className="section-title-main">{t("new-kh.title")}</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/tin-tuc/blog" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
+            {(t("new-kh.news", { returnObjects: true }) as NewsItem[]).map(
+              (item) => (
+                <div className="service-card" key={item.id}>
+                  <a href="/tin-tuc/blog" className="service-link">
+                    <div className="image-container">
+                      <Image
+                        src={hanhLyImage}
+                        alt={item.title}
+                        fill
+                        className="service-image"
+                        style={{ objectFit: "contain" }}
+                      />
+                    </div>
+                    <div className="service-content">
+                      <h2>{item.title}</h2>
+                      <div className="divider"></div>
+                    </div>
+                  </a>
                 </div>
-                <div className="service-content">
-                  <h2>HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+              )
+            )}
           </div>
         </div>
       </main>

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -74,66 +74,67 @@ const DichVuHangDuAn = () => {
             </article>
           </div>
 
-          <aside className="lg:col-span-1">
+          {/* <aside className="lg:col-span-1">
             <RelatedPosts />
-          </aside>
+          </aside> */}
         </div>
       </div>
     </main>
   );
 };
 
-const RelatedPosts = () => {
-  const { t } = useTranslation("common");
-  const posts = [
-    {
-      title: t("services.seaTransport"),
-      url: "/van-tai-duong-bien",
-      image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
-    },
-    {
-      title: t("services.airTransport"),
-      url: "/van-tai-hang-khong",
-      image: "/filemanager/userfiles/hang-nguy-hiem.jpg",
-    },
-    {
-      title: t("services.multimodalTransport"),
-      url: "/van-tai-da-phuong-thuc",
-      image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
-    },
-  ];
+// const RelatedPosts = () => {
+//   const { t } = useTranslation("common");
+//   const posts = [
+//     {
+//       title: t("services.seaTransport"),
+//       url: "/van-tai-duong-bien",
+//       image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
+//     },
+//     {
+//       title: t("services.airTransport"),
+//       url: "/van-tai-hang-khong",
+//       image: "/filemanager/userfiles/hang-nguy-hiem.jpg",
+//     },
+//     {
+//       title: t("services.multimodalTransport"),
+//       url: "/van-tai-da-phuong-thuc",
+//       image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
+//     },
+//   ];
 
-  return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h3 className="text-xl font-bold text-blue-800 mb-4">
-        {t("projectCargo.relatedServices")}
-      </h3>
-      <div className="space-y-4">
-        {posts.map((post, index) => (
-          <Link
-            key={index}
-            href={post.url}
-            className="flex items-center space-x-4 group hover:bg-gray-50 p-3 rounded-lg transition"
-          >
-            <div className="flex-shrink-0 w-20 h-16 relative overflow-hidden rounded">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <span className="font-medium text-gray-700 group-hover:text-blue-600">
-              {post.title}
-            </span>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="bg-white rounded-lg shadow-lg p-6">
+//       <h3 className="text-xl font-bold text-blue-800 mb-4">
+//         {t("projectCargo.relatedServices")}
+//       </h3>
+//       <div className="space-y-4">
+//         {posts.map((post, index) => (
+//           <Link
+//             key={index}
+//             href={post.url}
+//             className="flex items-center space-x-4 group hover:bg-gray-50 p-3 rounded-lg transition"
+//           >
+//             <div className="flex-shrink-0 w-20 h-16 relative overflow-hidden rounded">
+//               <Image
+//                 src={post.image}
+//                 alt={post.title}
+//                 fill
+//                 className="object-cover"
+//               />
+//             </div>
+//             <span className="font-medium text-gray-700 group-hover:text-blue-600">
+//               {post.title}
+//             </span>
+//           </Link>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
 // Social URLs configuration
+
 const socialUrls = {
   whatsapp: "whatsapp://send?text={title} - {url}",
   facebook: "https://www.facebook.com/sharer.php?u={url}",

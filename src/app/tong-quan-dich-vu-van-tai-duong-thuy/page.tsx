@@ -90,48 +90,48 @@ const HangDuAn = () => {
             </article>
           </div>
 
-          <aside className="bg-white shadow rounded-lg p-6">
+          {/* <aside className="bg-white shadow rounded-lg p-6">
             <RelatedPosts />
-          </aside>
+          </aside> */}
         </div>
       </div>
     </main>
   );
 };
 
-const RelatedPosts = () => {
-  const { t } = useTranslation("specialTransport");
+// const RelatedPosts = () => {
+//   const { t } = useTranslation("specialTransport");
 
-  const posts = Array(3).fill({
-    title: t("relatedPosts.postTitle"),
-    url: "/hang-nguy-hiem",
-    image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
-  });
+//   const posts = Array(3).fill({
+//     title: t("relatedPosts.postTitle"),
+//     url: "/hang-nguy-hiem",
+//     image: "/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg",
+//   });
 
-  return (
-    <div>
-      <h5 className="text-lg font-bold mb-4">{t("relatedPosts.title")}</h5>
-      <div className="space-y-4">
-        {posts.map((post, index) => (
-          <Link
-            key={index}
-            href={post.url}
-            className="flex items-center gap-4 bg-gray-100 rounded p-4 shadow-md hover:bg-gray-200 transition"
-          >
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={80}
-              height={60}
-              className="rounded object-cover"
-            />
-            <span className="font-medium text-gray-800">{post.title}</span>
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h5 className="text-lg font-bold mb-4">{t("relatedPosts.title")}</h5>
+//       <div className="space-y-4">
+//         {posts.map((post, index) => (
+//           <Link
+//             key={index}
+//             href={post.url}
+//             className="flex items-center gap-4 bg-gray-100 rounded p-4 shadow-md hover:bg-gray-200 transition"
+//           >
+//             <Image
+//               src={post.image}
+//               alt={post.title}
+//               width={80}
+//               height={60}
+//               className="rounded object-cover"
+//             />
+//             <span className="font-medium text-gray-800">{post.title}</span>
+//           </Link>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
 // SocialButton Component
 const SocialButton = ({ platform, url, title }: SocialButtonProps) => {

@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
-import RelatedPosts from "./RelatedPosts";
+// import RelatedPosts from "./RelatedPosts";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const BlogPost = () => {
+  const { t } = useTranslation();
   return (
     <main id="main" className="bg-gray-50 pt-20 pb-8">
       <div id="content" className="max-w-4xl mx-auto px-4">
@@ -36,60 +38,41 @@ const BlogPost = () => {
                   <div id="main-detail-body" className="content">
                     <p>
                       <Image
-                        src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg"
-                        alt="Vận chuyển hàng nguy hiểm"
-                        width={850} // You can specify the width
-                        height={442} // You can specify the height
+                        src={t("hanh-ly.images.0")}
+                        alt={t("hanh-ly.imageAlts.0")}
+                        width={850}
+                        height={442}
                         className="rounded-lg shadow-md mt-4"
                       />
                     </p>
                     <p className="mt-4 font-bold text-lg">
-                      Dịch vụ chuyển phát nhanh, dịch vụ xách tay cho các lô
-                      hàng mang tính chất cấp bách về thời gian.
+                      {t("hanh-ly.introText")}
                     </p>
-                    <p className="mt-4">
-                      Hành lý xách tay – Chuyển phát nhanh trên máy bay là dịch
-                      vụ Scanwell cung cấp với đội ngũ nhân viên đặc biệt và quy
-                      trình nhanh chóng hỗ trợ vận chuyển đúng nghĩa đen XÁCH
-                      TAY hàng hóa của bạn lên máy bay. Dịch vụ này giúp đáp ứng
-                      cho các lô hàng cấp bách hoặc giá trị cao có nhu cầu vận
-                      chuyển bảo hộ hoặc nhanh chóng trong ngày hoặc ít nhất qua
-                      ngày hôm sau tùy khu vực vận chuyển.
-                    </p>
+                    <p className="mt-4">{t("hanh-ly.description")}</p>
                     <p className="mt-4">
                       <Image
-                        src="https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg"
-                        alt="Vận chuyển hàng nguy hiểm"
-                        width={850} // You can specify the width
-                        height={442} // You can specify the height
+                        src={t("hanh-ly.images.1")}
+                        alt={t("hanh-ly.imageAlts.1")}
+                        width={850}
+                        height={442}
                         className="rounded-lg shadow-md mt-4"
                       />
                     </p>
                     <div className="space-y-2 mt-4 text-blue-600">
-                      <p>&gt;&gt; Dịch vụ 24/7/365</p>
-                      <p>
-                        &gt;&gt; Giao hàng trong cùng ngày hoặc ngày hôm sau tùy
-                        thuộc vào điểm đến
-                      </p>
-                      <p>&gt;&gt; Mua vé máy bay</p>
-                      <p>&gt;&gt; Tóm tắt thành viên nhóm được chọn</p>
-                      <p>&gt;&gt; Nhận hàng gửi hàng</p>
-                      <p>&gt;&gt; Thủ tục hải quan</p>
-                      <p>
-                        &gt;&gt; Giao hàng cá nhân cho người nhận hàng đã thỏa
-                        thuận
-                      </p>
-                      <p>&gt;&gt; Xác nhận giao hàng</p>
+                      {(t("hanh-ly.features", { returnObjects: true }) as string[]).map((feature: string, index: number) => (
+                        <p key={index}>&gt;&gt; {feature}</p>
+                      ))}
                     </div>
                     <h1 className="mt-8 text-center">
                       <a
-                        href="/lien-he"
+                        href={t("hanh-ly.cta.link")}
                         className="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-200"
                       >
-                        HÃY LIÊN HỆ CHÚNG TÔI NGAY!
+                        {t("hanh-ly.cta.text")}
                       </a>
                     </h1>
                   </div>
+
                   <div className="blog-share text-center mt-8">
                     <div className="is-divider my-4 border-t-2 border-gray-300" />
                     <div className="social-icons flex justify-center space-x-4">
@@ -144,9 +127,9 @@ const BlogPost = () => {
           </div>
 
           {/* Sidebar Section */}
-          <div className="md:w-1/3">
+          {/* <div className="md:w-1/3">
             <RelatedPosts />
-          </div>
+          </div> */}
         </div>
       </div>
     </main>

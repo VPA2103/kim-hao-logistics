@@ -303,17 +303,17 @@
     "title": "VẬN TẢI HÀNG KHÔNG",
     "services": [
       {
-        "id":1,
+        "id": 1,
         "title": "HÀNH LÝ XÁCH TAY",
         "description": "Vận chuyển hàng hóa bằng đường hàng không từ Việt Nam đi các nước trên thế giới."
       },
       {
-        "id":2,
+        "id": 2,
         "title": "TỔNG QUAN DỊCH VỤ VẬN TẢI HÀNG KHÔNG",
         "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
       },
       {
-        "id":3,
+        "id": 3,
         "title": "HÀNG NGUY HIỂM",
         "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
       }
@@ -323,18 +323,18 @@
     "title": "DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI",
     "services": [
       {
-        "id":1,
-        "title": "TỔNG QUAN DỊCH VỤ KHO BÃI",
+        "id": 1,
+        "title": "KHÁCH HÀNH KIM HẢO",
         "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
       },
       {
-        "id":2,
-        "title": "DỊCH VỤ KHO BÃI",
+        "id": 2,
+        "title": "TỔNG QUAN DỊCH VỤ KHO BÃI",
         "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
       },
       {
-        "id":3,
-        "title": "HÀNG NGUY HIỂM",
+        "id": 3,
+        "title": "PHÂN LOẠI VÀ ĐÓNG GÓI",
         "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
       }
     ]
@@ -343,7 +343,7 @@
     "title": "VẬN TẢI NỘI ĐỊA",
     "services": [
       {
-        "id":1,
+        "id": 1,
         "title": "TỔNG QUAN DỊCH VỤ VẬN TẢI NỘI ĐỊA",
         "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
       }
@@ -353,19 +353,63 @@
     "title": "DỊCH VỤ HẢI QUAN",
     "services": [
       {
-        "id":1,
+        "id": 1,
         "title": "TỔNG QUAN DỊCH VỤ HẢI QUAN",
         "description": "Cung cấp dịch vụ giao nhận hàng hóa tận nơi."
       },
       {
-        "id":2,
+        "id": 2,
         "title": "DỊCH VỤ HẢI QUAN",
         "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
       },
       {
-        "id":3,
+        "id": 3,
         "title": "HÀNG NGUY HIỂM",
         "description": "Cung cấp dịch vụ lưu kho và phân phối hàng hóa."
+      }
+    ]
+  },
+  "new-kh": {
+    "title": "TIN TỨC",
+    "news": [
+      {
+        "id": 1,
+        "title": "HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG"
+      }
+    ]
+  },
+  "news-activities": {
+    "title": "HOẠT ĐỘNG",
+    "activities": [
+      {
+        "id": 1,
+        "title": "TIỆC TÂN NIÊN KIM HẢO"
+      }
+    ]
+  },
+  "tuyen-dung": {
+    "title": "TUYỂN DỤNG",
+    "recruitments": [
+      {
+        "id": 1,
+        "title": "[HCM] Tuyển dụng sales Supervisor"
+      },
+      {
+        "id": 2,
+        "title": "[HCM] Tuyển dụng sales Executive"
+      }
+    ]
+  },
+  "news-recruitment": {
+    "title": "TUYỂN DỤNG",
+    "recruitments": [
+      {
+        "id": 1,
+        "title": "NHÂN VIÊN KINH DOANH"
+      },
+      {
+        "id": 2,
+        "title": "NHÂN VIÊN KINH DOANH"
       }
     ]
   },
@@ -424,5 +468,195 @@
         "submit": "Gửi"
       }
     }
+  },
+  "hanh-ly": {
+    "title": "HÀNH LÝ XÁCH TAY",
+    "images": [
+      "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg",
+      "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg"
+    ],
+    "imageAlts": ["Vận chuyển hàng nguy hiểm", "Vận chuyển hàng nguy hiểm"],
+    "introText": "Dịch vụ chuyển phát nhanh, dịch vụ xách tay cho các lô hàng mang tính chất cấp bách về thời gian.",
+    "description": "Hành lý xách tay – Chuyển phát nhanh trên máy bay là dịch vụ Kim Hảo cung cấp với đội ngũ nhân viên đặc biệt và quy trình nhanh chóng hỗ trợ vận chuyển đúng nghĩa đen XÁCH TAY hàng hóa của bạn lên máy bay. Dịch vụ này giúp đáp ứng cho các lô hàng cấp bách hoặc giá trị cao có nhu cầu vận chuyển bảo hộ hoặc nhanh chóng trong ngày hoặc ít nhất qua ngày hôm sau tùy khu vực vận chuyển.",
+    "features": [
+      "Dịch vụ 24/7/365",
+      "Giao hàng trong cùng ngày hoặc ngày hôm sau tùy thuộc vào điểm đến",
+      "Mua vé máy bay",
+      "Tóm tắt thành viên nhóm được chọn",
+      "Nhận hàng gửi hàng",
+      "Thủ tục hải quan",
+      "Giao hàng cá nhân cho người nhận hàng đã thỏa thuận",
+      "Xác nhận giao hàng"
+    ],
+    "cta": {
+      "text": "HÃY LIÊN HỆ CHÚNG TÔI NGAY!",
+      "link": "/lien-he"
+    }
+  },
+  "khach-hang": {
+    "title": "DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI",
+    "description": "KHÁCH HÀNG KIM HẢO"
+  },
+  "khoBai": {
+    "category": "DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI",
+    "title": "TỔNG QUAN DỊCH VỤ KHO BÃI",
+    "sections": {
+      "network": {
+        "title": "WAREHOUSE NETWORK",
+        "alt": "Warehouse Network"
+      },
+      "whyChooseUs": {
+        "title": "VÌ SAO CHỌN CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO?",
+        "benefits": [
+          "Mạng lưới kho bãi đặt tại trung tâm các khu công nghiệp",
+          "Hệ thống giám sát CCTV và phòng cháy chữa cháy hiện đại",
+          "Ứng dụng công nghệ trong quản lý và vận hành kho",
+          "Đầy đủ điều kiện bảo quản hàng hóa như nhiệt độ, độ ẩm"
+        ]
+      },
+      "warehouseImage1": {
+        "alt": "Kho Bãi"
+      },
+      "managementSystem": {
+        "title": "HỆ THỐNG QUẢN LÝ KHO",
+        "alt": "Hệ thống quản lý kho"
+      },
+      "warehouseImage2": {
+        "title": "HÌNH ẢNH KHO",
+        "alt": "Hình ảnh kho"
+      }
+    }
+  },
+  "phan-loai": {
+    "title": "PHÂN LOẠI VÀ ĐÓNG GÓI",
+    "title1": "ỨNG DỤNG HỆ THỐNG QUẢN LÝ KHO",
+    "title2": "SƠ ĐỒ DỊCH VỤ DC BYPASS",
+    "title3": "HỆ THỐNG KHO MIỀN NAM"
+  },
+  "vanTaiNoiDia": {
+    "category": "VẬN TẢI NỘI ĐỊA",
+    "title": "TỔNG QUAN VẬN TẢI NỘI ĐỊA",
+    "domesticTransport": {
+      "title": "DỊCH VỤ VẬN TẢI NỘI ĐỊA",
+      "image1": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%201.png",
+      "alt1": "Vận chuyển nội địa",
+      "image2": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%202.png",
+      "alt2": "Vận chuyển nội địa",
+      "services": [
+        {
+          "name": "Đầu kéo:",
+          "details": [
+            "Phục vụ liên tỉnh, bắc-trung-nam.",
+            "Hoạt động liên tục 24/7.",
+            "Trang bị hệ thống giám sát hàng hoá."
+          ]
+        },
+        {
+          "name": "Đường sắt:",
+          "details": [
+            "Kéo containers Nam-Trung-Bắc.",
+            "Tránh ùn tắc giao thông, cắt giảm các chi phí đường bộ."
+          ]
+        },
+        {
+          "name": "Xà lang:",
+          "details": [
+            "Thuận tiện giao thông vào các khu vực ven sông, biển như các tỉnh miền Tây."
+          ]
+        },
+        {
+          "name": "Xe van và xe bán tải (&lt;950kg):",
+          "details": [
+            "Phục vụ các mặt hàng dưới 1 tấn trong nội thành và các khu vực cấm tải."
+          ]
+        },
+        {
+          "name": "Xe 2 bánh:",
+          "details": [
+            "Vận chuyển các mặt hàng thương mại điện tử và chứng từ.",
+            "Dễ lưu thông vào các đường nhỏ, tránh kẹt xe."
+          ]
+        }
+      ]
+    },
+    "crossBorderTransport": {
+      "title": "DỊCH VỤ VẬN TẢI XUYÊN BIÊN GIỚI",
+      "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%203.png",
+      "alt": "Vận chuyển xuyên biên giới",
+      "services": [
+        {
+          "name": "Ga quốc tế:",
+          "details": [
+            "VIỆT NAM-TRUNG QUỐC (Bằng Tường, Quảng Tây, Nam Ninh, ...).",
+            "VIỆT NAM-TRUNG Á (Ulaanbaatar, Mongolia, ...).",
+            "VIỆT NAM-NGA (Vorsino, Moscow)."
+          ]
+        },
+        {
+          "name": "Đầu kéo quốc tế:",
+          "details": [
+            "VIỆT NAM - LÀO",
+            "VIỆT NAM - CAMPUCHIA",
+            "VIỆT NAM - TRUNG QUỐC"
+          ]
+        }
+      ]
+    },
+    "lastMileDelivery": {
+      "title": "GIAO HÀNG CHẶN CUỐI (LAST MILE DELIVERY)",
+      "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%204.png",
+      "alt": "Giao hàng chặn cuối"
+    }
+  },
+  "haiquan_blog": {
+    "title": "TỔNG QUAN DỊCH VỤ HẢI QUAN",
+    "description": "CHUYÊN DỊCH VỤ KHAI BÁO HẢI QUAN CHO CÁC MẶT HÀNG SAU"
+  },
+  "hoat-dong-KH": {
+    "category": "Tin tức",
+    "title": "HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG",
+    "headerImage": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORC.jpg",
+      "alt": "Hội thảo Một vành đai Một con đường"
+    },
+    "intro": [
+      "Trụ sở chính Scanwell Thượng Hải tự hào thông báo tham gia hội nghị về Một vành đai, Một con đường tại Thượng Hải. Mục đích chính của hội nghị này là diễn giải, phân tích và cung cấp các chiến lược hậu cần xung quanh Sáng kiến Một vành đai, Một con đường.",
+      "**Vậy Sáng kiến Một vành đai, Một con đường là gì?**"
+    ],
+    "mapImage": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORI.png",
+      "alt": "Sơ đồ Một vành đai Một con đường"
+    },
+    "oborExplanation": "Sáng kiến Một vành đai, Một con đường (OBOR) là chiến lược phát triển được Trung Quốc đưa ra vào năm 2013 nhằm kết nối châu Á, châu Phi và châu Âu thông qua mạng lưới các tuyến đường thương mại trên bộ và trên biển.",
+    "impactTitle": "Tác động kinh tế và địa chính trị",
+    "impacts": [
+      {
+        "title": "Ảnh hưởng gia tăng của Trung Quốc",
+        "content": "OBOR có thể dẫn đến gia tăng ảnh hưởng của Trung Quốc trong khu vực qua hỗ trợ cơ sở hạ tầng, tạo gánh nặng nợ."
+      },
+      {
+        "title": "Gia tăng thương mại",
+        "content": "OBOR mở rộng các tuyến thương mại giữa Trung Quốc và các nước tham gia, thúc đẩy thương mại và đầu tư."
+      },
+      {
+        "title": "Cải thiện cơ sở hạ tầng",
+        "content": "Việc xây dựng đường bộ, đường sắt, bến cảng, sân bay sẽ nâng cao kết nối giữa các quốc gia."
+      },
+      {
+        "title": "Tăng cường hợp tác",
+        "content": "OBOR đòi hỏi hợp tác chặt chẽ giữa các quốc gia tham gia, từ đó tạo sự ổn định trong khu vực."
+      }
+    ],
+    "howItWorksTitle": "Một vành đai Một con đường hoạt động như thế nào?",
+    "howItWorks": "OBOR bao gồm hai phần: Vành đai kinh tế Con đường Tơ lụa (trên bộ) và Con đường tơ lụa trên biển thế kỷ 21 (trên biển).",
+    "economicCorridors": [
+      "Cầu đất Á-Âu mới nối miền Tây Trung Quốc với miền Tây nước Nga",
+      "Hành lang Trung Quốc-Mông Cổ-Nga",
+      "Hành lang Trung Quốc-Trung Á-Tây Á",
+      "Hành lang Bán đảo Trung Quốc-Đông Dương",
+      "Hành lang Trung Quốc-Pakistan",
+      "Hành lang Bangladesh-Trung Quốc-Ấn Độ-Myanmar"
+    ],
+    "share": "CHIA SẺ BÀI VIẾT"
   }
 }

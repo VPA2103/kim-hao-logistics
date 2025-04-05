@@ -1,8 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const CustomsServiceComponent = () => {
+
+  const {t} = useTranslation()
+
+
+
   return (
     <main className="py-8 pt-20">
       <div className="max-w-7xl mx-auto">
@@ -17,7 +23,7 @@ const CustomsServiceComponent = () => {
                     </Link>
                   </h6>
                   <h1 className="text-3xl font-semibold text-gray-800">
-                    TỔNG QUAN DỊCH VỤ HẢI QUAN
+                    {t("haiquan_blog.title")}
                   </h1>
                   <div className="border-t-2 border-gray-300 my-4" />
                 </div>
@@ -33,7 +39,7 @@ const CustomsServiceComponent = () => {
                   />
                 </div>
                 <h2 className="mt-6 text-xl text-blue-600 underline text-center">
-                  CHUYÊN DỊCH VỤ KHAI BÁO HẢI QUAN CHO CÁC MẶT HÀNG SAU
+                  {t("haiquan_blog.description")}
                 </h2>
                 <div className="text-center mt-4">
                   <Image
@@ -53,38 +59,6 @@ const CustomsServiceComponent = () => {
                 </div>
               </div>
             </article>
-          </div>
-
-          <div className="post-sidebar">
-            <div className="widget-area">
-              <aside className="widget flatsome_recent_posts">
-                <h3 className="text-lg font-medium mb-2">Bài viết liên quan</h3>
-                <div className="border-t-2 border-gray-300 mb-4" />
-                <ul>
-                  <li>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 bg-gray-200 rounded-lg">
-                        <Image
-                          src="/public/filemanager/userfiles/Tommy/Customs5.png"
-                          alt="Related Post"
-                          width={64}
-                          height={64}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                      <div>
-                        <a
-                          href="/dich-vu-hai-quan.html"
-                          className="text-blue-600 font-semibold hover:underline"
-                        >
-                          TỔNG QUAN DỊCH VỤ HẢI QUAN
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </aside>
-            </div>
           </div>
         </div>
       </div>

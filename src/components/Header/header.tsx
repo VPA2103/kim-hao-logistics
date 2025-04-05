@@ -174,11 +174,10 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-4">
               <LanguageSwitcher />
-              
             </div>
 
             {/* Track & Trace */}
-            <TrackTraceButton/>
+            <TrackTraceButton />
 
             <button
               onClick={toggleMobileMenu}
@@ -251,17 +250,13 @@ const Header = () => {
                 </div>
               </div>
             ))}
-          </nav>
-
-          {/* Mobile Footer */}
-          <div className="border-t border-gray-200 p-4">
             <div className="flex justify-between items-center">
               <span className="text-blue-600 font-medium">
                 +84 028 3510 6866
               </span>
-              <LanguageSwitcher />
             </div>
-          </div>
+            <LanguageSwitcher />
+          </nav>
         </div>
       </div>
     </header>

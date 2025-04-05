@@ -1,47 +1,91 @@
 "use client";
 
 import React from "react";
+import { StaticImageData } from "next/image";
 import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 import Image from "next/image";
+import recruitment1Image from "../../../public/filemanager/userfiles/Sales Supervisor-360x.jpg";
+import recruitment2Image from "../../../public/filemanager/userfiles/dang-tin-tuyen-dung-360x.jpg";
+import { useTranslation } from "react-i18next";
 
-// Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/Sales Supervisor-360x.jpg";
-import vanTaiImage from "../../../public/filemanager/userfiles/dang-tin-tuyen-dung-360x.jpg";
-// import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
+interface Recruitment {
+  id: number;
+  title: string;
+}
 
-const AirTransportSection = () => {
+interface RecruitmentContent {
+  title: string;
+  recruitments: Recruitment[];
+}
+
+const RecruitmentSection = () => {
+  const { t } = useTranslation();
+
+  // Get the translated content with proper typing
+  const recruitmentData = t("tuyen-dung", {
+    returnObjects: true,
+  }) as RecruitmentContent;
+
+  // Provide fallback content if needed
+  const content: RecruitmentContent = recruitmentData?.recruitments
+    ? recruitmentData
+    : {
+        title: "TUYỂN DỤNG",
+        recruitments: [
+          {
+            id: 1,
+            title: "[HCM] Tuyển dụng sales Supervisor",
+          },
+          {
+            id: 2,
+            title: "[HCM] Tuyển dụng sales Executive",
+          },
+        ],
+      };
+
+  // Image mapping based on recruitment ID
+  const recruitmentImages: Record<number, StaticImageData> = {
+    1: recruitment1Image,
+    2: recruitment2Image,
+  };
+
+  // Link mapping based on recruitment ID
+  const recruitmentLinks: Record<number, string> = {
+    1: "/tuyen-dung/blog1",
+    2: "/tuyen-dung/blog2",
+  };
+
   return (
     <>
       <main id="main">
         <div id="content" role="main">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
+          <div className="banner" id="banner-recruitment">
             <div
               className="banner-image-container"
               style={{
                 position: "relative",
                 width: "100%",
-                height: "100vh" /* Full viewport height */,
-                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
+                height: "100vh",
+                minHeight: "600px",
                 overflow: "hidden",
               }}
             >
               <Image
                 src={bannerImage}
-                alt="Banner vận tải đường thủy"
-                fill /* Tự động lấp đầy container */
+                alt={`${content.title} Banner`}
+                fill
                 priority
                 className="banner-image"
                 style={{
-                  objectFit: "cover" /* Phủ kín container */,
-                  objectPosition: "center" /* Căn giữa hình */,
+                  objectFit: "cover",
+                  objectPosition: "center",
                   width: "100%",
                   height: "100%",
                 }}
-                quality={100} /* Chất lượng hình ảnh tốt nhất */
-                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
+                quality={100}
+                sizes="100vw"
               />
-              {/* Có thể thêm overlay hoặc text nếu cần */}
               <div
                 style={{
                   position: "absolute",
@@ -49,60 +93,41 @@ const AirTransportSection = () => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
+                  backgroundColor: "rgba(0,0,0,0.3)",
                 }}
               ></div>
-            </div>
-            <div className="banner-content">
-              <div className="text-box">
-                <div className="text-content"></div>
-              </div>
             </div>
           </div>
 
           {/* Section Title */}
           <div className="section-title-container">
-            <h1 className="section-title-main">TUYỂN DỤNG</h1>
+            <h1 className="section-title-main">{content.title}</h1>
           </div>
 
           {/* Services Grid */}
           <div className="services-grid">
-            {/* Service 1 */}
-            <div className="service-card">
-              <a href="/tuyen-dung/blog1" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={hanhLyImage}
-                    alt="Hành lý xách tay"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>[HCM] Tuyển dụng sales Supervisor</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
-
-            <div className="service-card">
-              <a href="/tuyen-dung/blog2" className="service-link">
-                <div className="image-container">
-                  <Image
-                    src={vanTaiImage}
-                    alt="Hành lý xách tay"
-                    fill
-                    className="service-image"
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div className="service-content">
-                  <h2>HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG</h2>
-                  <div className="divider"></div>
-                </div>
-              </a>
-            </div>
+            {content.recruitments.map((recruitment: Recruitment) => (
+              <div className="service-card" key={recruitment.id}>
+                <a
+                  href={recruitmentLinks[recruitment.id]}
+                  className="service-link"
+                >
+                  <div className="image-container">
+                    <Image
+                      src={recruitmentImages[recruitment.id]}
+                      alt={recruitment.title}
+                      fill
+                      className="service-image"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="service-content">
+                    <h2>{recruitment.title}</h2>
+                    <div className="divider"></div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </main>
@@ -242,4 +267,4 @@ const AirTransportSection = () => {
   );
 };
 
-export default AirTransportSection;
+export default RecruitmentSection;
