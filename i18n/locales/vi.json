@@ -612,7 +612,7 @@
     "title": "TỔNG QUAN DỊCH VỤ HẢI QUAN",
     "description": "CHUYÊN DỊCH VỤ KHAI BÁO HẢI QUAN CHO CÁC MẶT HÀNG SAU"
   },
-  "hoat-dong-KH": {
+  "tin-tuc-KH": {
     "category": "Tin tức",
     "title": "HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG",
     "headerImage": {
@@ -627,36 +627,131 @@
       "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORI.png",
       "alt": "Sơ đồ Một vành đai Một con đường"
     },
-    "oborExplanation": "Sáng kiến Một vành đai, Một con đường (OBOR) là chiến lược phát triển được Trung Quốc đưa ra vào năm 2013 nhằm kết nối châu Á, châu Phi và châu Âu thông qua mạng lưới các tuyến đường thương mại trên bộ và trên biển.",
+    "oborExplanation": "Sáng kiến Một vành đai, Một con đường (OBOR) là chiến lược phát triển được Trung Quốc đưa ra vào năm 2013. Sáng kiến này nhằm mục đích kết nối châu Á, châu Phi và châu Âu thông qua mạng lưới các tuyến đường thương mại trên bộ và trên biển. Sáng kiến OBOR đã được một số người ca ngợi vì tiềm năng thúc đẩy tăng trưởng kinh tế và hợp tác trong khu vực.",
     "impactTitle": "Tác động kinh tế và địa chính trị",
     "impacts": [
       {
+        "id": 1,
         "title": "Ảnh hưởng gia tăng của Trung Quốc",
-        "content": "OBOR có thể dẫn đến gia tăng ảnh hưởng của Trung Quốc trong khu vực qua hỗ trợ cơ sở hạ tầng, tạo gánh nặng nợ."
+        "content": "Sáng kiến OBOR có thể dẫn đến gia tăng ảnh hưởng của Trung Quốc trong khu vực bằng cách tạo ra gánh nặng nợ nần cho các quốc gia tham gia nhận được hỗ trợ của Trung Quốc trong việc phát triển cơ sở hạ tầng hậu cần của họ"
       },
       {
+        "id": 2,
         "title": "Gia tăng thương mại",
-        "content": "OBOR mở rộng các tuyến thương mại giữa Trung Quốc và các nước tham gia, thúc đẩy thương mại và đầu tư."
+        "content": "Sáng kiến OBOR sẽ tạo ra các tuyến thương mại mới giữa Trung Quốc và các nước tham gia. Điều này có thể dẫn đến tăng trưởng thương mại và đầu tư trong khu vực."
       },
       {
+        "id": 3,
         "title": "Cải thiện cơ sở hạ tầng",
-        "content": "Việc xây dựng đường bộ, đường sắt, bến cảng, sân bay sẽ nâng cao kết nối giữa các quốc gia."
+        "content": " Sáng kiến OBOR sẽ liên quan đến việc xây dựng đường bộ, đường sắt, bến cảng và sân bay mới. Điều này sẽ cải thiện khả năng kết nối giữa các nước tham gia và giúp thương mại và đầu tư dễ dàng hơn."
       },
       {
+        "id": 4,
         "title": "Tăng cường hợp tác",
-        "content": "OBOR đòi hỏi hợp tác chặt chẽ giữa các quốc gia tham gia, từ đó tạo sự ổn định trong khu vực."
+        "content": "Sáng kiến OBOR sẽ đòi hỏi sự hợp tác giữa Trung Quốc và các nước tham gia. Điều này có thể dẫn đến mối quan hệ được cải thiện giữa các nước và một khu vực ổn định hơn."
       }
     ],
     "howItWorksTitle": "Một vành đai Một con đường hoạt động như thế nào?",
-    "howItWorks": "OBOR bao gồm hai phần: Vành đai kinh tế Con đường Tơ lụa (trên bộ) và Con đường tơ lụa trên biển thế kỷ 21 (trên biển).",
+    "howItWorks": "Dự án bao gồm hai phần. Vành đai đầu tiên được gọi là Vành đai kinh tế Con đường Tơ lụa, chủ yếu dựa trên đất liền và dự kiến sẽ kết nối Trung Quốc với Trung Á, Đông Âu và Tây Âu. Con đường thứ hai được gọi là Con đường tơ lụa trên biển thế kỷ 21, dựa trên biển và dự kiến sẽ nối bờ biển phía nam của Trung Quốc đến Địa Trung Hải, Châu Phi, Đông Nam Á và Trung Á.",
+    "abc": " Chúng bao gồm sáu hành lang kinh tế sau:",
     "economicCorridors": [
       "Cầu đất Á-Âu mới nối miền Tây Trung Quốc với miền Tây nước Nga",
-      "Hành lang Trung Quốc-Mông Cổ-Nga",
-      "Hành lang Trung Quốc-Trung Á-Tây Á",
-      "Hành lang Bán đảo Trung Quốc-Đông Dương",
-      "Hành lang Trung Quốc-Pakistan",
-      "Hành lang Bangladesh-Trung Quốc-Ấn Độ-Myanmar"
+      "Hành lang Trung Quốc-Mông Cổ-Nga, nối Bắc Trung Quốc với Đông Nga qua Mông Cổ",
+      "Hành lang Trung Quốc-Trung Á-Tây Á, nối Tây Trung Quốc với Thổ Nhĩ Kỳ qua Trung và Tây Á",
+      "Hành lang Bán đảo Trung Quốc-Đông Dương, nối miền Nam Trung Quốc với Singapore qua Ấn Độ-Trung Quốc",
+      "Hành lang Trung Quốc-Pakistan, nối Tây Nam Trung Quốc qua Pakistan đến các tuyến đường biển Ả Rập",
+      "Hành lang Bangladesh-Trung Quốc-Ấn Độ-Myanmar, nối miền Nam Trung Quốc với Ấn Độ qua Bangladesh và Myanmar"
     ],
     "share": "CHIA SẺ BÀI VIẾT"
+  },
+  "hoat-dong-KH": {
+    "category": "Hoạt động KIM HẢO",
+    "title": "Tiệc tân niên Công ty TNHH Thương Mại Vận Tải Kim Hảo 2025",
+    "sections": [
+      {
+        "content": "Trong bầu không khí ấm áp của những ngày đầu xuân, <strong>Công ty TNHH Thương Mại Vận Tải Kim Hảo Logistics Việt Nam</strong> tổ chức buổi tiệc Tân niên 2025 nhằm chào mừng văn phòng mới tại trụ sở Hà Nội cũng như đánh dấu một năm mới đầy hứng khởi và gắn kết những thành viên trong công ty.",
+        "image": "LP__5880.jpg"
+      },
+      {
+        "title": "Hoạt động nổi bật trong tiệc Tân niên 2025 của Công ty TNHH Thương Mại Vận Tải Kim Hảo Vietnam",
+        "content": "Vào ngày 14/03/2025, các thành viên trong “ngôi nhà chung” <strong> Công ty TNHH Thương Mại Vận Tải Kim Hảo Logistics Việt Nam </strong> đã cùng nhau góp sức, sáng tạo để trang trí từng góc nhỏ trong không gian tiệc Tân Niên. Với sân khấu được trang trí hoành tráng, những chiếc bóng bay đầy màu sắc, bàn tiệc tỉ mỉ với hoa tươi sang trọng tạo cảm giác vui và phấn khởi.",
+        "image": "LP__5824.jpg"
+      },
+      {
+        "content": "Bữa tiệc trở nên sôi động hơn nhờ các tiếc mục văn nghệ hấp dẫn do chính các thành viên trong công ty trình diễn như: Nhảy hiện đại, ca nhạc, múa đương đại.",
+        "image": "Blank 4 Grids Collage (6).png"
+      },
+      {
+        "content": "Xuyên suốt buổi tiệc, chúng tôi đã cùng nhau chụp lại nhiều khoảnh khắc tập thể để lưu giữ những khoảnh khắc ý nghĩa.",
+        "image": "Blank 4 Grids Collage (3).png"
+      },
+      {
+        "content": "Để khuấy động không khí và mang lại những giây phút thư giãn, chúng tôi đã tham gia các trò chơi và chương trình xổ số với phần thưởng cực hấp dẫn cùng khoảnh khắc vinh danh những cá nhân xuất sắc đã gắn bó lâu dài cùng cty.&nbsp;Chính sự nhiệt huyết của các thành viên đã góp phần tạo nên không gian ấm cúng, gần gũi và vui vẻ.",
+        "image": "Blank 4 Grids Collage (4).png"
+      },
+      {
+        "title": "Thông điệp và cảm hứng từ bữa tiệc Tân niên Công ty TNHH Thương Mại Vận Tải Kim Hảo 2025",
+        "content": "Có thể nói, chương trình tiệc Tân niên không chỉ là một sự kiện đáng nhớ mà còn là minh chứng cho tình yêu thương và đoàn kết mà toàn thể nhân viên dành cho nhau. Thông qua buổi tiệc này, công ty Logistics VietNam muốn truyền cảm hứng không ngừng đổi mới và sáng tạo, dám thử thách và bứt phá để thành công hơn trong năm 2025.",
+        "image": "Blank 4 Grids Collage.png"
+      }
+    ],
+    "video": {
+      "url": "https://www.youtube.com/embed/cYQuktgXCTY?si=kYLEeJFDrPffk0QB",
+      "title": "Video tiệc Tân niên 2025"
+    }
+  },
+  "tuyen-dung-KH": {
+    "category": "Tuyển Dụng",
+    "categoryLink": "/tuyen-dung",
+    "title": "[HCM] Tuyển Dụng Sales Supervisor",
+    "image": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/dang-tin-tuyen-dung-360x.jpg",
+      "alt": "Sales Supervisor",
+      "width": 500,
+      "height": 312
+    },
+    "jobDescription": {
+      "title": "Mô tả công việc:",
+      "items": [
+        "Lưu trữ chỉ tiêu bán hàng được giao của nhóm và chỉ tiêu cá nhân do quản lý đặt ra",
+        "Lập kế hoạch bán hàng, đào tạo cho đại diện bán hàng mới",
+        "Tổ chức và điều phối lịch trình đại diện bán hàng",
+        "Giám sát đại diện kinh doanh, hỗ trợ họ đạt và vượt mục tiêu",
+        "Cung cấp dịch vụ giao nhận vận tải và các dịch vụ cốt lõi của logistics",
+        "Thường xuyên tìm kiếm khách hàng mới và chăm sóc khách hàng hiện có",
+        "Phát triển và duy trì mối quan hệ tin cậy với khách hàng",
+        "Quản lý hợp đồng khách hàng và quy trình báo giá",
+        "Giải quyết mọi vấn đề và khiếu nại của khách hàng"
+      ]
+    },
+    "requirements": {
+      "title": "Yêu Cầu:",
+      "items": [
+        "Trình độ học vấn: Cao đẳng trở lên",
+        "Có 2-3 năm kinh nghiệm trong các hoạt động Kinh doanh Hậu cần/Xuất nhập khẩu",
+        "Có sẵn nguồn khách hàng là một lợi thế",
+        "Khả năng giao tiếp tốt, nhanh nhẹn, ăn nói lưu loát",
+        "Khả năng làm việc nhóm, chia sẻ với tập thể",
+        "Yêu thích kinh doanh, nhiệt tình, chủ động",
+        "Tiếng Anh là ngoại ngữ bắt buộc",
+        "Báo cáo cho Trưởng phòng kinh doanh"
+      ]
+    },
+    "benefits": {
+      "title": "Quyền Lợi:",
+      "items": [
+        "Môi trường làm việc hiện đại, chuyên nghiệp, thân thiện",
+        "BHXH, BHYT, BHTN theo luật Việt Nam",
+        "Phụ cấp và Thưởng tháng 13, Quà sinh nhật, Phép năm, Du lịch hàng năm",
+        "Kiểm tra sức khoẻ hàng năm",
+        "Thưởng sinh nhật, Thưởng lễ tết",
+        "Bảo hiểm y tế"
+      ]
+    },
+    "contact": {
+      "title": "Liên Hệ:",
+      "text": "Vui lòng gửi CV ứng tuyển về",
+      "email": "hcm-admin@scanwell.com"
+    }
   }
 }

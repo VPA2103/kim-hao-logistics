@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 const SalesSupervisorJob = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <main className="min-h-screen bg-gray-100 py-12 flex items-center justify-center">

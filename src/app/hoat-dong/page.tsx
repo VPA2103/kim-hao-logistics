@@ -49,7 +49,7 @@ const AirTransportSection: React.FC = () => {
             {(t("news-activities.activities", { returnObjects: true }) as NewsItem[]).map(
               (item) => (
                 <div className="service-card" key={item.id}>
-                  <a href="/tin-tuc/blog" className="service-link">
+                  <a href="/hoat-dong/blog" className="service-link">
                     <div className="image-container">
                       <Image
                         src={hanhLyImage}

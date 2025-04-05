@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const BlogPost = () => {
+  const { t } = useTranslation();
+
+
   return (
     <main className="bg-gray-50 min-h-screen pt-24 pb-12">
       <div className="container mx-auto px-4">
@@ -15,11 +19,11 @@ const BlogPost = () => {
                 href="/tin-tuc"
                 className="inline-block px-3 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-full hover:bg-blue-100 transition-colors"
               >
-                Tin tức
+                {t("tin-tuc-KH.category")}
               </a>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-4">
-              HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG
+              {t("tin-tuc-KH.title")}
             </h1>
             <div className="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
           </header>
@@ -37,19 +41,11 @@ const BlogPost = () => {
                 className="object-cover"
               />
             </div>
-
-            {/* Đoạn văn */}
             <div className="prose prose-lg max-w-none text-gray-700">
-              <p className="mb-6">
-                Trụ sở chính Scanwell Thượng Hải tự hào thông báo tham gia hội
-                nghị về Một vành đai, Một con đường tại Thượng Hải. Mục đích
-                chính của hội nghị này là diễn giải, phân tích và cung cấp các
-                chiến lược hậu cần xung quanh Sáng kiến Một vành đai, Một con
-                đường.
-              </p>
+              <p className="mb-6">{t("tin-tuc-KH.intro.0")}</p>
 
               <p className="mb-6 font-medium text-gray-800">
-                Vậy Sáng kiến Một vành đai, Một con đường là gì?
+                {t("tin-tuc-KH.intro.1")}
               </p>
 
               {/* Hình ảnh minh họa */}
@@ -64,42 +60,31 @@ const BlogPost = () => {
                 />
               </div>
 
-              <p className="mb-6">
-                Sáng kiến Một vành đai, Một con đường (OBOR) là chiến lược phát
-                triển được Trung Quốc đưa ra vào năm 2013. Sáng kiến này nhằm
-                mục đích kết nối châu Á, châu Phi và châu Âu thông qua mạng lưới
-                các tuyến đường thương mại trên bộ và trên biển. Sáng kiến OBOR
-                đã được một số người ca ngợi vì tiềm năng thúc đẩy tăng trưởng
-                kinh tế và hợp tác trong khu vực.
-              </p>
+              <p className="mb-6">{t("tin-tuc-KH.oborExplanation")}</p>
 
               {/* Tiêu đề phụ */}
               <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-6 pb-2 border-b border-gray-200">
-                Tác động kinh tế và địa chính trị
+                {t("tin-tuc-KH.impactTitle")}
               </h2>
 
               {/* Danh sách tác động */}
               <ul className="space-y-4 mb-8">
                 {[
                   {
-                    title: "Ảnh hưởng gia tăng của Trung Quốc",
-                    content:
-                      "Sáng kiến OBOR có thể dẫn đến gia tăng ảnh hưởng của Trung Quốc trong khu vực bằng cách tạo ra gánh nặng nợ nần cho các quốc gia tham gia nhận được hỗ trợ của Trung Quốc trong việc phát triển cơ sở hạ tầng hậu cần của họ",
+                    title: t("tin-tuc-KH.impacts.0.title"),
+                    content: t("tin-tuc-KH.impacts.0.content"),
                   },
                   {
-                    title: "Gia tăng thương mại",
-                    content:
-                      "Sáng kiến OBOR sẽ tạo ra các tuyến thương mại mới giữa Trung Quốc và các nước tham gia. Điều này có thể dẫn đến tăng trưởng thương mại và đầu tư trong khu vực.",
+                    title: t("tin-tuc-KH.impacts.1.title"),
+                    content: t("tin-tuc-KH.impacts.1.content"),
                   },
                   {
-                    title: "Cải thiện cơ sở hạ tầng",
-                    content:
-                      "Sáng kiến OBOR sẽ liên quan đến việc xây dựng đường bộ, đường sắt, bến cảng và sân bay mới. Điều này sẽ cải thiện khả năng kết nối giữa các nước tham gia và giúp thương mại và đầu tư dễ dàng hơn.",
+                    title: t("tin-tuc-KH.impacts.2.title"),
+                    content: t("tin-tuc-KH.impacts.2.content"),
                   },
                   {
-                    title: "Tăng cường hợp tác",
-                    content:
-                      "Sáng kiến OBOR sẽ đòi hỏi sự hợp tác giữa Trung Quốc và các nước tham gia. Điều này có thể dẫn đến mối quan hệ được cải thiện giữa các nước và một khu vực ổn định hơn.",
+                    title: t("tin-tuc-KH.impacts.3.title"),
+                    content: t("tin-tuc-KH.impacts.3.content"),
                   },
                 ].map((item, index) => (
                   <li key={index} className="flex">
@@ -120,32 +105,25 @@ const BlogPost = () => {
 
               {/* Tiêu đề phụ */}
               <h2 className="text-2xl font-bold text-gray-800 mt-10 mb-6 pb-2 border-b border-gray-200">
-                Một vành đai Một con đường hoạt động như thế nào?
+                {t("tin-tuc-KH.howItWorksTitle")}
               </h2>
 
-              <p className="mb-6">
-                Dự án bao gồm hai phần. Vành đai đầu tiên được gọi là Vành đai
-                kinh tế Con đường Tơ lụa, chủ yếu dựa trên đất liền và dự kiến
-                sẽ kết nối Trung Quốc với Trung Á, Đông Âu và Tây Âu. Con đường
-                thứ hai được gọi là Con đường tơ lụa trên biển thế kỷ 21, dựa
-                trên biển và dự kiến sẽ nối bờ biển phía nam của Trung Quốc đến
-                Địa Trung Hải, Châu Phi, Đông Nam Á và Trung Á.
-              </p>
+              <p className="mb-6">{t("tin-tuc-KH.howItWorks")}</p>
 
               {/* Danh sách hành lang kinh tế */}
               <div className="bg-blue-50 rounded-xl p-6 mb-8">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  6 Hành lang kinh tế chính:
+                  {t("tin-tuc-KH.abc")}
                 </h3>
                 <ol className="space-y-3 list-decimal list-inside">
                   {[
-                    "Cầu đất Á-Âu mới nối miền Tây Trung Quốc với miền Tây nước Nga",
-                    "Hành lang Trung Quốc-Mông Cổ-Nga, nối Bắc Trung Quốc với Đông Nga qua Mông Cổ",
-                    "Hành lang Trung Quốc-Trung Á-Tây Á, nối Tây Trung Quốc với Thổ Nhĩ Kỳ qua Trung và Tây Á",
-                    "Hành lang Bán đảo Trung Quốc-Đông Dương, nối miền Nam Trung Quốc với Singapore qua Ấn Độ-Trung Quốc",
-                    "Hành lang Trung Quốc-Pakistan, nối Tây Nam Trung Quốc qua Pakistan đến các tuyến đường biển Ả Rập",
-                    "Hành lang Bangladesh-Trung Quốc-Ấn Độ-Myanmar, nối miền Nam Trung Quốc với Ấn Độ qua Bangladesh và Myanmar",
-                  ].map((item, index) => (
+                    t("tin-tuc-KH.economicCorridors.0"),
+                    t("tin-tuc-KH.economicCorridors.1"),
+                    t("tin-tuc-KH.economicCorridors.2"),
+                    t("tin-tuc-KH.economicCorridors.3"),
+                    t("tin-tuc-KH.economicCorridors.4"),
+                    t("tin-tuc-KH.economicCorridors.5"),
+                    ].map((item, index) => (
                     <li key={index} className="text-gray-700">
                       {item}
                     </li>
@@ -157,7 +135,7 @@ const BlogPost = () => {
             {/* Phần chia sẻ */}
             <div className="mt-12 pt-8 border-t border-gray-200">
               <h3 className="text-center text-sm font-medium text-gray-500 mb-4">
-                CHIA SẺ BÀI VIẾT
+                {t("tin-tuc-KH.share")}
               </h3>
               <div className="flex justify-center space-x-4">
                 {[

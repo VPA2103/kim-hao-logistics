@@ -632,5 +632,147 @@
   "haiquan_blog": {
     "title": "CUSTOMS SERVICES OVERVIEW",
     "description": "SPECIALIZED IN CUSTOMS DECLARATION SERVICES FOR THE FOLLOWING GOODS"
+  },
+  "tin-tuc-KH": {
+    "category": "News",
+    "title": "ONE BELT ONE ROAD SEMINAR",
+    "headerImage": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORC.jpg",
+      "alt": "One Belt One Road Seminar"
+    },
+    "intro": [
+      "Scanwell Shanghai headquarters is proud to announce its participation in the One Belt One Road conference in Shanghai. The main purpose of this conference is to interpret, analyze, and provide logistics strategies surrounding the One Belt One Road Initiative.",
+      "**So what is the One Belt One Road Initiative?**"
+    ],
+    "mapImage": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORI.png",
+      "alt": "One Belt One Road Diagram"
+    },
+    "oborExplanation": "The One Belt One Road (OBOR) Initiative is a development strategy launched by China in 2013. This initiative aims to connect Asia, Africa, and Europe through a network of land and sea trade routes. OBOR has been praised by some for its potential to boost economic growth and regional cooperation.",
+    "impactTitle": "Economic and Geopolitical Impacts",
+    "impacts": [
+      {
+        "id": 1,
+        "title": "Increased Chinese Influence",
+        "content": "The OBOR initiative could lead to increased Chinese influence in the region by creating debt burdens for participating countries receiving China’s support in developing their logistics infrastructure."
+      },
+      {
+        "id": 2,
+        "title": "Trade Expansion",
+        "content": "The OBOR initiative will create new trade routes between China and participating countries. This could lead to increased trade and investment in the region."
+      },
+      {
+        "id": 3,
+        "title": "Infrastructure Improvement",
+        "content": "The OBOR initiative will involve the construction of new roads, railways, ports, and airports. This will improve connectivity between participating countries and facilitate trade and investment."
+      },
+      {
+        "id": 4,
+        "title": "Enhanced Cooperation",
+        "content": "The OBOR initiative will require cooperation between China and participating countries. This could lead to improved relations among countries and a more stable region."
+      }
+    ],
+    "howItWorksTitle": "How Does One Belt One Road Work?",
+    "howItWorks": "The project consists of two parts. The first belt is called the Silk Road Economic Belt, which is land-based and is intended to connect China to Central Asia, Eastern Europe, and Western Europe. The second is the 21st Century Maritime Silk Road, which is sea-based and is intended to connect China’s southern coast to the Mediterranean, Africa, Southeast Asia, and Central Asia.",
+    "abc": "These include the following six economic corridors:",
+    "economicCorridors": [
+      "The New Eurasian Land Bridge connecting Western China to Western Russia",
+      "The China-Mongolia-Russia Corridor, connecting Northern China to Eastern Russia via Mongolia",
+      "The China-Central Asia-West Asia Corridor, connecting Western China to Turkey through Central and West Asia",
+      "The China-Indochina Peninsula Corridor, connecting Southern China to Singapore via the Indo-China region",
+      "The China-Pakistan Corridor, connecting Southwestern China through Pakistan to Arabian Sea trade routes",
+      "The Bangladesh-China-India-Myanmar Corridor, connecting Southern China to India via Bangladesh and Myanmar"
+    ],
+    "share": "SHARE THIS ARTICLE"
+  },
+  "hoat-dong-KH": {
+    "category": "KIM HẢO Activities",
+    "title": "Kim Hao Logistics New Year Party 2025",
+    "sections": [
+      {
+        "content": "In the warm atmosphere of early spring, <strong>Kim Hao Logistics Vietnam Co., Ltd.</strong> hosted the 2025 New Year Party to celebrate the opening of its new office at the Hanoi headquarters and to kick off a new year full of excitement and bonding among team members.",
+        "image": "LP__5880.jpg"
+      },
+      {
+        "title": "Highlights of Kim Hao Logistics Vietnam's 2025 New Year Party",
+        "content": "On March 14, 2025, members of the 'Kim Hao family' joined hands and got creative in decorating every corner of the New Year Party venue. The grand stage setup, colorful balloons, and meticulously prepared tables with elegant fresh flowers created a joyful and enthusiastic atmosphere.",
+        "image": "LP__5824.jpg"
+      },
+      {
+        "content": "The party became even more lively with exciting performances by our own employees, including modern dance, live music, and contemporary dance.",
+        "image": "Blank 4 Grids Collage (6).png"
+      },
+      {
+        "content": "Throughout the party, we captured many memorable group moments to preserve these meaningful memories together.",
+        "image": "Blank 4 Grids Collage (3).png"
+      },
+      {
+        "content": "To energize the atmosphere and bring fun moments, we joined in games and a lucky draw featuring attractive prizes. We also honored outstanding individuals who have been with the company for a long time. The enthusiasm of our members contributed to creating a warm, friendly, and joyful space.",
+        "image": "Blank 4 Grids Collage (4).png"
+      },
+      {
+        "title": "Messages and Inspiration from Kim Hao's 2025 New Year Party",
+        "content": "The New Year Party was not only a memorable event but also a testament to the love and unity among all employees. Through this event, Kim Hao Logistics Vietnam hopes to inspire continuous innovation and creativity, encouraging everyone to challenge limits and break through to greater success in 2025.",
+        "image": "Blank 4 Grids Collage.png"
+      }
+    ],
+    "video": {
+      "url": "https://www.youtube.com/embed/cYQuktgXCTY?si=kYLEeJFDrPffk0QB",
+      "title": "2025 New Year Party Video"
+    }
+  },
+  "tuyen-dung-KH":{
+    "category": "Careers",
+    "categoryLink": "/tuyen-dung",
+    "title": "[HCM] Hiring Sales Supervisor",
+    "image": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/dang-tin-tuyen-dung-360x.jpg",
+      "alt": "Sales Supervisor",
+      "width": 500,
+      "height": 312
+    },
+    "jobDescription": {
+      "title": "Job Description:",
+      "items": [
+        "Maintain assigned sales targets for the team and personal targets set by the manager",
+        "Develop sales plans and provide training for new sales representatives",
+        "Organize and coordinate sales representatives' schedules",
+        "Supervise and support sales representatives to help them meet and exceed goals",
+        "Provide freight forwarding services and core logistics solutions",
+        "Regularly seek out new clients and take care of existing customers",
+        "Build and maintain trustworthy relationships with clients",
+        "Manage customer contracts and quotation processes",
+        "Handle customer issues and complaints effectively"
+      ]
+    },
+    "requirements": {
+      "title": "Requirements:",
+      "items": [
+        "Education level: College degree or higher",
+        "2–3 years of experience in logistics/export-import sales",
+        "Having an existing client base is a plus",
+        "Good communication skills, quick and articulate",
+        "Team player with a collaborative spirit",
+        "Passionate about sales, enthusiastic, and proactive",
+        "English is a mandatory foreign language",
+        "Report to the Sales Manager"
+      ]
+    },
+    "benefits": {
+      "title": "Benefits:",
+      "items": [
+        "Modern, professional, and friendly working environment",
+        "Social, Health, and Unemployment Insurance according to Vietnamese law",
+        "Allowances and 13th-month bonus, birthday gifts, annual leave, yearly company trips",
+        "Annual health check-up",
+        "Birthday bonus, holiday bonuses",
+        "Health insurance"
+      ]
+    },
+    "contact": {
+      "title": "Contact:",
+      "text": "Please send your CV to",
+      "email": "hcm-admin@scanwell.com"
+    }
   }
 }
