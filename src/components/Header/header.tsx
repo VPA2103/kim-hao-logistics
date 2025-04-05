@@ -207,23 +207,26 @@ const Header = () => {
                 className="border-b border-gray-200 last:border-0"
               >
                 <div className="flex flex-col">
-                  <button
-                    className="flex justify-between items-center w-full px-4 py-4 text-left text-gray-800 font-bold uppercase"
-                    onClick={() => {
-                      if (item.subItems) {
-                        toggleDropdown(index);
-                      } else {
-                        setIsMobileMenuOpen(false);
-                      }
-                    }}
-                  >
-                    <span>{t(item.label)}</span>
-                    {item.subItems && (
+                  {/* Thay button bằng Link cho các mục không có submenu */}
+                  {item.subItems ? (
+                    <button
+                      className="flex justify-between items-center w-full px-4 py-4 text-left text-gray-800 font-bold uppercase"
+                      onClick={() => toggleDropdown(index)}
+                    >
+                      <span>{t(item.label)}</span>
                       <span className="text-sm transform transition-transform">
                         {activeDropdown === index ? "▲" : "▼"}
                       </span>
-                    )}
-                  </button>
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="flex justify-between items-center w-full px-4 py-4 text-left text-gray-800 font-bold uppercase"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <span>{t(item.label)}</span>
+                    </Link>
+                  )}
 
                   {/* SubItems for mobile */}
                   {item.subItems && (
@@ -239,7 +242,7 @@ const Header = () => {
                             key={subIndex}
                             href={subItem.href}
                             className="block px-4 py-3 text-gray-600 hover:text-blue-600 transition-colors"
-                            onClick={toggleMobileMenu}
+                            onClick={() => setIsMobileMenuOpen(false)}
                           >
                             {t(subItem.label)}
                           </Link>
