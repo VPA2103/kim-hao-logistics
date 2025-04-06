@@ -254,9 +254,7 @@ const Header = () => {
               </div>
             ))}
             <div className="flex justify-between items-center">
-              <span className="text-blue-600 font-medium">
-                +84 028 3510 6866
-              </span>
+              <span className="text-blue-600 font-medium">0903 357 988</span>
             </div>
             <LanguageSwitcher />
           </nav>
