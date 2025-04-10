@@ -46,27 +46,29 @@ const AirTransportSection: React.FC = () => {
 
           {/* Services Grid */}
           <div className="services-grid">
-            {(t("news-activities.activities", { returnObjects: true }) as NewsItem[]).map(
-              (item) => (
-                <div className="service-card" key={item.id}>
-                  <a href="/hoat-dong/blog" className="service-link">
-                    <div className="image-container">
-                      <Image
-                        src={hanhLyImage}
-                        alt={item.title}
-                        fill
-                        className="service-image"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </div>
-                    <div className="service-content">
-                      <h2>{item.title}</h2>
-                      <div className="divider"></div>
-                    </div>
-                  </a>
-                </div>
-              )
-            )}
+            {(
+              t("news-activities.activities", {
+                returnObjects: true,
+              }) as NewsItem[]
+            ).map((item) => (
+              <div className="service-card" key={item.id}>
+                <a href="/hoat-dong/blog" className="service-link">
+                  <div className="image-container">
+                    <Image
+                      src={hanhLyImage}
+                      alt={item.title}
+                      fill
+                      className="service-image"
+                      style={{ objectFit: "contain" }}
+                    />
+                  </div>
+                  <div className="service-content">
+                    <h2>{item.title}</h2>
+                    <div className="divider"></div>
+                  </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </main>
@@ -134,7 +136,7 @@ const AirTransportSection: React.FC = () => {
           grid-template-columns: 1fr;
           gap: 30px;
           max-width: 1200px;
-          margin: 0 auto;
+          margin: 0 auto 80px; /* Thêm margin-bottom 80px */
           padding: 0 20px;
         }
 

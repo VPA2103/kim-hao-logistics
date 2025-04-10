@@ -174,7 +174,7 @@ const CustomsServicePage = () => {
           grid-template-columns: 1fr;
           gap: 30px;
           max-width: 1200px;
-          margin: 0 auto;
+          margin: 0 auto 80px; /* Thêm margin-bottom 80px */
           padding: 0 20px;
         }
 

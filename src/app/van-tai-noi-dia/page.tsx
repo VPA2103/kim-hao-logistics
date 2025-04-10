@@ -211,6 +211,15 @@ const InlandTransportSection = () => {
           display: block;
         }
 
+        .services-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 30px;
+          max-width: 1200px;
+          margin: 0 auto 80px; /* Thêm margin-bottom 80px */
+          padding: 0 20px;
+        }
+
         .image-container {
           position: relative;
           width: 100%;
