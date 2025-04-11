@@ -25,21 +25,21 @@
       "address": "94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành Phố Hồ Chí Minh, Việt Nam",
       "tel": "Tel: 0903 357 988",
       "fax": "Fax:",
-      "email": "Email:"
+      "email": "Email: info@kimhaotransport.com"
     }
 
   },
-  "copyright": "© 2016 Scanwell Logistics Viet Nam. All rights reserved.",
+  "copyright": "© 2016 CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO Viet Nam. All rights reserved.",
 
   "homepage": {
     "banner": {
-      "title": "CHÀO MỪNG ĐẾN VỚI SCANWELL LOGISTICS VIỆT NAM",
-      "description": "Scanwell Logistics là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. Scanwell cung cấp nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế giới.",
+      "title": "CHÀO MỪNG ĐẾN VỚI CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO",
+      "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO là một trong những công ty hàng đầu trong ngành vận tải và giao nhận. Kim Hảo cung cấp nhiều giải pháp vận tải và giao nhận bao gồm vận tải và giao nhận quốc tế, phân phối nội địa và hỗ trợ hậu cần chuỗi cung ứng. Chúng tôi vận chuyển hàng hóa nhanh chóng, an toàn và đúng thời gian trên toàn thế giới.",
       "button": "ĐỌC THÊM"
     },
     "about": {
       "title": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO",
-      "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO được thành lập vào năm 1981, có trụ sở chính đặt tại Hồng Kông. Trong hơn 35 năm qua, chúng tôi đã phát triển để trở thành một trong những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng tôi có hệ thống chi nhánh tại hầu hết các châu lục như: Châu Mỹ, Châu Á, Châu Âu, Châu Úc ... và hàng trăm đại lý ở các thành phố lớn trên toàn thế giới, mục đích tạo điều kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch vụ và sự an toàn trong chuyên chở hàng hóa."
+      "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO được thành lập vào năm 2025, có trụ sở chính đặt tại Việt Nam. Chúng tôi đang phát triển để trở thành một trong những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng tôi có hệ thống chi nhánh tại hầu hết các châu lục như: Châu Mỹ, Châu Á, Châu Âu, Châu Úc ... và hàng trăm đại lý ở các thành phố lớn trên toàn thế giới, mục đích tạo điều kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch vụ và sự an toàn trong chuyên chở hàng hóa."
     },
     "services": {
       "title": "DỊCH VỤ",
@@ -47,13 +47,13 @@
         {
           "id": 1,
           "title": "VẬN TẢI BIỂN",
-          "description": "Scanwell Logistics là một trong những NVOCC lớn nhất tại Hong Kong, với hơn 30 năm kinh nghiệm vận tải đường thủy gồm LCL (hàng lẻ) và FCL (hàng container).",
+          "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO là một trong những NVOCC lớn nhất tại Hong Kong, với hơn 30 năm kinh nghiệm vận tải đường thủy gồm LCL (hàng lẻ) và FCL (hàng container).",
           "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png"
         },
         {
           "id": 2,
           "title": "VẬN TẢI HÀNG KHÔNG",
-          "description": "Scanwell Logistics hân hạnh là thành viên của hiệp hội vận tải hàng không Quốc Tế (IATA), sở hữu dày dặn kinh nghiệm trong vận tải hàng hóa hàng không.",
+          "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO hân hạnh là thành viên của hiệp hội vận tải hàng không Quốc Tế (IATA), sở hữu dày dặn kinh nghiệm trong vận tải hàng hóa hàng không.",
           "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png"
         },
         {
@@ -111,10 +111,10 @@
     "metaDescription": "Giới thiệu về CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
     "bannerAlt": "Banner giới thiệu công ty",
     "sections": {
-      "intro1": "<strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> được thành lập vào năm 1981, có trụ sở chính đặt tại Hồng Kông. Trong hơn 35 năm qua, chúng tôi đã phát triển để trở thành một trong những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng tôi có hệ thống chi nhánh tại hầu hết các châu lục như: Châu Mỹ, Châu Á, Châu Âu, Châu Úc … và hàng trăm đại lý ở các thành phố lớn trên toàn thế giới, mục đích tạo điều kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch vụ và sự an toàn trong chuyên chở hàng hóa.",
+      "intro1": "<strong>CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO</strong> được thành lập vào năm 2025, có trụ sở chính đặt tại Việt Nam. Chúng tôi đang phát triển để trở thành một trong những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng tôi có hệ thống chi nhánh tại hầu hết các châu lục như: Châu Mỹ, Châu Á, Châu Âu, Châu Úc ... và hàng trăm đại lý ở các thành phố lớn trên toàn thế giới, mục đích tạo điều kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch vụ và sự an toàn trong chuyên chở hàng hóa.",
       "intro2": "<strong>CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo</strong> là một công ty logistics toàn diện. Chúng tôi cung cấp các dịch vụ tối ưu với chuỗi cung ứng hoàn chỉnh “end-to-end” để tiết kiệm thời gian của khách hàng khi lựa chọn nhà vận chuyển trọn gói. Chúng tôi có thể cung cấp khách hàng các giải pháp vận tải và logistics tổng hợp, có khả năng xử lý các kiện hàng từ nhỏ nhất đến lớn nhất đến bất kỳ vị trí trên toàn thế giới, với đầy đủ trách nhiệm từ việc sắp xếp vận chuyển an toàn cho từng kiện hàng đến các dịch vụ hậu cần khác như đóng gói, lưu kho, phân phối.",
       "servicesTitle": "Các dịch vụ chúng tôi cung cấp:",
-      "motto": "<strong>Phương châm của chúng tôi</strong> là luôn luôn tập trung vào nhu cầu của khách hàng, cống hiến hết mình, tiết kiệm chi phí, và giao hàng đúng hạn. Vì vậy, chúng tôi đảm bảo rằng SCANWELL LOGISTICS VIỆT NAM có thể thỏa mãn mọi nhu cầu về vận tải và giao nhận hàng hoá của quý công ty bất kỳ lúc nào và tại bất kỳ nơi đâu trên thế giới với mức giá cả hợp lý nhất."
+      "motto": "<strong>Phương châm của chúng tôi</strong> là luôn luôn tập trung vào nhu cầu của khách hàng, cống hiến hết mình, tiết kiệm chi phí, và giao hàng đúng hạn. Vì vậy, chúng tôi đảm bảo rằng <strong>CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO VIỆT NAM</strong> có thể thỏa mãn mọi nhu cầu về vận tải và giao nhận hàng hoá của quý công ty bất kỳ lúc nào và tại bất kỳ nơi đâu trên thế giới với mức giá cả hợp lý nhất."
     },
     "servicesList": [
       "Vận Tải Biển - Xuất Nhập khẩu",
@@ -155,16 +155,12 @@
       "1": "CHỨNG NHẬN",
       "2": "CHUYÊN CÁC DỰ ÁN",
       "3": "CHUYÊN TUYẾN",
-      "5": "VĂN PHÒNG ĐẠI DIỆN",
-      "6": "HÌNH ẢNH THI CÔNG",
       "8": "HÌNH ẢNH THI CÔNG"
     },
     "imageAlts": {
       "1": "Chứng nhận của công ty",
       "2": "Các dự án chuyên nghiệp",
       "3": "Chuyên tuyến vận chuyển",
-      "5": "Văn phòng đại diện",
-      "6": "Hình ảnh thi công",
       "8": "Hình ảnh thực tế của dự án"
     },
     "socialPlatforms": {
@@ -269,7 +265,7 @@
         }
       ],
       "intro": "Dịch vụ chuyển phát nhanh, dịch vụ xách tay cho các lô hàng mang tính chất cấp bách về thời gian.",
-      "description": "Hành lý xách tay – Chuyển phát nhanh trên máy bay là dịch vụ Scanwell cung cấp với đội ngũ nhân viên đặc biệt và quy trình nhanh chóng hỗ trợ vận chuyển đúng nghĩa đen XÁCH TAY hàng hóa của bạn lên máy bay...",
+      "description": "Hành lý xách tay – Chuyển phát nhanh trên máy bay là dịch vụ Kim Hảo cung cấp với đội ngũ nhân viên đặc biệt và quy trình nhanh chóng hỗ trợ vận chuyển đúng nghĩa đen XÁCH TAY hàng hóa của bạn lên máy bay...",
       "features": [
         "Dịch vụ 24/7/365",
         "Giao hàng trong cùng ngày hoặc ngày hôm sau tùy thuộc vào điểm đến",
@@ -607,7 +603,7 @@
       "alt": "Hội thảo Một vành đai Một con đường"
     },
     "intro": [
-      "Trụ sở chính Scanwell Thượng Hải tự hào thông báo tham gia hội nghị về Một vành đai, Một con đường tại Thượng Hải. Mục đích chính của hội nghị này là diễn giải, phân tích và cung cấp các chiến lược hậu cần xung quanh Sáng kiến Một vành đai, Một con đường.",
+      "Trụ sở chính Kim Hảo ở 94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành phố Hồ Chí Minh, Việt Nam",
       "**Vậy Sáng kiến Một vành đai, Một con đường là gì?**"
     ],
     "mapImage": {
@@ -687,6 +683,7 @@
       "title": "Video tiệc Tân niên 2025"
     }
   },
+
   "tuyen-dung-KH": {
     "category": "Tuyển Dụng",
     "categoryLink": "/tuyen-dung",
@@ -736,9 +733,9 @@
       ]
     },
     "contact": {
-      "title": "Liên Hệ:",
+      "title": "Liên Hệ: 94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành phố Hồ Chí Minh, Việt Nam",
       "text": "Vui lòng gửi CV ứng tuyển về",
-      "email": "hcm-admin@scanwell.com"
+      "email": "info@kimhaotransport.com"
     }
   }
 }

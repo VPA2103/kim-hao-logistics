@@ -21,32 +21,30 @@ const HangDuAn = () => {
   const { t } = useTranslation();
 
   return (
-    <main className="pt-20 pb-10 bg-gray-100">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 py-10">
+      <div className="pt-28 pb-10 w-full max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="flex justify-center">
+          <div className="w-full lg:w-2/3 xl:w-3/4">
             <article className="bg-white shadow rounded-lg p-6">
               <header className="text-center mb-10">
                 <div className="mb-4">
                   <Link
                     href="/van-tai-duong-thuy"
-                    className="inline-block px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+                    className="inline-block px-4 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                   >
                     {t("specialTransport.header.link")}
                   </Link>
                 </div>
-                <h1 className="text-4xl font-bold text-gray-800">
+                <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
                   {t("specialTransport.header.title")}
                 </h1>
-                <div className="mt-4 border-b-2 border-gray-300"></div>
+                <div className="mt-4 mx-auto w-24 border-b-2 border-gray-300"></div>
               </header>
 
-              <div className="space-y-8">
+              <div className="space-y-8 max-w-4xl mx-auto">
                 {[
                   "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/1.png",
                   "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/VOLUME.PNG",
-                  "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/3(1).png",
-                  "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OCEAN%20FREIGHT.png",
                 ].map((imageUrl, index) => (
                   <div
                     key={index}
@@ -61,6 +59,7 @@ const HangDuAn = () => {
                         alt={t(`specialTransport.sections.alts.${index + 1}`)}
                         fill
                         className="absolute top-0 left-0 w-full h-full object-cover"
+                        priority={index === 0}
                       />
                     </div>
                   </div>
@@ -89,19 +88,12 @@ const HangDuAn = () => {
               </div>
             </article>
           </div>
-
-          {/* <aside className="bg-white shadow rounded-lg p-6">
-            <RelatedPosts />
-          </aside> */}
         </div>
       </div>
     </main>
   );
 };
 
-
-
-// SocialButton Component
 const SocialButton = ({ platform, url, title }: SocialButtonProps) => {
   const shareUrl = platform.url
     .replace("{url}", encodeURIComponent(url))
@@ -112,19 +104,13 @@ const SocialButton = ({ platform, url, title }: SocialButtonProps) => {
       href={shareUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 focus:ring focus:ring-blue-300"
+      className="p-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 focus:ring focus:ring-blue-300 transition-colors"
       aria-label={`Share on ${platform.name}`}
     >
-      <i className={`bi bi-${platform.icon}`}></i> {/* Dynamic icon */}
+      <i className={`bi bi-${platform.icon}`}></i>
     </a>
   );
 };
-
-
-
-
-
-
 
 const socialPlatforms: SocialPlatform[] = [
   {

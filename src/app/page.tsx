@@ -72,7 +72,8 @@ export default function Home() {
                       </p>
                       <Link href="/gioi-thieu">
                         <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded transition duration-300">
-                          {t("homepage.banner.button")} {/* Lấy chuỗi button từ JSON */}
+                          {t("homepage.banner.button")}{" "}
+                          {/* Lấy chuỗi button từ JSON */}
                         </button>
                       </Link>
                     </div>
@@ -268,407 +269,59 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Office Listings */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
-                {/* ASIA Offices */}
-                <div className="bg-gray-50 rounded-lg shadow-sm p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    ASIA Offices
-                  </h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Hong Kong - Headquarters</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Bangkok, Thailand</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Cebu, Philippines</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Manila, Philippines</span>
-                    </li>
-                    {/* Thêm các địa điểm còn lại tương tự */}
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Singapore</span>
-                    </li>
-                    <li className="mt-2">
-                      <button className="text-blue-500 hover:text-blue-700 text-sm font-medium flex items-center">
-                        Xem tất cả
-                        <svg
-                          className="h-4 w-4 ml-1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+              {/* Office Listings - Centered Single Card */}
+              <div className="flex justify-center">
+                <div className="w-full max-w-md">
+                  {" "}
+                  {/* Giới hạn chiều rộng thẻ */}
+                  <div className="bg-gray-50 rounded-lg shadow-sm p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 text-center">
+                      Việt Nam
+                    </h3>
+                    <ul className="space-y-3">
+                      <li className="flex flex-col items-center text-center">
+                        <div className="flex items-start mb-2">
+                          <svg
+                            className="h-5 w-5 text-blue-500 mr-2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <span>
+                            94 Bùi Thanh Khiết, Thị Trấn Tân Túc
+                            <br />
+                            Huyện Bình Chánh, Thành phố Hồ Chí Minh
+                            <br />
+                            Việt Nam
+                          </span>
+                        </div>
+                      </li>
 
-                {/* CHINA Offices */}
-                <div className="bg-gray-50 rounded-lg shadow-sm p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    CHINA Offices
-                  </h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Shanghai</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Beijing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Dalian</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Guangzhou</span>
-                    </li>
-                    <li className="mt-2">
-                      <button className="text-blue-500 hover:text-blue-700 text-sm font-medium flex items-center">
-                        Xem tất cả
-                        <svg
-                          className="h-4 w-4 ml-1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* EUROPE & MIDDLE EAST Offices */}
-                <div className="bg-gray-50 rounded-lg shadow-sm p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    EUROPE & MIDDLE EAST Offices
-                  </h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Felixstowe, United Kingdom</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Istanbul, Turkey</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Dubai, United Arab Emirates</span>
-                    </li>
-                    <li className="mt-2">
-                      <button className="text-blue-500 hover:text-blue-700 text-sm font-medium flex items-center">
-                        Xem tất cả
-                        <svg
-                          className="h-4 w-4 ml-1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* WEST ASIA Offices */}
-                <div className="bg-gray-50 rounded-lg shadow-sm p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    WEST ASIA Offices
-                  </h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Bangalore - India Head Office</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Mumbai, India</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Karachi, Pakistan</span>
-                    </li>
-                    <li className="mt-2">
-                      <button className="text-blue-500 hover:text-blue-700 text-sm font-medium flex items-center">
-                        Xem tất cả
-                        <svg
-                          className="h-4 w-4 ml-1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* NORTH AMERICA Offices */}
-                <div className="bg-gray-50 rounded-lg shadow-sm p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    NORTH AMERICA Offices
-                  </h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>New York, US</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Los Angeles, US</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Toronto, Canada</span>
-                    </li>
-                    <li className="mt-2">
-                      <button className="text-blue-500 hover:text-blue-700 text-sm font-medium flex items-center">
-                        Xem tất cả
-                        <svg
-                          className="h-4 w-4 ml-1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
+                      <li className="mt-4 text-center">
+                        <button className="text-blue-500 hover:text-blue-700 text-sm font-medium inline-flex items-center">
+                          Xem tất cả
+                          <svg
+                            className="h-4 w-4 ml-1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

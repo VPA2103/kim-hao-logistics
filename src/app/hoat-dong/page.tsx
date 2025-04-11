@@ -3,17 +3,17 @@
 import React from "react";
 import Image from "next/image";
 import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
-import hanhLyImage from "../../../public/filemanager/userfiles/LP__7980 (1)-360x.jpg";
+// import hanhLyImage from "../../../public/filemanager/userfiles/LP__7980 (1)-360x.jpg";
 import { useTranslation } from "react-i18next";
 // import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
 // import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
 
-interface NewsItem {
-  id: number;
-  title: string;
-}
+// interface NewsItem {
+//   id: number;
+//   title: string;
 
+// }
 
 const AirTransportSection: React.FC = () => {
   const {t} = useTranslation();
@@ -45,7 +45,7 @@ const AirTransportSection: React.FC = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="services-grid">
+          {/* <div className="services-grid">
             {(
               t("news-activities.activities", {
                 returnObjects: true,
@@ -69,7 +69,7 @@ const AirTransportSection: React.FC = () => {
                 </a>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </main>
 
