@@ -88,12 +88,17 @@ export default function Home() {
               <div className="flex flex-wrap -mx-4">
                 {/* Left column - Text content */}
                 <div className="w-full md:w-1/2 px-4">
-                  <div className="p-10">
-                    <h2 className="text-2xl md:text-3xl font-bold text-blue-500 mb-5 uppercase leading-tight">
+                  <div className="p-4 md:p-6">
+                    {" "}
+                    {/* Giảm xuống p-4 (16px) mobile và p-6 (24px) desktop */}
+                    <h2 className="text-xl md:text-2xl font-bold text-blue-500 mb-4 uppercase whitespace-nowrap">
+                      {" "}
+                      {/* Giảm mb-5 xuống mb-4 */}
                       {t("homepage.about.title")}
                     </h2>
-
-                    <p className="text-gray-800 text-base leading-relaxed mb-5">
+                    <p className="text-gray-800 text-base leading-relaxed mb-4">
+                      {" "}
+                      {/* Giảm mb-5 xuống mb-4 */}
                       {t("homepage.about.description")}
                     </p>
                   </div>
