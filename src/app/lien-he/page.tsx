@@ -99,11 +99,7 @@ const ContactPage = () => {
                     >
                       <iframe
                         src={
-                          location === "hcm"
-                            ? "https://www.google.com/maps/place/94+B%C3%B9i+Thanh+Khi%E1%BA%BFt,+TT.+T%C3%A2n+T%C3%BAc,+B%C3%ACnh+Ch%C3%A1nh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.6853983,106.5739701,17z/data=!3m1!4b1!4m5!3m4!1s0x317532f49e6489e5:0x764671e48c754cc7!8m2!3d10.685393!4d106.576545?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNjM5SAFQAw%3D%3D"
-                            : location === "hanoi"
-                            ? "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d465.5086658199118!2d105.785547!3d21.0299119!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7a372b27946f3c9!2zMjHCsDAxJzQ3LjEiTiAxMDXCsDQ3JzA4LjciRQ!5e0!3m2!1svi!2s!4v1671533204760!5m2!1svi!2s"
-                            : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3728.1376836090285!2d106.6928889!3d20.866500000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf0f6f0292cf96854!2zMjDCsDUxJzU5LjQiTiAxMDbCsDQxJzM0LjQiRQ!5e0!3m2!1svi!2s!4v1671533178922!5m2!1svi!2s"
+                            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.635195751887!2d106.5739700757912!3d10.685398260864623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317532f49e6489e5%3A0x764671e48c754cc7!2zOTQgQsO5aSBUaGFuaCBLaGnhur90LCBUVC4gVMOibiBUw7pjLCBCw6xuaCBDaMOhbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1744361533722!5m2!1svi!2s"
                         }
                         width="100%"
                         height="400"
@@ -118,7 +114,7 @@ const ContactPage = () => {
 
                 {/* Right Column - Contact Info */}
                 <div className="info-column">
-                  {["hcm", "hanoi", "haiphong"].map((officeId) => (
+                  {["hcm"].map((officeId) => (
                     <div
                       key={officeId}
                       className={`office-info ${

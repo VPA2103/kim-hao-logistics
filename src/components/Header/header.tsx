@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import logo from "../../../public/filemanager/userfiles/logologo.png";
+import logo from "../../../image/logo/logo.png";
 // import { TracingChannel } from "node:diagnostics_channel";
 import TrackTraceButton from "@/app/TrackTraceButton";
 
@@ -104,7 +104,7 @@ const Header = () => {
             <Image
               src={logo}
               alt="SCANWELL LOGISTICS VIETNAM"
-              width={160}
+              width={100}
               height={40}
               priority
               className={clsx(

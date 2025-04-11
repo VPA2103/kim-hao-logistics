@@ -25,7 +25,7 @@
       "address": "94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành Phố Hồ Chí Minh, Việt Nam",
       "tel": "Tel: 0903 357 988",
       "fax": "Fax:",
-      "email": "Email: info@kimhaotransport.com"
+      "email": "Email: kimhao@kimhaotransport.com"
     }
 
   },
@@ -413,18 +413,6 @@
           "address": "94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành Phố Hồ Chí Minh, Việt Nam",
           "phone": "0903357988",
           "email": ""
-        },
-        "hanoi": {
-          "title": "Văn phòng Hà Nội",
-          "address": "Tầng 13 Pearl Plaza, 561A Điện Biên Phủ, Q. Bình Thạnh, Hà Nội",
-          "phone": "+84 028 3510 6866",
-          "email": "hanoi-sales@kimhao.com"
-        },
-        "haiphong": {
-          "title": "Văn phòng Hải Phòng",
-          "address": "Phòng 803, Tòa nhà Thành Đạt, số 3 Lê Thánh Tông, Q. Ngô Quyền, Hải Phòng",
-          "phone": "+84 0225 325 0779",
-          "email": "haiphong-sales@kimhao.com"
         }
       },
       "form": {

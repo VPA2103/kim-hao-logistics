@@ -1,4 +1,7 @@
-module.exports = {
+// next.config.mjs
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -27,4 +30,9 @@ module.exports = {
     maxInactiveAge: 1000 * 60 * 60,
     pagesBufferLength: 5
   }
-}
+};
+
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+initOpenNextCloudflareForDev();
+
+export default nextConfig;
