@@ -1,25 +1,43 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "main": ".open-next/worker.js",
   "name": "kimhao",
+  "main": ".open-next/worker.js",
   "compatibility_date": "2024-12-30",
   "compatibility_flags": ["nodejs_compat"],
+
+  // Cấu hình cho static assets
   "assets": {
-    "directory": ".open-next/assets",
     "binding": "ASSETS",
+    "directory": ".open-next/assets"
   },
+
+  // Tự bind chính Worker này
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      // The service should match the "name" of your worker
-      "service": "kimhao",
-    },
+      "service": "kimhao"
+    }
   ],
-  "r2_buckets": [
-    // Create a R2 binding with the binding name "NEXT_INC_CACHE_R2_BUCKET"
+
+  // Nếu dùng R2 (chưa cần lúc này)
+  // "r2_buckets": [
+  //   {
+  //     "binding": "NEXT_INC_CACHE_R2_BUCKET",
+  //     "bucket_name": "<BUCKET_NAME>"
+  //   }
+  // ],
+
+  // Route để kết nối Worker với domain tùy chỉnh
+  "routes": [
+    {
+      "pattern": "kimhaotransport.com/",
+      "zone_name": "kimhaotransport.com"
+    }
+
+    // Nếu cần wildcard subdomains:
     // {
-    //   "binding": "NEXT_INC_CACHE_R2_BUCKET",
-    //   "bucket_name": "<BUCKET_NAME>",
-    // },
-  ],
+    //   "pattern": "*.kimhaotransport.com/*",
+    //   "zone_name": "kimhaotransport.com"
+    // }
+  ]
 }

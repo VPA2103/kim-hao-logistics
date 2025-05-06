@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { StaticImageData } from "next/image";
-import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
-import Image from "next/image";
-import recruitment1Image from "../../../public/filemanager/userfiles/Sales Supervisor-360x.jpg";
-import recruitment2Image from "../../../public/filemanager/userfiles/dang-tin-tuyen-dung-360x.jpg";
+// import { StaticImageData } from "next/image";
+// import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
+// import Image from "next/image";
+// import recruitment1Image from "../../../public/filemanager/userfiles/Sales Supervisor-360x.jpg";
+// import recruitment2Image from "../../../public/filemanager/userfiles/dang-tin-tuyen-dung-360x.jpg";
 import { useTranslation } from "react-i18next";
 
 interface Recruitment {
@@ -44,23 +44,23 @@ const RecruitmentSection = () => {
       };
 
   // Image mapping based on recruitment ID
-  const recruitmentImages: Record<number, StaticImageData> = {
-    1: recruitment1Image,
-    2: recruitment2Image,
-  };
+  // const recruitmentImages: Record<number, StaticImageData> = {
+  //   1: recruitment1Image,
+  //   2: recruitment2Image,
+  // };
 
   // Link mapping based on recruitment ID
-  const recruitmentLinks: Record<number, string> = {
-    1: "/tuyen-dung/blog1",
-    2: "/tuyen-dung/blog2",
-  };
+  // const recruitmentLinks: Record<number, string> = {
+  //   1: "/tuyen-dung/blog1",
+  //   2: "/tuyen-dung/blog2",
+  // };
 
   return (
     <>
       <main id="main">
-        <div id="content" role="main">
+        <div id="content" role="main" className="content-wrapper pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-recruitment">
+          {/* <div className="banner" id="banner-recruitment">
             <div
               className="banner-image-container"
               style={{
@@ -97,7 +97,7 @@ const RecruitmentSection = () => {
                 }}
               ></div>
             </div>
-          </div>
+          </div> */}
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -105,7 +105,8 @@ const RecruitmentSection = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="services-grid">
+          <strong>Chưa có bài viết...</strong>
+          {/* <div className="services-grid">
             {content.recruitments.map((recruitment: Recruitment) => (
               <div className="service-card" key={recruitment.id}>
                 <a
@@ -128,7 +129,7 @@ const RecruitmentSection = () => {
                 </a>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </main>
 

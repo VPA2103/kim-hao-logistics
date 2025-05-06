@@ -2,7 +2,7 @@
 
 import React from "react";
 import { StaticImageData } from "next/image";
-import bannerImage from "../../../public/filemanager/userfiles/hai-quan.png";
+// import bannerImage from "../../../public/filemanager/userfiles/hai-quan.png";
 import Image from "next/image";
 import customsImage from "../../../public/filemanager/userfiles/Customs 5-360x.png";
 import { useTranslation } from "react-i18next";
@@ -64,10 +64,10 @@ const CustomsServicePage = () => {
 
   return (
     <>
-      <main id="main">
-        <div id="content" role="main">
+
+        <div id="content" role="main" className="pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-customs">
+          {/* <div className="banner" id="banner-customs">
             <div className="banner-image-container">
               <Image
                 src={bannerImage}
@@ -78,7 +78,7 @@ const CustomsServicePage = () => {
                 style={{ objectFit: "cover" }}
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -109,7 +109,7 @@ const CustomsServicePage = () => {
             ))}
           </div>
         </div>
-      </main>
+
 
       <style jsx>{`
         /* Global Styles */

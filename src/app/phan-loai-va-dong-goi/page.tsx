@@ -11,7 +11,7 @@ const ArticleContent = () => {
 
 
   return (
-    <main className="pt-20 pb-10 bg-gray-100 flex justify-center">
+    <main className="pt-40 pb-10 bg-gray-100 flex justify-center">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
         <article className="bg-white shadow rounded-lg p-6">
           <header className="text-center mb-10">

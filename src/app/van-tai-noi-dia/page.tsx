@@ -2,7 +2,7 @@
 
 import React from "react";
 import { StaticImageData } from "next/image";
-import bannerImage from "../../../public/filemanager/userfiles/vt-noidia.png";
+// import bannerImage from "../../../public/filemanager/userfiles/vt-noidia.png";
 import Image from "next/image";
 import inlandImage from "../../../public/filemanager/userfiles/INLAND 5-360x.png";
 import { useTranslation } from "react-i18next";
@@ -52,10 +52,10 @@ const InlandTransportSection = () => {
 
   return (
     <>
-      <main id="main">
-        <div id="content" role="main">
+
+        <div id="content" role="main" className="pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-inland-transport">
+          {/* <div className="banner" id="banner-inland-transport">
             <div
               className="banner-image-container"
               style={{
@@ -92,7 +92,7 @@ const InlandTransportSection = () => {
                 }}
               ></div>
             </div>
-          </div>
+          </div> */}
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -123,7 +123,7 @@ const InlandTransportSection = () => {
             ))}
           </div>
         </div>
-      </main>
+
 
       <style jsx>{`
         /* Global Styles */

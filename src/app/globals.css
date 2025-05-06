@@ -18,11 +18,16 @@
   }
 }
 
+
 /* Body styles */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+*{
+  color: black;
 }
 
 /* 📌 Fix footer overlay để giống ảnh mẫu */

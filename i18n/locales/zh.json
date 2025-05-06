@@ -1,0 +1,702 @@
+{
+    "map": "在地图上查看",
+  "home": "首页",
+  "about_us": "关于我们",
+  "services": "服务",
+  "services_sub": {
+    "water_transport": "水路运输",
+    "air_transport": "航空运输",
+    "warehouse": "仓储与配送服务",
+    "domestic_transport": "国内运输",
+    "customs": "海关"
+  },
+  "news": "金好新闻",
+  "news_sub": {
+    "news": "新闻",
+    "activities": "金好活动",
+    "recruitment": "招聘"
+  },
+  "contact": "联系我们",
+  "track_trace": "货物追踪",
+  "search_placeholder": "搜索...",
+
+  "locations": {
+    "hcm": {
+      "title": "平政县",
+      "address": "越南胡志明市平政县新集镇裴清决街94号",
+      "tel": "电话：+84 903 357 988",
+      "email": "邮箱：info@kimhaotransport.com"
+    },
+    "D5": {
+      "title": "第五郡",
+      "address": "越南胡志明市第五郡第五坊饶心街11号",
+      "tel": "电话：+84 903 357 988",
+      "email": "邮箱：info@kimhaotransport.com"
+    }
+  },
+  "copyright": "© 2025 越南金好贸易运输有限责任公司。版权所有。",
+
+  "homepage": {
+    "banner": {
+      "title": "欢迎来到越南金好贸易运输有限责任公司",
+      "description": "越南金好贸易运输有限责任公司是运输和货运行业的领先公司之一。金好提供多种运输和货运解决方案，包括国际运输和货运、国内配送和供应链物流支持。我们在全球范围内快速、安全、准时地运输货物。",
+      "button": "了解更多"
+    },
+    "about": {
+      "title": "越南金好贸易运输有限责任公司",
+      "description": "越南金好贸易运输有限责任公司成立于2025年，总部设在越南。我们正在发展成为运输和货运服务领域最大的公司之一，是国际航空运输协会（IATA）完全信任的成员。我们在大多数大洲设有分支机构，如美洲、亚洲、欧洲、大洋洲...以及全球各大城市的数百家代理商，旨在为货物运输的质量控制和安全提供最便利的条件。"
+    },
+    "services": {
+      "title": "服务",
+      "list": [
+        {
+          "id": 1,
+          "title": "海运",
+          "description": "越南金好贸易运输有限责任公司是越南最大的无船承运人（NVOCC）之一，拥有超过30年的海运经验，包括拼箱（LCL）和整箱（FCL）。",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png",
+          "link": "/水路运输"
+        },
+        {
+          "id": 2,
+          "title": "空运",
+          "description": "越南金好贸易运输有限责任公司荣幸成为国际航空运输协会（IATA）的成员，拥有丰富的航空货运经验。",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png",
+          "link": "/航空运输"
+        },
+        {
+          "id": 3,
+          "title": "仓储服务",
+          "description": "目前在胡志明市中心及周边地区如边和、同奈、仁泽等地运营服务仓库和保税仓库。",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png",
+          "link": "/保税仓库与普通仓库"
+        },
+        {
+          "id": 4,
+          "title": "海关服务",
+          "description": "在越南处理海关手续方面拥有超过20年的工作经验。",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png",
+          "link": "/海关"
+        },
+        {
+          "id": 5,
+          "title": "国内运输",
+          "description": "拥有覆盖全国的卡车和集装箱网络。",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png",
+          "link": "/国内运输"
+        },
+        {
+          "id": 6,
+          "title": "分类与包装",
+          "description": "金好配备了全面的仓库信息管理系统，可以为客户提供全面的供应链物流解决方案。",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png",
+          "link": "/分类与包装"
+        }
+      ],
+      "button": "了解更多"
+    },
+    "management": {
+      "title": "管理系统",
+      "subtitle": "通过我们全面的管理解决方案简化您的业务运营"
+    },
+    "network": {
+      "title": "网络",
+      "button": "查找附近的办公室"
+    },
+    "partners": {
+      "title": "协会合作伙伴"
+    },
+    "contact": {
+      "title": "联系我们",
+      "form": {
+        "name": "姓名",
+        "email": "邮箱",
+        "phone": "电话号码",
+        "content": "内容",
+        "button": "发送联系"
+      }
+    }
+  },
+
+  "about": {
+    "title": "关于 - 越南金好贸易运输有限责任公司",
+    "metaDescription": "关于越南金好贸易运输有限责任公司的介绍",
+    "bannerAlt": "公司介绍横幅",
+    "sections": {
+      "intro1": "<strong>越南金好贸易运输有限责任公司</strong>成立于2025年，总部设在越南。我们正在发展成为运输和货运服务领域最大的公司之一，是国际航空运输协会（IATA）完全信任的成员。我们在大多数大洲设有分支机构，如美洲、亚洲、欧洲、大洋洲...以及全球各大城市的数百家代理商，旨在为货物运输的质量控制和安全提供最便利的条件。",
+      "intro2": "<strong>越南金好贸易运输有限责任公司</strong>是一家综合性物流公司。我们提供优化的服务，具有完整的“端到端”供应链，以节省客户在选择整体运输方案时的时间。我们可以为客户提供综合运输和物流解决方案，能够处理从最小到最大的货物到全球任何地点，并承担从安排每件货物的安全运输到其他物流服务如包装、仓储、配送的全部责任。",
+      "servicesTitle": "我们提供的服务：",
+      "motto": "<strong>我们的宗旨</strong>是始终专注于客户需求，全力以赴，节省成本，并按时交付。因此，我们确保<strong>越南金好贸易运输有限责任公司</strong>可以随时随地在全球任何地方以最合理的价格满足贵公司的所有运输和货运需求。"
+    },
+    "servicesList": [
+      "海运 - 进出口",
+      "空运 - 进出口",
+      "公路和多式联运",
+      "仓储管理",
+      "海关手续"
+    ],
+    "companyName": "越南金好贸易运输有限责任公司",
+    "logoAlt": "金好公司标志"
+  },
+
+  "waterTransport": {
+    "sectionTitle": "水路运输",
+    "services": [
+      {
+        "title": "项目货物服务",
+        "alt": "项目货物服务",
+        "href": "/dich-vu-hang-du-an"
+      },
+      {
+        "title": "水路运输服务概述",
+        "alt": "水路运输服务概述",
+        "href": "/tong-quan-dich-vu-van-tai-duong-thuy"
+      },
+      {
+        "title": "危险品",
+        "alt": "危险品",
+        "href": "/hang-nguy-hiem"
+      }
+    ]
+  },
+  "projectCargo": {
+    "title": "项目货物服务",
+    "shareLabel": "分享：",
+    "relatedServices": "其他服务",
+    "sectionTitles": {
+      "1": "认证",
+      "2": "专业项目",
+      "3": "专线",
+      "8": "施工图片"
+    },
+    "imageAlts": {
+      "1": "公司认证",
+      "2": "专业项目",
+      "3": "运输专线",
+      "8": "项目实际图片"
+    },
+    "socialPlatforms": {
+      "whatsapp": "WhatsApp",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "common": {
+    "services": {
+      "seaTransport": "海运",
+      "airTransport": "空运",
+      "multimodalTransport": "多式联运"
+    }
+  },
+  "specialTransport": {
+    "header": {
+      "link": "水路运输",
+      "title": "水路运输服务"
+    },
+    "sections": {
+      "titles": {
+        "1": "合作伙伴船公司",
+        "2": "货运量",
+        "3": "专线",
+        "5": "办公室"
+      },
+      "alts": {
+        "1": "公司认证",
+        "2": "专业项目",
+        "3": "运输专线",
+        "5": "代表处"
+      }
+    },
+    "social": {
+      "shareTitle": "分享文章",
+      "platforms": {
+        "whatsapp": "WhatsApp",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "relatedPosts": {
+      "title": "相关文章",
+      "postTitle": "危险品"
+    }
+  },
+
+  "blog": {
+    "category": "水路运输",
+    "categoryLink": "/水路运输",
+    "title": "危险品",
+    "content": {
+      "image1": {
+        "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/images2641-5c32b9fab0cfc-1024x683.jpg",
+        "alt": "危险品运输"
+      },
+      "sections": [
+        {
+          "type": "list",
+          "title": "什么是危险品？",
+          "items": [
+            "危险品是指含有危险物质的货物...",
+            "危险物质是指气体形式的物质或化合物..."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/7.png",
+          "alt": "危险品运输",
+          "width": 850,
+          "height": 442
+        }
+      ]
+    },
+    "sidebar": {
+      "title": "相关文章",
+      "posts": [
+        {
+          "title": "危险品",
+          "link": "/危险品",
+          "image": "/public/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg"
+        }
+      ]
+    }
+  },
+  "blog_hk": {
+    "category": "空运",
+    "categoryLink": "/空运",
+    "title": "手提行李",
+    "content": {
+      "images": [
+        {
+          "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg",
+          "alt": "危险品运输"
+        },
+        {
+          "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg",
+          "alt": "危险品运输"
+        }
+      ],
+      "intro": "快递服务，为时间紧迫的货物提供手提服务。",
+      "description": "手提行李 - 飞机上的快递服务是金好提供的一项服务，拥有专门的团队和快速流程，支持字面意义上的手提您的货物上飞机...",
+      "features": [
+        "24/7/365服务",
+        "当天或次日送达，视目的地而定",
+        "购买机票",
+        "精选团队成员",
+        "收发货",
+        "海关手续",
+        "亲自交付给约定的收货人",
+        "交付确认"
+      ],
+      "cta": {
+        "text": "立即联系我们！",
+        "link": "/联系"
+      }
+    }
+  },
+  "vantaihangkhong": {
+    "title": "空运",
+    "services_air": {
+      "title": "空运服务概述",
+      "sections": [
+        {
+          "id": 1,
+          "title": "合作伙伴航空公司"
+        },
+        {
+          "id": 2,
+          "title": "货运量"
+        },
+        {
+          "id": 3,
+          "title": "专线"
+        }
+      ]
+    },
+    "services": [
+      {
+        "id": 1,
+        "title": "手提行李",
+        "description": "从越南到世界各地的航空货物运输。"
+      },
+      {
+        "id": 2,
+        "title": "空运服务概述",
+        "description": "提供门到门的货物收发服务。"
+      },
+      {
+        "id": 3,
+        "title": "危险品",
+        "description": "提供仓储和配送服务。"
+      }
+    ]
+  },
+
+  "dichvukhobaivaphanphoi": {
+    "title": "仓储与配送服务",
+    "services": [
+      {
+        "id": 1,
+        "title": "金好客户",
+        "description": "提供门到门的货物收发服务。"
+      },
+      {
+        "id": 2,
+        "title": "仓储服务概述",
+        "description": "提供仓储和配送服务。"
+      },
+      {
+        "id": 3,
+        "title": "分类与包装",
+        "description": "提供仓储和配送服务。"
+      }
+    ]
+  },
+  "vantainoidia": {
+    "title": "国内运输",
+    "services": [
+      {
+        "id": 1,
+        "title": "国内运输服务概述",
+        "description": "提供门到门的货物收发服务。"
+      }
+    ]
+  },
+  "haiquan": {
+    "title": "海关服务",
+    "services": [
+      {
+        "id": 1,
+        "title": "海关服务概述",
+        "description": "提供门到门的货物收发服务。"
+      },
+      {
+        "id": 2,
+        "title": "海关服务",
+        "description": "提供仓储和配送服务。"
+      },
+      {
+        "id": 3,
+        "title": "危险品",
+        "description": "提供仓储和配送服务。"
+      }
+    ]
+  },
+  "new-kh": {
+    "title": "新闻",
+    "news": [
+      {
+        "id": 1,
+        "title": "一带一路研讨会"
+      }
+    ]
+  },
+  "news-activities": {
+    "title": "活动",
+    "activities": [
+      {
+        "id": 1,
+        "title": "金好新年宴会"
+      }
+    ]
+  },
+  "tuyen-dung": {
+    "title": "招聘",
+    "recruitments": [
+      {
+        "id": 1,
+        "title": "[胡志明市] 招聘销售主管"
+      },
+      {
+        "id": 2,
+        "title": "[胡志明市] 招聘销售专员"
+      }
+    ]
+  },
+  "news-recruitment": {
+    "title": "招聘",
+    "recruitments": [
+      {
+        "id": 1,
+        "title": "销售人员"
+      },
+      {
+        "id": 2,
+        "title": "销售人员"
+      }
+    ]
+  },
+  "lien_he": {
+    "title": "越南金好贸易运输有限责任公司",
+    "contact": {
+      "title": "办公室与分支机构联系",
+      "subtitle": "越南金好贸易运输有限责任公司",
+      "instruction": "请选择您需要联系的办公室并填写以下表格的完整信息。",
+      "locations": {
+        "D5": "第五郡",
+        "binh_chanh": "平政县"
+      },
+      "offices": {
+        "D5": {
+          "title": "第五郡办公室",
+          "address": "地址：越南胡志明市第五郡第五坊饶心街11号",
+          "phone": "电话：+84 903 357 988",
+          "email": "邮箱：info@kimhaotransport.com"
+        },
+        "binh_chanh": {
+          "title": "平政县办公室",
+          "address": "地址：越南胡志明市平政县新集镇裴清决街94号",
+          "phone": "电话：+84 903 357 988",
+          "email": "邮箱：info@kimhaotransport.com"
+        }
+      },
+      "form": {
+        "title": "发送联系请求",
+        "fields": {
+          "fullName": {
+            "label": "姓名",
+            "placeholder": ""
+          },
+          "phone": {
+            "label": "电话号码",
+            "placeholder": ""
+          },
+          "email": {
+            "label": "邮箱",
+            "placeholder": ""
+          },
+          "message": {
+            "label": "消息",
+            "placeholder": ""
+          }
+        },
+        "required": "*",
+        "submit": "发送"
+      }
+    }
+  },
+  "hanh-ly": {
+    "title": "手提行李",
+    "images": [
+      "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg",
+      "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg"
+    ],
+    "imageAlts": ["危险品运输", "危险品运输"],
+    "introText": "快递服务，为时间紧迫的货物提供手提服务。",
+    "description": "手提行李 - 飞机上的快递服务是金好提供的一项服务，拥有专门的团队和快速流程，支持字面意义上的手提您的货物上飞机。这项服务帮助满足紧急或高价值货物的运输需求，提供保护性或当天或次日送达的运输服务，视运输区域而定。",
+    "features": [
+      "24/7/365服务",
+      "当天或次日送达，视目的地而定",
+      "购买机票",
+      "精选团队成员",
+      "收发货",
+      "海关手续",
+      "亲自交付给约定的收货人",
+      "交付确认"
+    ],
+    "cta": {
+      "text": "立即联系我们！",
+      "link": "/联系"
+    }
+  },
+  "khach-hang": {
+    "title": "仓储与配送服务",
+    "description": "金好客户"
+  },
+  "khoBai": {
+    "category": "仓储与配送服务",
+    "title": "仓储服务概述",
+    "sections": {
+      "network": {
+        "title": "仓储网络",
+        "alt": "仓储网络"
+      },
+      "whyChooseUs": {
+        "title": "为什么选择越南金好贸易运输有限责任公司？",
+        "benefits": [
+          "仓库网络位于工业区中心",
+          "现代化的CCTV监控和消防系统",
+          "在仓库管理和运营中应用技术",
+          "具备温湿度等货物保存条件"
+        ]
+      },
+      "warehouseImage1": {
+        "alt": "仓库"
+      },
+      "managementSystem": {
+        "title": "仓库管理系统",
+        "alt": "仓库管理系统"
+      },
+      "warehouseImage2": {
+        "title": "仓库图片",
+        "alt": "仓库图片"
+      }
+    }
+  },
+  "phan-loai": {
+    "title": "分类与包装",
+    "title1": "仓库管理系统应用",
+    "title2": "DC BYPASS服务示意图",
+    "title3": "南部仓库系统"
+  },
+  "vanTaiNoiDia": {
+    "category": "国内运输",
+    "title": "国内运输概述",
+    "domesticTransport": {
+      "title": "国内运输服务",
+      "image1": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%201.png",
+      "alt1": "国内运输",
+      "image2": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%202.png",
+      "alt2": "国内运输",
+      "services": [
+        {
+          "name": "牵引车：",
+          "details": [
+            "服务跨省，北-中-南。",
+            "24/7不间断运营。",
+            "配备货物监控系统。"
+          ]
+        },
+        {
+          "name": "铁路：",
+          "details": ["南北集装箱运输。", "避免交通拥堵，降低公路运输成本。"]
+        },
+        {
+          "name": "驳船：",
+          "details": ["方便进入河流、沿海地区如湄公河三角洲各省。"]
+        },
+        {
+          "name": "厢式货车和皮卡（<950kg）：",
+          "details": ["服务城市内和禁行区域的1吨以下货物。"]
+        },
+        {
+          "name": "两轮车：",
+          "details": ["运输电商货物和文件。", "便于进入小巷，避免堵车。"]
+        }
+      ]
+    },
+    "crossBorderTransport": {
+      "title": "跨境运输服务",
+      "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%203.png",
+      "alt": "跨境运输",
+      "services": [
+        {
+          "name": "国际站点：",
+          "details": [
+            "越南-中国（凭祥、广西、南宁等）。",
+            "越南-中亚（乌兰巴托、蒙古等）。",
+            "越南-俄罗斯（莫斯科沃西诺）。"
+          ]
+        },
+        {
+          "name": "国际牵引车：",
+          "details": ["越南 - 老挝", "越南 - 柬埔寨", "越南 - 中国"]
+        }
+      ]
+    },
+    "lastMileDelivery": {
+      "title": "最后一公里配送",
+      "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%204.png",
+      "alt": "最后一公里配送"
+    }
+  },
+  "haiquan_blog": {
+    "title": "海关服务概述",
+    "description": "专为以下货物提供海关申报服务"
+  },
+  "tin-tuc-KH": {
+    "category": "新闻",
+
+    "share": "分享文章"
+  },
+  "hoat-dong-KH": {
+    "category": "金好活动",
+    "title": "2025年越南金好贸易运输有限责任公司新年宴会",
+    "sections": [
+      {
+        "content": "在初春温暖的气氛中，<strong>越南金好贸易运输有限责任公司</strong>举办了2025年新年宴会，庆祝河内新办公室的成立，并迎接充满激情的新一年，同时加强公司成员之间的联系。",
+        "image": "LP__5880.jpg"
+      },
+      {
+        "title": "2025年越南金好贸易运输有限责任公司新年宴会的亮点活动",
+        "content": "2025年3月14日，<strong>越南金好贸易运输有限责任公司</strong>的成员们共同努力，创意装饰了宴会空间的每一个角落。舞台装饰宏伟，彩色气球，精致的宴会桌配以优雅的鲜花，营造出欢乐和兴奋的氛围。",
+        "image": "LP__5824.jpg"
+      },
+      {
+        "content": "宴会因公司成员表演的精彩文艺节目而更加热闹，如现代舞、音乐、当代舞等。",
+        "image": "Blank 4 Grids Collage (6).png"
+      },
+      {
+        "content": "整个宴会期间，我们一起拍摄了许多集体照片，以保存这些有意义的时刻。",
+        "image": "Blank 4 Grids Collage (3).png"
+      },
+      {
+        "content": "为了活跃气氛并带来放松的时刻，我们参与了各种游戏和抽奖活动，奖品极具吸引力，同时表彰了长期为公司服务的优秀个人。正是成员们的热情共同营造了温馨、亲近和愉快的空间。",
+        "image": "Blank 4 Grids Collage (4).png"
+      },
+      {
+        "title": "2025年越南金好贸易运输有限责任公司新年宴会的信息与灵感",
+        "content": "可以说，新年宴会不仅是一个难忘的活动，也是全体成员对彼此的爱心和团结的证明。通过这次宴会，越南物流公司希望激发不断革新和创造的灵感，敢于挑战和突破，在2025年取得更大的成功。",
+        "image": "Blank 4 Grids Collage.png"
+      }
+    ],
+    "video": {
+      "url": "https://www.youtube.com/embed/cYQuktgXCTY?si=kYLEeJFDrPffk0QB",
+      "title": "2025新年宴会视频"
+    }
+  },
+
+  "tuyen-dung-KH": {
+    "category": "招聘",
+    "categoryLink": "/招聘",
+    "title": "[胡志明市] 招聘销售主管",
+    "image": {
+      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/dang-tin-tuyen-dung-360x.jpg",
+      "alt": "销售主管",
+      "width": 500,
+      "height": 312
+    },
+    "jobDescription": {
+      "title": "工作描述：",
+      "items": [
+        "记录团队和个人的销售指标",
+        "制定销售计划，培训新销售代表",
+        "组织和协调销售代表的日程",
+        "监督销售代表，支持他们达成和超越目标",
+        "提供运输和物流核心服务",
+        "不断寻找新客户并维护现有客户",
+        "发展和维护与客户的信任关系",
+        "管理客户合同和报价流程",
+        "解决客户的所有问题和投诉"
+      ]
+    },
+    "requirements": {
+      "title": "要求：",
+      "items": [
+        "学历：大专以上",
+        "在物流/进出口业务方面有2-3年经验",
+        "有现成客户资源者优先",
+        "良好的沟通能力，反应敏捷，口齿伶俐",
+        "团队合作能力，与集体分享",
+        "热爱销售，热情，主动",
+        "英语为必修外语",
+        "向销售经理汇报"
+      ]
+    },
+    "benefits": {
+      "title": "福利：",
+      "items": [
+        "现代化、专业、友好的工作环境",
+        "根据越南法律缴纳社会保险、医疗保险、失业保险",
+        "补贴和13薪，生日礼物，年假，年度旅游",
+        "年度健康检查",
+        "生日奖金，节假日奖金",
+        "医疗保险"
+      ]
+    },
+    "contact": {
+      "title": "联系：越南胡志明市平政县新集镇裴清决街94号",
+      "text": "请将简历发送至",
+      "email": "info@kimhaotransport.com"
+    }
+  }
+}

@@ -2,45 +2,94 @@
 "use client";
 import Image from "next/image";
 // import vantaibien from "../../public/filemanager/userfiles/_thumbs/ICON 2023/Sea-144x.png";
-import cosco from "../../public/filemanager/userfiles/z3901221202527_85eb4089bc0d3c43829b5bf93d1c2365.jpg.png";
-import wcas from "../../public/filemanager/userfiles/wcas.png";
-import oocl from "../../public/filemanager/userfiles/oocl.png";
+// import cosco from "../../public/filemanager/userfiles/z3901221202527_85eb4089bc0d3c43829b5bf93d1c2365.jpg.png";
+// import wcas from "../../public/filemanager/userfiles/wcas.png";
+// import oocl from "../../public/filemanager/userfiles/oocl.png";
 // import vantainoidia from "../../public/filemanager/userfiles/van-tai-noi-dia.png";
-import banner from '../../image/home.png'
+import banner from "../../image/home.jpg";
 import Link from "next/link";
 import section2 from "../../image/1.jpg";
-import crm3 from "../../public/filemanager/userfiles/banner/crm3.png";
-import map3 from "../../public/filemanager/userfiles/banner/map3.png";
+// import crm3 from "../../public/filemanager/userfiles/banner/crm3.png";
+import map3 from "../../public/filemanager/userfiles/banner/outlined-map-world-vector-31655562.jpg";
 import sectionBg from "../../public/filemanager/userfiles/_thumbs/_thumbs/global-logistics-disruption-new.jpg";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
 // import { useMemo } from "react";
 
-interface Service {
-  id: number;
-  title: string;
-  description: string;
-  iconUrl: string;
-}
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+//   iconUrl: string;
+//   link: string;
+// }
+
 
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-   const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+
   const services = t("homepage.services.list", {
     returnObjects: true,
-  }) as Service[];
+  });
+
+  // Kiểm tra nếu services không phải là mảng
+  if (!Array.isArray(services)) {
+    console.error("Dữ liệu dịch vụ không hợp lệ:", services);
+    return null; // hoặc hiển thị UI fallback
+  }
+
+  // Ép kiểu an toàn hơn
+  const serviceList = services as Array<{
+    id: number;
+    title: string;
+    description: string;
+    link: string;
+    iconUrl: string;
+  }>;
 
   if (!t) {
     return <div>Loading...</div>; // Hoặc bất kỳ UI loading nào bạn muốn
   }
-  console.log(services); 
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await res.json();
+    alert(result.message);
+  };
+
+  console.log("Kiểm tra:", {
+    type: typeof services, // → 'object'
+    isArray: Array.isArray(services), // → true
+    data: services, // → Mảng dịch vụ
+  });
 
   return (
     <>
       <main id="main" className="homepage">
         <div id="content" role="main">
-          <section className="relative w-full">
+          <section className="relative w-full pt-24 md:pt-28">
             {/* Banner background */}
             <div className="relative h-screen max-h-[600px] w-full overflow-hidden bg-gray-900">
               <Image
@@ -83,38 +132,31 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="py-20 bg-gray-100">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-wrap -mx-4">
+          <section className="py-12 md:py-20 bg-gray-100">
+            <div className="container mx-auto px-4 sm:px-6">
+              <div className="flex flex-col md:flex-row gap-8">
                 {/* Left column - Text content */}
-                <div className="w-full md:w-1/2 px-4">
-                  <div className="p-4 md:p-6">
-                    {" "}
-                    {/* Giảm xuống p-4 (16px) mobile và p-6 (24px) desktop */}
-                    <h2 className="text-xl md:text-2xl font-bold text-blue-500 mb-4 uppercase whitespace-nowrap">
-                      {" "}
-                      {/* Giảm mb-5 xuống mb-4 */}
+                <div className="w-full md:w-1/2 order-1 md:order-none">
+                  <div className="p-4 sm:p-6 bg-white rounded-lg shadow-sm md:shadow-none">
+                    <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 mb-4 uppercase truncate">
                       {t("homepage.about.title")}
                     </h2>
-                    <p className="text-gray-800 text-base leading-relaxed mb-4">
-                      {" "}
-                      {/* Giảm mb-5 xuống mb-4 */}
+                    <p className="text-gray-700 md:text-gray-800 text-base md:text-lg leading-relaxed mb-4">
                       {t("homepage.about.description")}
                     </p>
                   </div>
                 </div>
 
                 {/* Right column - Image */}
-                <div className="w-full md:w-1/2 px-4">
-                  <div className="relative h-full min-h-64 md:min-h-full">
+                <div className="w-full md:w-1/2 order-0 md:order-none">
+                  <div className="relative aspect-video md:aspect-[4/3] lg:aspect-auto lg:h-full rounded-lg overflow-hidden shadow-md">
                     <Image
-                      src={section2} // Đảm bảo cung cấp đúng đường dẫn hình ảnh từ JSON nếu cần
+                      src={section2}
                       alt={t("homepage.about.title")}
-                      className="rounded shadow-md"
                       fill
-                      style={{
-                        objectFit: "cover",
-                      }}
+                      className="object-cover"
+                      sizes="(max-width: 767px) 100vw, 50vw"
+                      priority
                     />
                   </div>
                 </div>
@@ -132,29 +174,35 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service) => (
+                {serviceList.map((service) => (
                   <div
                     key={service.id}
                     className="transition-all duration-300 hover:shadow-lg"
                   >
-                    <div className="bg-white rounded-lg p-8 h-full shadow-md text-center">
-                      <div className="flex justify-center mb-4">
-                        <Image
-                          src={service.iconUrl}
-                          alt={service.title}
-                          width={80}
-                          height={80}
-                          className="object-contain"
-                          quality={90}
-                        />
+                    <a
+                      href={service.link}
+                      rel="noopener noreferrer"
+                      className="block h-full"
+                    >
+                      <div className="bg-white rounded-lg p-8 h-full shadow-md text-center hover:shadow-lg transition-shadow cursor-pointer">
+                        <div className="flex justify-center mb-4">
+                          <Image
+                            src={service.iconUrl}
+                            alt={service.title}
+                            width={80}
+                            height={80}
+                            className="object-contain"
+                            quality={90}
+                          />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-800 mb-4 uppercase">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 text-base leading-relaxed">
+                          {service.description}
+                        </p>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-800 mb-4 uppercase">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 text-base leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
+                    </a>
                   </div>
                 ))}
               </div>
@@ -168,6 +216,7 @@ export default function Home() {
               </div>
             </div>
           </section>
+
           <section>
             <div
               id="section-4"
@@ -195,7 +244,9 @@ export default function Home() {
                         letterSpacing: "1px",
                       }}
                     >
-                      <strong>MANAGEMENT SYSTEM</strong>
+                      <h2 className="text-4xl font-bold uppercase text-blue-500 tracking-wider">
+                        MANAGEMENT SYSTEM
+                      </h2>
                     </span>
                   </h2>
                 </div>
@@ -204,17 +255,17 @@ export default function Home() {
                   <div
                     className="row slider row-slider slider-nav-reveal slider-nav-push"
                     data-flickity-options='{
-            "imagesLoaded": true,
-            "groupCells": "100%",
-            "dragThreshold": 5,
-            "cellAlign": "center",
-            "wrapAround": true,
-            "prevNextButtons": true,
-            "percentPosition": true,
-            "pageDots": true,
-            "rightToLeft": false,
-            "autoPlay": 5000
-          }'
+                    "imagesLoaded": true,
+                    "groupCells": "100%",
+                    "dragThreshold": 5,
+                    "cellAlign": "center",
+                    "wrapAround": true,
+                    "prevNextButtons": true,
+                    "percentPosition": true,
+                    "pageDots": true,
+                    "rightToLeft": false,
+                    "autoPlay": 5000
+                  }'
                     style={{
                       width: "100%",
                       overflow: "hidden",
@@ -222,7 +273,7 @@ export default function Home() {
                       borderRadius: "8px",
                     }}
                   >
-                    <div
+                    {/* <div
                       style={{
                         display: "flex",
                         justifyContent: "center",
@@ -242,7 +293,7 @@ export default function Home() {
                         }}
                         priority={true}
                       />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -256,7 +307,7 @@ export default function Home() {
                   Network
                 </h2>
                 <div className="flex justify-center">
-                  <div className="h-1 w-16 bg-blue-500 my-4"></div>
+                  {/* <div className="h-1 w-16 bg-blue-500 my-4"></div> */}
                 </div>
               </div>
 
@@ -275,58 +326,99 @@ export default function Home() {
               </div>
 
               {/* Office Listings - Centered Single Card */}
-              <div className="flex justify-center">
-                <div className="w-full max-w-md">
-                  {" "}
-                  {/* Giới hạn chiều rộng thẻ */}
-                  <div className="bg-gray-50 rounded-lg shadow-sm p-6">
+              <div className="flex justify-center px-4">
+                <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Card 1 - Bình Chánh */}
+                  <a
+                    href="https://maps.app.goo.gl/h79fMeix7eL34twa8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-lg shadow-md p-6 transform transition-all hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+                  >
                     <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 text-center">
-                      Việt Nam
+                      {t("locations.hcm.title")}
                     </h3>
-                    <ul className="space-y-3">
-                      <li className="flex flex-col items-center text-center">
-                        <div className="flex items-start mb-2">
-                          <svg
-                            className="h-5 w-5 text-blue-500 mr-2"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          <span>
-                            94 Bùi Thanh Khiết, Thị Trấn Tân Túc
-                            <br />
-                            Huyện Bình Chánh, Thành phố Hồ Chí Minh
-                            <br />
-                            Việt Nam
-                          </span>
-                        </div>
-                      </li>
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-start w-full max-w-xs">
+                        <svg
+                          className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="text-gray-600 text-sm leading-relaxed text-left">
+                          {t("locations.hcm.address")}
+                        </span>
+                      </div>
+                      <div className="mt-4 text-blue-500 hover:text-blue-700 text-sm font-medium inline-flex items-center transition-colors">
+                        {t("map")}
+                        <svg
+                          className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
 
-                      <li className="mt-4 text-center">
-                        <button className="text-blue-500 hover:text-blue-700 text-sm font-medium inline-flex items-center">
-                          Xem tất cả
-                          <svg
-                            className="h-4 w-4 ml-1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
+                  {/* Card 2 - Quận 5 */}
+                  <a
+                    href="https://maps.app.goo.gl/bXcxNzEaMkWXWp2g9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-lg shadow-md p-6 transform transition-all hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+                  >
+                    <h3 className="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2 text-center">
+                      {t("locations.D5.title")}
+                    </h3>
+                    <div className="flex flex-col items-center">
+                      <div className="flex items-start w-full max-w-xs">
+                        <svg
+                          className="h-5 w-5 text-blue-500 mt-0.5 mr-2 flex-shrink-0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="text-gray-600 text-sm leading-relaxed text-left">
+                          {t("locations.D5.address")}
+                        </span>
+                      </div>
+                      <div className="mt-4 text-blue-500 hover:text-blue-700 text-sm font-medium inline-flex items-center transition-colors">
+                        {t("map")}
+                        <svg
+                          className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -397,7 +489,7 @@ export default function Home() {
                 <div className="divider"></div>
               </div>
 
-              <div className="partner-logos">
+              {/* <div className="partner-logos">
                 <div className="partner-logo">
                   <Image
                     src={cosco}
@@ -428,7 +520,7 @@ export default function Home() {
                     quality={100}
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
           <section className="contact-section" id="section_1631451535">
@@ -574,13 +666,15 @@ export default function Home() {
                     </h2>
                   </div>
 
-                  <form className="wpcf7-form">
+                  <form className="wpcf7-form" onSubmit={handleSubmit}>
                     <div className="form-group">
                       <input
                         type="text"
                         name="name"
                         className="form-control"
                         placeholder={t("homepage.contact.form.name")}
+                        value={formData.name}
+                        onChange={handleChange}
                         required
                       />
                     </div>
@@ -591,6 +685,8 @@ export default function Home() {
                         name="email"
                         className="form-control"
                         placeholder={t("homepage.contact.form.email")}
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                       />
                     </div>
@@ -601,15 +697,19 @@ export default function Home() {
                         name="phone"
                         className="form-control"
                         placeholder={t("homepage.contact.form.phone")}
+                        value={formData.phone}
+                        onChange={handleChange}
                         required
                       />
                     </div>
 
                     <div className="form-group">
                       <textarea
-                        name="content"
+                        name="message"
                         className="form-control"
                         placeholder={t("homepage.contact.form.content")}
+                        value={formData.message}
+                        onChange={handleChange}
                         required
                       />
                     </div>

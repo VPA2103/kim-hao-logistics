@@ -73,7 +73,7 @@ const RelatedPost = () => {
   };
 
   return (
-    <main id="main" className="pt-24 py-8">
+    <main id="main" className="pt-40 py-8">
       <div id="content" className="container mx-auto px-4">
         <div className="flex flex-col items-center">
           <div className="w-full lg:w-2/3">

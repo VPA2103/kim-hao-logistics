@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
-import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
-import Image from "next/image";
+// import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
+// import Image from "next/image";
 
 // Import images for services
-import hanhLyImage from "../../../public/filemanager/userfiles/obori2-360x.jpg";
+// import hanhLyImage from "../../../public/filemanager/userfiles/obori2-360x.jpg";
 import { useTranslation } from "react-i18next";
 // import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
 // import nguyHiemImage from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
 
-interface NewsItem {
-  id: number;
-  title: string;
-}
+// interface NewsItem {
+//   id: number;
+//   title: string;
+// }
 
 // interface NewsContent {
 //   title: string;
@@ -28,52 +28,8 @@ const AirTransportSection = () => {
   return (
     <>
       <main id="main">
-        <div id="content" role="main">
+        <div id="content" role="main" className="content-wrapper pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
-            <div
-              className="banner-image-container"
-              style={{
-                position: "relative",
-                width: "100%",
-                height: "100vh" /* Full viewport height */,
-                minHeight: "600px" /* Đảm bảo không quá nhỏ */,
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={bannerImage}
-                alt="Banner vận tải đường thủy"
-                fill /* Tự động lấp đầy container */
-                priority
-                className="banner-image"
-                style={{
-                  objectFit: "cover" /* Phủ kín container */,
-                  objectPosition: "center" /* Căn giữa hình */,
-                  width: "100%",
-                  height: "100%",
-                }}
-                quality={100} /* Chất lượng hình ảnh tốt nhất */
-                sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
-              />
-              {/* Có thể thêm overlay hoặc text nếu cần */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
-                }}
-              ></div>
-            </div>
-            <div className="banner-content">
-              <div className="text-box">
-                <div className="text-content"></div>
-              </div>
-            </div>
-          </div>
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -81,29 +37,7 @@ const AirTransportSection = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="services-grid">
-            {(t("new-kh.news", { returnObjects: true }) as NewsItem[]).map(
-              (item) => (
-                <div className="service-card" key={item.id}>
-                  <a href="/tin-tuc/blog" className="service-link">
-                    <div className="image-container">
-                      <Image
-                        src={hanhLyImage}
-                        alt={item.title}
-                        fill
-                        className="service-image"
-                        style={{ objectFit: "contain" }}
-                      />
-                    </div>
-                    <div className="service-content">
-                      <h2>{item.title}</h2>
-                      <div className="divider"></div>
-                    </div>
-                  </a>
-                </div>
-              )
-            )}
-          </div>
+          <strong>Chưa có bài viết...</strong>
         </div>
       </main>
 
@@ -113,8 +47,8 @@ const AirTransportSection = () => {
           font-family: "Arial", sans-serif;
           line-height: 1.6;
           color: #333;
+         
         }
-
         /* Banner Styles */
         .banner {
           position: relative;
@@ -241,5 +175,72 @@ const AirTransportSection = () => {
     </>
   );
 };
+
+{/* <div className="services-grid">
+  {(t("new-kh.news", { returnObjects: true }) as NewsItem[]).map((item) => (
+    <div className="service-card" key={item.id}>
+      <a href="/tin-tuc/blog" className="service-link">
+        <div className="image-container">
+          <Image
+            src={hanhLyImage}
+            alt={item.title}
+            fill
+            className="service-image"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="service-content">
+          <h2>{item.title}</h2>
+          <div className="divider"></div>
+        </div>
+      </a>
+    </div>
+  ))}
+</div>; */}
+
+// {/* <div className="banner" id="banner-water-transport">
+//   <div
+//     className="banner-image-container"
+//     style={{
+//       position: "relative",
+//       width: "100%",
+//       height: "100vh" /* Full viewport height */,
+//       minHeight: "600px" /* Đảm bảo không quá nhỏ */,
+//       overflow: "hidden",
+//     }}
+//   >
+//     <Image
+//       src={bannerImage}
+//       alt="Banner vận tải đường thủy"
+//       fill /* Tự động lấp đầy container */
+//       priority
+//       className="banner-image"
+//       style={{
+//         objectFit: "cover" /* Phủ kín container */,
+//         objectPosition: "center" /* Căn giữa hình */,
+//         width: "100%",
+//         height: "100%",
+//       }}
+//       quality={100} /* Chất lượng hình ảnh tốt nhất */
+//       sizes="100vw" /* Tối ưh cho mọi kích thước màn hình */
+//     />
+//     {/* Có thể thêm overlay hoặc text nếu cần */}
+//     <div
+//       style={{
+//         position: "absolute",
+//         top: 0,
+//         left: 0,
+//         right: 0,
+//         bottom: 0,
+//         backgroundColor: "rgba(0,0,0,0.3)" /* Overlay mờ */,
+//       }}
+//     ></div>
+//   </div>
+//   <div className="banner-content">
+//     <div className="text-box">
+//       <div className="text-content"></div>
+//     </div>
+//   </div>
+// </div>; */}
 
 export default AirTransportSection;

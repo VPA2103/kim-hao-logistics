@@ -1,11 +1,13 @@
 {
+  "map": "View on map",
+
   "home": "Home",
   "about_us": "About Us",
   "services": "Services",
   "services_sub": {
     "water_transport": "Water Transport",
     "air_transport": "Air Transport",
-    "warehouse": "Warehouse and Distribution Services",
+    "warehouse": "Warehousing and Distribution Services",
     "domestic_transport": "Domestic Transport",
     "customs": "Customs"
   },
@@ -20,39 +22,30 @@
   "search_placeholder": "Search...",
 
   "locations": {
-    "hanoi": {
-      "title": "SCANWELL HANOI",
-      "address": "3rd Floor, Intracom Building, Lot C2F, Cau Giay, Hanoi",
-      "tel": "Tel: +84 024 3512 2590",
-      "fax": "Fax: +84 024 3795 0702",
-      "email": "han-sales@scanwell.com"
-    },
     "hcm": {
-      "title": "SCANWELL HO CHI MINH",
-      "address": "13th Floor, Pearl Plaza, 561A Dien Bien Phu, Binh Thanh District, Ho Chi Minh City",
-      "tel": "Tel: +84 028 3510 6866",
-      "fax": "Fax: +84 028 3510 6880",
-      "email": "hcm-sales@scanwell.com"
+      "title": "BINH CHANH DISTRICT",
+      "address": "94 Bui Thanh Khiet, Tan Tuc Town, Binh Chanh District, Ho Chi Minh City, Vietnam",
+      "tel": "Tel: +84 903 357 988",
+      "email": "Email: info@kimhaotransport.com"
     },
-    "haiphong": {
-      "title": "SCANWELL HAI PHONG",
-      "address": "Room 803, 8th Floor, Thanh Dat Building, Hai Phong",
-      "tel": "Tel: +84 0225 325 0779",
-      "fax": "Fax: +84 0225 325 0780",
-      "email": "han-sales@scanwell.com"
+    "D5": {
+      "title": "DISTRICT 5",
+      "address": "11 Nhieu Tam, Ward 5, District 5, Ho Chi Minh City, Vietnam",
+      "tel": "Tel: +84 903 357 988",
+      "email": "Email: info@kimhaotransport.com"
     }
   },
-  "copyright": "© 2016 Scanwell Logistics Viet Nam. All rights reserved.",
+  "copyright": "© 2025 KIM HAO TRANSPORT TRADING COMPANY LIMITED Vietnam. All rights reserved.",
 
   "homepage": {
     "banner": {
-      "title": "WELCOME TO SCANWELL LOGISTICS VIETNAM",
-      "description": "Scanwell Logistics is one of the leading companies in the transport and freight forwarding industry. Scanwell offers a variety of transport and logistics solutions including international freight forwarding, domestic distribution, and supply chain logistics support. We transport goods quickly, safely, and on time worldwide.",
+      "title": "WELCOME TO KIM HAO TRANSPORT TRADING COMPANY LIMITED",
+      "description": "KIM HAO TRANSPORT TRADING COMPANY LIMITED is one of the leading companies in the transport and logistics industry. Kim Hao provides a variety of transport and logistics solutions, including international transport and logistics, domestic distribution, and supply chain logistics support. We deliver goods quickly, safely, and on time worldwide.",
       "button": "READ MORE"
     },
     "about": {
-      "title": "KIM HAO TRANSPORT TRADE CO., LTD.",
-      "description": "KIM HAO TRANSPORT TRADE CO., LTD. was established in 1981, with its headquarters located in Hong Kong. Over the past 35 years, we have grown to become one of the largest companies in the transport and freight forwarding industry, a fully trusted member of the IATA association. We have a network of branches across continents such as: America, Asia, Europe, Australia... and hundreds of agents in major cities worldwide, aiming to ensure the best conditions for controlling service quality and safety in the transportation of goods."
+      "title": "KIM HAO TRANSPORT TRADING COMPANY LIMITED",
+      "description": "KIM HAO TRANSPORT TRADING COMPANY LIMITED was established in 2025, with its headquarters in Vietnam. We are developing to become one of the largest transport and logistics service companies, fully trusted by the IATA association. We have a branch system in most continents such as America, Asia, Europe, Australia... and hundreds of agents in major cities worldwide, aiming to provide the most convenient conditions for quality service control and cargo safety."
     },
     "services": {
       "title": "SERVICES",
@@ -60,39 +53,44 @@
         {
           "id": 1,
           "title": "SEA TRANSPORT",
-          "description": "Scanwell Logistics is one of the largest NVOCCs in Hong Kong, with over 30 years of experience in sea freight including LCL (Less than Container Load) and FCL (Full Container Load).",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png"
+          "description": "KIM HAO TRANSPORT TRADING COMPANY LIMITED is one of the largest NVOCCs in Vietnam, with over 30 years of experience in sea transport, including LCL (less than container load) and FCL (full container load).",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png",
+          "link": "/water-transport"
         },
         {
           "id": 2,
-
-          "title": "AIR FREIGHT",
-          "description": "Scanwell Logistics is proud to be a member of the International Air Transport Association (IATA), with extensive experience in air freight services.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png"
+          "title": "AIR TRANSPORT",
+          "description": "KIM HAO TRANSPORT TRADING COMPANY LIMITED is proud to be a member of the International Air Transport Association (IATA), with extensive experience in air cargo transport.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png",
+          "link": "/air-transport"
         },
         {
           "id": 3,
-          "title": "WAREHOUSE SERVICES",
-          "description": "Currently operating service and bonded warehouses in central Ho Chi Minh City and surrounding areas such as Bien Hoa, Dong Nai, Nhon Trach, etc.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png"
+          "title": "WAREHOUSING SERVICES",
+          "description": "Currently operating service warehouses and bonded warehouses in the center of Ho Chi Minh City and neighboring areas such as Bien Hoa, Dong Nai, Nhon Trach, etc.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png",
+          "link": "/bonded-warehouse"
         },
         {
           "id": 4,
           "title": "CUSTOMS SERVICES",
-          "description": "With over 20 years of experience handling customs procedures in Vietnam.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png"
+          "description": "Over 20 years of experience working and handling customs procedures in Vietnam.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png",
+          "link": "/customs"
         },
         {
           "id": 5,
           "title": "DOMESTIC TRANSPORT",
-          "description": "Scanwell Logistics is one of the largest NVOCCs in Hong Kong, with over 30 years of experience in sea freight including LCL (Less than Container Load) and FCL (Full Container Load). We have a network of small trucks and containers nationwide.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png"
+          "description": "Owns a nationwide network of small trucks and containers.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png",
+          "link": "/domestic-transport"
         },
         {
           "id": 6,
-          "title": "SORTING AND PACKING SERVICES",
-          "description": "Scanwell is equipped with a comprehensive warehouse management system that can provide complete supply chain logistics solutions for our clients.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png"
+          "title": "SORTING AND PACKAGING",
+          "description": "Equipped with a comprehensive warehouse management information system that can provide complete supply chain logistics solutions for customers.",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png",
+          "link": "/sorting-and-packaging"
         }
       ],
       "button": "READ MORE"
@@ -106,7 +104,7 @@
       "button": "Find an office near you"
     },
     "partners": {
-      "title": "Partner Associations"
+      "title": "Association Partners"
     },
     "contact": {
       "title": "Contact Us",
@@ -114,41 +112,38 @@
         "name": "Full Name",
         "email": "Email",
         "phone": "Phone Number",
-        "content": "Message",
+        "content": "Content",
         "button": "Send Contact"
       }
     }
   },
 
   "about": {
-    "title": "About - KIM HAO Trading & Transport Co., Ltd.",
-    "metaDescription": "Introduction to KIM HAO Trading & Transport Co., Ltd.",
+    "title": "About - KIM HAO TRANSPORT TRADING COMPANY LIMITED",
+    "metaDescription": "About KIM HAO TRANSPORT TRADING COMPANY LIMITED",
     "bannerAlt": "Company introduction banner",
     "sections": {
-      "intro1": "<strong>KIM HAO Trading and Transport Co., Ltd.</strong> was established in 1981 with its headquarters located in Hong Kong. For over 35 years, we have grown to become one of the largest companies in the transportation and freight forwarding industry, fully accredited by IATA. We have branch networks across most continents including America, Asia, Europe, and Australia, along with hundreds of agents in major cities around the world. This extensive network ensures the best quality control and the highest level of safety in cargo transportation.",
-      "intro2": "<strong>KIM HAO Trading and Transport Co., Ltd.</strong> is a comprehensive logistics company. We offer optimal services with a complete end-to-end supply chain, saving our customers time when choosing an all-in-one transportation provider. We are capable of offering integrated transport and logistics solutions, handling shipments of all sizes to any location worldwide, with full responsibility for the safe transportation of each package and additional logistics services such as packing, warehousing, and distribution.",
-      "servicesTitle": "Our Services Include:",
-      "motto": "<strong>Our Motto</strong> is to always focus on customer needs, dedicate ourselves fully, reduce costs, and deliver on time. Therefore, we ensure that SCANWELL LOGISTICS VIETNAM can meet all your transportation and freight forwarding needs anytime and anywhere in the world at the most reasonable prices."
+      "intro1": "<strong>KIM HAO TRANSPORT TRADING COMPANY LIMITED</strong> was established in 2025, with its headquarters in Vietnam. We are developing to become one of the largest transport and logistics service companies, fully trusted by the IATA association. We have a branch system in most continents such as America, Asia, Europe, Australia... and hundreds of agents in major cities worldwide, aiming to provide the most convenient conditions for quality service control and cargo safety.",
+      "intro2": "<strong>KIM HAO TRANSPORT TRADING COMPANY LIMITED</strong> is a comprehensive logistics company. We provide optimized services with a complete \"end-to-end\" supply chain to save customers' time when choosing a full-service carrier. We can provide customers with integrated transport and logistics solutions, capable of handling shipments from the smallest to the largest to any location worldwide, with full responsibility from arranging safe transport for each shipment to other logistics services such as packaging, warehousing, and distribution.",
+      "servicesTitle": "Services we provide:",
+      "motto": "<strong>Our motto</strong> is to always focus on customer needs, dedicate ourselves, save costs, and deliver on time. Therefore, we ensure that <strong>KIM HAO TRANSPORT TRADING COMPANY LIMITED VIETNAM</strong> can meet all transport and logistics needs of your company anytime and anywhere in the world at the most reasonable prices."
     },
     "servicesList": [
-      "Sea Freight - Import & Export",
-      "Air Freight - Import & Export",
-      "Road Transport and Multimodal Transport",
+      "Sea Transport - Import and Export",
+      "Air Transport - Import and Export",
+      "Road and Multimodal Transport",
       "Warehouse Management",
       "Customs Procedures"
     ],
-    "companyName": "KIM HAO Trading & Transport Co., Ltd.",
-    "logoAlt": "KIM HAO Company Logo"
+    "companyName": "KIM HAO TRANSPORT TRADING COMPANY LIMITED",
+    "logoAlt": "Kim Hao Company Logo"
   },
 
   "waterTransport": {
-    "title": "Water Transport - KIM HAO TRANSPORT TRADING COMPANY LIMITED",
-    "metaDescription": "Professional water transport services",
-    "bannerAlt": "Water transport banner",
-    "sectionTitle": "WATER TRANSPORTATION",
+    "sectionTitle": "WATER TRANSPORT",
     "services": [
       {
-        "title": "PROJECT CARGO SERVICES",
+        "title": "PROJECT CARGO SERVICE",
         "alt": "Project cargo service",
         "href": "/dich-vu-hang-du-an"
       },
@@ -165,23 +160,19 @@
     ]
   },
   "projectCargo": {
-    "title": "PROJECT CARGO SERVICES",
+    "title": "PROJECT CARGO SERVICE",
     "shareLabel": "Share:",
     "relatedServices": "OTHER SERVICES",
     "sectionTitles": {
       "1": "CERTIFICATIONS",
       "2": "SPECIALIZED PROJECTS",
-      "3": "DEDICATED ROUTES",
-      "5": "REPRESENTATIVE OFFICE",
-      "6": "CONSTRUCTION IMAGES",
-      "8": "PROJECT IMAGES"
+      "3": "SPECIALIZED ROUTES",
+      "8": "PROJECT EXECUTION IMAGES"
     },
     "imageAlts": {
       "1": "Company certifications",
       "2": "Professional projects",
-      "3": "Transportation routes",
-      "5": "Representative office",
-      "6": "Construction images",
+      "3": "Transport routes",
       "8": "Actual project images"
     },
     "socialPlatforms": {
@@ -200,21 +191,21 @@
   },
   "specialTransport": {
     "header": {
-      "link": "WATER TRANSPORTATION",
-      "title": "SPECIAL TRANSPORT SERVICES"
+      "link": "WATER TRANSPORT",
+      "title": "WATER TRANSPORT SERVICES"
     },
     "sections": {
       "titles": {
         "1": "PARTNER SHIPPING LINES",
         "2": "VOLUME",
-        "3": "DEDICATED ROUTES",
-        "5": "OFFICE"
+        "3": "SPECIALIZED ROUTES",
+        "5": "OFFICES"
       },
       "alts": {
         "1": "Company certifications",
         "2": "Professional projects",
-        "3": "Transportation routes",
-        "5": "Representative office"
+        "3": "Transport routes",
+        "5": "Representative offices"
       }
     },
     "social": {
@@ -231,43 +222,31 @@
       "postTitle": "DANGEROUS GOODS"
     }
   },
+
   "blog": {
-    "category": "MARITIME TRANSPORTATION",
-    "categoryLink": "/van-tai-duong-thuy",
+    "category": "WATER TRANSPORT",
+    "categoryLink": "/water-transport",
     "title": "DANGEROUS GOODS",
     "content": {
       "image1": {
         "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/images2641-5c32b9fab0cfc-1024x683.jpg",
-        "alt": "Dangerous goods transportation",
-        "width": 850,
-        "height": 442
+        "alt": "Dangerous goods transport"
       },
       "sections": [
         {
           "type": "list",
           "title": "What are dangerous goods?",
           "items": [
-            "Dangerous goods are goods containing hazardous substances when transported by road or inland waterway that may cause harm to human life, health, the environment, safety and national security.",
-            "Hazardous substances are substances or compounds in gaseous, liquid or solid form that may cause harm to human life, health, the environment, safety and national security."
-          ]
-        },
-        {
-          "type": "list",
-          "title": "Scanwell's dangerous goods transportation services:",
-          "items": [
-            "Since its establishment, Scanwell has strived to provide the highest quality services to customers in the field of logistics for dangerous goods."
+            "Dangerous goods are goods containing hazardous substances...",
+            "Hazardous substances are substances or compounds in gaseous form..."
           ]
         },
         {
           "type": "image",
           "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/7.png",
-          "alt": "Dangerous goods transportation",
+          "alt": "Dangerous goods transport",
           "width": 850,
           "height": 442
-        },
-        {
-          "type": "paragraph",
-          "content": "Thanks to the agent network of Kim Hao Transport Trading Company Limited operating in more than 80 countries, we can meet all customer needs globally. All our agents are certified by IATA, FIATA for dangerous goods transportation operations in their respective countries and regions. Therefore, Kim Hao Transport Trading Company Limited is confident to provide dangerous goods transportation services from Vietnam to countries around the world and vice versa with safety and full compliance with local requirements worldwide."
         }
       ]
     },
@@ -278,104 +257,108 @@
           "title": "DANGEROUS GOODS",
           "link": "/dangerous-goods",
           "image": "/public/filemanager/userfiles/images2641-5c32b9fab0cfc-1024x683.jpg"
-        },
-        {
-          "title": "OVERVIEW OF MARITIME TRANSPORT SERVICES",
-          "link": "/maritime-transport-services",
-          "image": "/public/filemanager/userfiles/Tommy/IMAGE.jpg"
-        },
-        {
-          "title": "PROJECT CARGO SERVICES",
-          "link": "/project-cargo-services",
-          "image": "/public/filemanager/userfiles/Tommy/PROJECTCARGO7.jpg"
         }
       ]
     }
   },
   "blog_hk": {
-    "category": "AIR FREIGHT",
-    "categoryLink": "/van-tai-hang-khong",
+    "category": "AIR TRANSPORT",
+    "categoryLink": "/air-transport",
     "title": "HAND-CARRIED LUGGAGE",
     "content": {
       "images": [
         {
           "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg",
-          "alt": "Dangerous goods transportation"
+          "alt": "Dangerous goods transport"
         },
         {
           "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg",
-          "alt": "Dangerous goods transportation"
+          "alt": "Dangerous goods transport"
         }
       ],
       "intro": "Express delivery service, hand-carried service for urgent shipments.",
-      "description": "Hand-carried luggage - Express delivery by air is a service provided by Scanwell with a special team and quick procedures to literally HAND-CARRY your goods onto the plane...",
+      "description": "Hand-carried luggage – Express delivery by air is a service provided by Kim Hao with a special team and quick process to literally HAND-CARRY your goods onto the plane...",
       "features": [
         "24/7/365 service",
-        "Same day or next day delivery depending on destination",
+        "Same-day or next-day delivery depending on the destination",
         "Air ticket purchase",
         "Selected team member briefing",
         "Cargo pickup and delivery",
         "Customs procedures",
-        "Personal delivery to agreed recipient",
+        "Personal delivery to the agreed recipient",
         "Delivery confirmation"
       ],
       "cta": {
         "text": "CONTACT US NOW!",
-        "link": "/lien-he"
+        "link": "/contact"
       }
-    },
-    "social": {
-      "shareText": "Share this post",
-      "platforms": []
     }
   },
   "vantaihangkhong": {
-    "title": "AIR FREIGHT",
+    "title": "AIR TRANSPORT",
+    "services_air": {
+      "title": "OVERVIEW OF AIR TRANSPORT SERVICES",
+      "sections": [
+        {
+          "id": 1,
+          "title": "AIRLINE PARTNERS"
+        },
+        {
+          "id": 2,
+          "title": "VOLUME"
+        },
+        {
+          "id": 3,
+          "title": "SPECIALIZED ROUTES"
+        }
+      ]
+    },
     "services": [
       {
         "id": 1,
-        "title": "Air freight service",
-        "description": "Shipping goods by air from Vietnam to countries worldwide."
+        "title": "HAND-CARRIED LUGGAGE",
+        "description": "Air freight transport from Vietnam to countries worldwide."
       },
       {
         "id": 2,
-        "title": "Delivery service",
-        "description": "Providing door-to-door cargo pickup and delivery services."
+        "title": "OVERVIEW OF AIR TRANSPORT SERVICES",
+        "description": "Provides door-to-door cargo delivery services."
       },
       {
         "id": 3,
-        "title": "Warehousing service",
-        "description": "Offering storage and distribution solutions for goods."
+        "title": "DANGEROUS GOODS",
+        "description": "Provides warehousing and distribution services."
       }
     ]
   },
+
   "dichvukhobaivaphanphoi": {
     "title": "WAREHOUSING AND DISTRIBUTION SERVICES",
     "services": [
       {
         "id": 1,
-        "title": "KIM HAO'S CLIENTS",
-        "description": "Providing door-to-door delivery services."
+        "title": "KIM HAO CUSTOMERS",
+        "description": "Provides door-to-door cargo delivery services."
       },
       {
         "id": 2,
-        "title": "WAREHOUSING OVERVIEW",
-        "description": "Providing storage and goods distribution services."
+        "title": "OVERVIEW OF WAREHOUSING SERVICES",
+        "description": "Provides warehousing and distribution services."
       },
       {
         "id": 3,
         "title": "SORTING AND PACKAGING",
-        "description": "Providing storage and goods distribution services."
+        "description": "Provides warehousing and distribution services."
       }
     ]
   },
   "vantainoidia": {
-    "title": "DOMESTIC TRANSPORTATION",
+    "title": "DOMESTIC TRANSPORT",
     "services": [
       {
         "id": 1,
-        "title": "DOMESTIC TRANSPORTATION OVERVIEW",
-        "description": "Providing door-to-door cargo delivery services nationwide."
+        "title": "OVERVIEW OF DOMESTIC TRANSPORT SERVICES",
+        "description": "Provides door-to-door cargo delivery services."
       }
     ]
   },
@@ -384,18 +367,18 @@
     "services": [
       {
         "id": 1,
-        "title": "CUSTOMS SERVICES OVERVIEW",
-        "description": "Providing comprehensive customs clearance services."
+        "title": "OVERVIEW OF CUSTOMS SERVICES",
+        "description": "Provides door-to-door cargo delivery services."
       },
       {
         "id": 2,
         "title": "CUSTOMS SERVICES",
-        "description": "Professional customs brokerage and documentation services."
+        "description": "Provides warehousing and distribution services."
       },
       {
         "id": 3,
-        "title": "DANGEROUS GOODS CLEARANCE",
-        "description": "Specialized customs handling for hazardous materials."
+        "title": "DANGEROUS GOODS",
+        "description": "Provides warehousing and distribution services."
       }
     ]
   },
@@ -404,7 +387,7 @@
     "news": [
       {
         "id": 1,
-        "title": "BELT AND ROAD FORUM"
+        "title": "ONE BELT ONE ROAD SEMINAR"
       }
     ]
   },
@@ -422,54 +405,60 @@
     "recruitments": [
       {
         "id": 1,
-        "title": "[HCM] Hiring Sales Supervisor"
+        "title": "[HCM] Sales Supervisor Recruitment"
       },
       {
         "id": 2,
-        "title": "[HCM] Hiring Sales Executive"
+        "title": "[HCM] Sales Executive Recruitment"
+      }
+    ]
+  },
+  "news-recruitment": {
+    "title": "RECRUITMENT",
+    "recruitments": [
+      {
+        "id": 1,
+        "title": "SALES STAFF"
+      },
+      {
+        "id": 2,
+        "title": "SALES STAFF"
       }
     ]
   },
   "lien_he": {
-    "title": "KIM HAO VIET NAM TRANSPORT TRADING COMPANY LIMITED",
+    "title": "KIM HAO TRANSPORT TRADING COMPANY LIMITED VIETNAM",
     "contact": {
-      "title": "OFFICE & BRANCH CONTACT",
-      "subtitle": "KIM HAO VIET NAM TRANSPORT TRADING COMPANY LIMITED",
-      "instruction": "Please select the office you want to contact and fill in the information below.",
+      "title": "CONTACT OFFICES & BRANCHES",
+      "subtitle": "KIM HAO TRANSPORT TRADING COMPANY LIMITED VIETNAM",
+      "instruction": "Please select the office you wish to contact and fill in the information below.",
       "locations": {
-        "hcm": "Ho Chi Minh",
-        "hanoi": "Hanoi",
-        "haiphong": "Hai Phong"
+        "D5": "District 5",
+        "binh_chanh": "Binh Chanh"
       },
       "offices": {
-        "hcm": {
-          "title": "Ho Chi Minh Office",
-          "address": "94 Bui Thanh Khiet, Tan Tuc, Binh Chanh, HCM",
-          "phone": "+84 93 806 5499",
-          "email": "hcm-sales@kimhao.com"
+        "D5": {
+          "title": "District 5 Office",
+          "address": "Address: 11 Nhieu Tam, Ward 5, District 5, Ho Chi Minh City, Vietnam",
+          "phone": "Phone: +84 903 357 988",
+          "email": "Email: info@kimhaotransport.com"
         },
-        "hanoi": {
-          "title": "Hanoi Office",
-          "address": "13th Floor, Pearl Plaza, 561A Dien Bien Phu, Binh Thanh District, Hanoi",
-          "phone": "+84 028 3510 6866",
-          "email": "hanoi-sales@kimhao.com"
-        },
-        "haiphong": {
-          "title": "Hai Phong Office",
-          "address": "Room 803, Thanh Dat Building, No. 3 Le Thanh Tong, Ngo Quyen District, Hai Phong",
-          "phone": "+84 0225 325 0779",
-          "email": "haiphong-sales@kimhao.com"
+        "binh_chanh": {
+          "title": "Binh Chanh Office",
+          "address": "Address: 94 Bui Thanh Khiet, Tan Tuc Town, Binh Chanh District, Ho Chi Minh City, Vietnam",
+          "phone": "Phone: +84 903 357 988",
+          "email": "Email: info@kimhaotransport.com"
         }
       },
       "form": {
-        "title": "Send contact request",
+        "title": "Send Contact Request",
         "fields": {
           "fullName": {
-            "label": "Full name",
+            "label": "Full Name",
             "placeholder": ""
           },
           "phone": {
-            "label": "Phone number",
+            "label": "Phone Number",
             "placeholder": ""
           },
           "email": {
@@ -482,7 +471,7 @@
           }
         },
         "required": "*",
-        "submit": "Submit"
+        "submit": "Send"
       }
     }
   },
@@ -492,20 +481,17 @@
       "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT4.jpg",
       "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/HLXT2.jpg"
     ],
-    "imageAlts": [
-      "Dangerous goods transportation",
-      "Dangerous goods transportation"
-    ],
-    "introText": "Express delivery service, hand-carry service for urgent shipments.",
-    "description": "Hand-carried luggage - Express delivery by air is a service provided by Kim Hao with a special team and quick procedures to literally HAND-CARRY your goods onto the plane. This service meets the needs of urgent or high-value shipments requiring protective or same-day delivery, or at least the next day depending on the destination area.",
+    "imageAlts": ["Dangerous goods transport", "Dangerous goods transport"],
+    "introText": "Express delivery service, hand-carried service for urgent shipments.",
+    "description": "Hand-carried luggage – Express delivery by air is a service provided by Kim Hao with a special team and quick process to literally HAND-CARRY your goods onto the plane. This service helps meet the needs of urgent or high-value shipments requiring protective or same-day or next-day delivery depending on the region.",
     "features": [
       "24/7/365 service",
-      "Same-day or next-day delivery depending on destination",
+      "Same-day or next-day delivery depending on the destination",
       "Air ticket purchase",
       "Selected team member briefing",
       "Cargo pickup and delivery",
       "Customs procedures",
-      "Personal delivery to agreed recipient",
+      "Personal delivery to the agreed recipient",
       "Delivery confirmation"
     ],
     "cta": {
@@ -515,204 +501,151 @@
   },
   "khach-hang": {
     "title": "WAREHOUSING AND DISTRIBUTION SERVICES",
-    "description": "KIM HAO'S CLIENTS"
+    "description": "KIM HAO CUSTOMERS"
   },
   "khoBai": {
     "category": "WAREHOUSING AND DISTRIBUTION SERVICES",
-    "categoryLink": "/dich-vu-kho-bai-va-phan-phoi",
-    "title": "WAREHOUSING SERVICE OVERVIEW",
+    "title": "OVERVIEW OF WAREHOUSING SERVICES",
     "sections": {
       "network": {
         "title": "WAREHOUSE NETWORK",
-        "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/3347F736.jpg",
         "alt": "Warehouse Network"
       },
       "whyChooseUs": {
-        "title": "WHY CHOOSE KIM HAO TRADING & TRANSPORT CO., LTD?",
+        "title": "WHY CHOOSE KIM HAO TRANSPORT TRADING COMPANY LIMITED?",
         "benefits": [
-          "Warehouses located in key industrial zones",
-          "Modern CCTV surveillance and fire prevention systems",
-          "Technology-driven warehouse management and operations",
-          "Fully equipped for temperature and humidity-controlled storage"
+          "Warehouse network located in the center of industrial zones",
+          "Modern CCTV monitoring and fire prevention systems",
+          "Application of technology in warehouse management and operation",
+          "Full conditions for cargo preservation such as temperature, humidity"
         ]
       },
       "warehouseImage1": {
-        "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/4.png",
         "alt": "Warehouse"
       },
       "managementSystem": {
         "title": "WAREHOUSE MANAGEMENT SYSTEM",
-        "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/2.jpg",
-        "alt": "Warehouse Management System"
+        "alt": "Warehouse management system"
       },
       "warehouseImage2": {
         "title": "WAREHOUSE IMAGES",
-        "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/3.jpg",
-        "alt": "Warehouse Images"
+        "alt": "Warehouse images"
       }
     }
   },
   "phan-loai": {
     "title": "SORTING AND PACKAGING",
-    "title1": "APPLICATION OF WAREHOUSE MANAGEMENT SYSTEM",
+    "title1": "WAREHOUSE MANAGEMENT SYSTEM APPLICATION",
     "title2": "DC BYPASS SERVICE DIAGRAM",
     "title3": "SOUTHERN WAREHOUSE SYSTEM"
   },
   "vanTaiNoiDia": {
-    "category": "DOMESTIC TRANSPORTATION",
-    "title": "DOMESTIC TRANSPORTATION OVERVIEW",
+    "category": "DOMESTIC TRANSPORT",
+    "title": "OVERVIEW OF DOMESTIC TRANSPORT",
     "domesticTransport": {
-      "title": "DOMESTIC TRANSPORTATION SERVICES",
+      "title": "DOMESTIC TRANSPORT SERVICES",
       "image1": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%201.png",
-      "alt1": "Domestic Transport",
+      "alt1": "Domestic transport",
       "image2": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%202.png",
-      "alt2": "Domestic Transport",
+      "alt2": "Domestic transport",
       "services": [
         {
-          "name": "Tractor Trucks:",
+          "name": "Trucks:",
           "details": [
-            "Serving interprovincial routes across North–Central–South Vietnam.",
-            "24/7 continuous operation.",
+            "Serve inter-provincial, north-central-south routes.",
+            "Operate continuously 24/7.",
             "Equipped with cargo monitoring systems."
           ]
         },
         {
-          "name": "Rail Transport:",
+          "name": "Railway:",
           "details": [
-            "Container transport across South–Central–North Vietnam.",
-            "Avoids traffic congestion and reduces road transport costs."
+            "Transport containers from South to Central to North.",
+            "Avoid traffic congestion, reduce road costs."
           ]
         },
         {
           "name": "Barges:",
           "details": [
-            "Convenient for river and coastal access, especially in the Mekong Delta provinces."
+            "Convenient for transport to riverine and coastal areas such as the Mekong Delta provinces."
           ]
         },
         {
-          "name": "Vans and Pickups (<950kg):",
+          "name": "Vans and pickup trucks (<950kg):",
           "details": [
-            "Serves goods under 1 ton in urban areas and restricted traffic zones."
+            "Serve shipments under 1 ton within the city and restricted areas."
           ]
         },
         {
           "name": "Motorbikes:",
           "details": [
-            "Transporting e-commerce goods and documents.",
-            "Easily navigate narrow roads and avoid traffic jams."
+            "Transport e-commerce goods and documents.",
+            "Easy access to small roads, avoiding traffic jams."
           ]
         }
       ]
     },
     "crossBorderTransport": {
-      "title": "CROSS-BORDER TRANSPORTATION SERVICES",
+      "title": "CROSS-BORDER TRANSPORT SERVICES",
       "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%203.png",
-      "alt": "Cross-border Transport",
+      "alt": "Cross-border transport",
       "services": [
         {
-          "name": "International Rail Terminals:",
+          "name": "International stations:",
           "details": [
-            "VIETNAM–CHINA (Pingxiang, Guangxi, Nanning, ...).",
-            "VIETNAM–CENTRAL ASIA (Ulaanbaatar, Mongolia, ...).",
-            "VIETNAM–RUSSIA (Vorsino, Moscow)."
+            "VIETNAM-CHINA (Pingxiang, Guangxi, Nanning, ...).",
+            "VIETNAM-CENTRAL ASIA (Ulaanbaatar, Mongolia, ...).",
+            "VIETNAM-RUSSIA (Vorsino, Moscow)."
           ]
         },
         {
-          "name": "International Tractor Trucks:",
-          "details": ["VIETNAM – LAOS", "VIETNAM – CAMBODIA", "VIETNAM – CHINA"]
+          "name": "International trucks:",
+          "details": ["VIETNAM - LAOS", "VIETNAM - CAMBODIA", "VIETNAM - CHINA"]
         }
       ]
     },
     "lastMileDelivery": {
       "title": "LAST MILE DELIVERY",
       "image": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/INLAND%204.png",
-      "alt": "Last Mile Delivery"
+      "alt": "Last mile delivery"
     }
   },
   "haiquan_blog": {
-    "title": "CUSTOMS SERVICES OVERVIEW",
-    "description": "SPECIALIZED IN CUSTOMS DECLARATION SERVICES FOR THE FOLLOWING GOODS"
+    "title": "OVERVIEW OF CUSTOMS SERVICES",
+    "description": "SPECIALIZED CUSTOMS DECLARATION SERVICES FOR THE FOLLOWING GOODS"
   },
   "tin-tuc-KH": {
     "category": "News",
-    "title": "ONE BELT ONE ROAD SEMINAR",
-    "headerImage": {
-      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORC.jpg",
-      "alt": "One Belt One Road Seminar"
-    },
-    "intro": [
-      "Scanwell Shanghai headquarters is proud to announce its participation in the One Belt One Road conference in Shanghai. The main purpose of this conference is to interpret, analyze, and provide logistics strategies surrounding the One Belt One Road Initiative.",
-      "**So what is the One Belt One Road Initiative?**"
-    ],
-    "mapImage": {
-      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORI.png",
-      "alt": "One Belt One Road Diagram"
-    },
-    "oborExplanation": "The One Belt One Road (OBOR) Initiative is a development strategy launched by China in 2013. This initiative aims to connect Asia, Africa, and Europe through a network of land and sea trade routes. OBOR has been praised by some for its potential to boost economic growth and regional cooperation.",
-    "impactTitle": "Economic and Geopolitical Impacts",
-    "impacts": [
-      {
-        "id": 1,
-        "title": "Increased Chinese Influence",
-        "content": "The OBOR initiative could lead to increased Chinese influence in the region by creating debt burdens for participating countries receiving China’s support in developing their logistics infrastructure."
-      },
-      {
-        "id": 2,
-        "title": "Trade Expansion",
-        "content": "The OBOR initiative will create new trade routes between China and participating countries. This could lead to increased trade and investment in the region."
-      },
-      {
-        "id": 3,
-        "title": "Infrastructure Improvement",
-        "content": "The OBOR initiative will involve the construction of new roads, railways, ports, and airports. This will improve connectivity between participating countries and facilitate trade and investment."
-      },
-      {
-        "id": 4,
-        "title": "Enhanced Cooperation",
-        "content": "The OBOR initiative will require cooperation between China and participating countries. This could lead to improved relations among countries and a more stable region."
-      }
-    ],
-    "howItWorksTitle": "How Does One Belt One Road Work?",
-    "howItWorks": "The project consists of two parts. The first belt is called the Silk Road Economic Belt, which is land-based and is intended to connect China to Central Asia, Eastern Europe, and Western Europe. The second is the 21st Century Maritime Silk Road, which is sea-based and is intended to connect China’s southern coast to the Mediterranean, Africa, Southeast Asia, and Central Asia.",
-    "abc": "These include the following six economic corridors:",
-    "economicCorridors": [
-      "The New Eurasian Land Bridge connecting Western China to Western Russia",
-      "The China-Mongolia-Russia Corridor, connecting Northern China to Eastern Russia via Mongolia",
-      "The China-Central Asia-West Asia Corridor, connecting Western China to Turkey through Central and West Asia",
-      "The China-Indochina Peninsula Corridor, connecting Southern China to Singapore via the Indo-China region",
-      "The China-Pakistan Corridor, connecting Southwestern China through Pakistan to Arabian Sea trade routes",
-      "The Bangladesh-China-India-Myanmar Corridor, connecting Southern China to India via Bangladesh and Myanmar"
-    ],
-    "share": "SHARE THIS ARTICLE"
+    "share": "SHARE THIS POST"
   },
   "hoat-dong-KH": {
-    "category": "KIM HẢO Activities",
-    "title": "Kim Hao Logistics New Year Party 2025",
+    "category": "KIM HAO ACTIVITIES",
+    "title": "KIM HAO TRANSPORT TRADING COMPANY LIMITED 2025 NEW YEAR PARTY",
     "sections": [
       {
-        "content": "In the warm atmosphere of early spring, <strong>Kim Hao Logistics Vietnam Co., Ltd.</strong> hosted the 2025 New Year Party to celebrate the opening of its new office at the Hanoi headquarters and to kick off a new year full of excitement and bonding among team members.",
+        "content": "In the warm atmosphere of the early spring days, <strong>KIM HAO TRANSPORT TRADING COMPANY LIMITED VIETNAM</strong> organized the 2025 New Year party to welcome the new office in Hanoi headquarters as well as mark a new year full of excitement and connection among company members.",
         "image": "LP__5880.jpg"
       },
       {
-        "title": "Highlights of Kim Hao Logistics Vietnam's 2025 New Year Party",
-        "content": "On March 14, 2025, members of the 'Kim Hao family' joined hands and got creative in decorating every corner of the New Year Party venue. The grand stage setup, colorful balloons, and meticulously prepared tables with elegant fresh flowers created a joyful and enthusiastic atmosphere.",
+        "title": "Highlights of KIM HAO TRANSPORT TRADING COMPANY LIMITED VIETNAM's 2025 New Year Party",
+        "content": "On March 14, 2025, members of the \"common home\" <strong>KIM HAO TRANSPORT TRADING COMPANY LIMITED VIETNAM</strong> worked together to decorate every corner of the party space. With a grand stage, colorful balloons, and meticulous tables with elegant fresh flowers, the atmosphere was joyful and exciting.",
         "image": "LP__5824.jpg"
       },
       {
-        "content": "The party became even more lively with exciting performances by our own employees, including modern dance, live music, and contemporary dance.",
+        "content": "The party became more lively with attractive performances by company members such as modern dance, music, and contemporary dance.",
         "image": "Blank 4 Grids Collage (6).png"
       },
       {
-        "content": "Throughout the party, we captured many memorable group moments to preserve these meaningful memories together.",
+        "content": "Throughout the party, we took many group photos to capture meaningful moments.",
         "image": "Blank 4 Grids Collage (3).png"
       },
       {
-        "content": "To energize the atmosphere and bring fun moments, we joined in games and a lucky draw featuring attractive prizes. We also honored outstanding individuals who have been with the company for a long time. The enthusiasm of our members contributed to creating a warm, friendly, and joyful space.",
+        "content": "To liven up the atmosphere and bring relaxing moments, we participated in games and a lottery program with attractive prizes, along with the recognition of outstanding individuals who have long been with the company. The enthusiasm of the members contributed to creating a cozy, friendly, and fun space.",
         "image": "Blank 4 Grids Collage (4).png"
       },
       {
-        "title": "Messages and Inspiration from Kim Hao's 2025 New Year Party",
-        "content": "The New Year Party was not only a memorable event but also a testament to the love and unity among all employees. Through this event, Kim Hao Logistics Vietnam hopes to inspire continuous innovation and creativity, encouraging everyone to challenge limits and break through to greater success in 2025.",
+        "title": "Message and Inspiration from KIM HAO TRANSPORT TRADING COMPANY LIMITED's 2025 New Year Party",
+        "content": "It can be said that the New Year party was not only a memorable event but also a testament to the love and solidarity that all employees have for each other. Through this party, Logistics VietNam Company wants to inspire continuous innovation and creativity, daring to challenge and break through to succeed more in 2025.",
         "image": "Blank 4 Grids Collage.png"
       }
     ],
@@ -721,10 +654,11 @@
       "title": "2025 New Year Party Video"
     }
   },
-  "tuyen-dung-KH":{
-    "category": "Careers",
-    "categoryLink": "/tuyen-dung",
-    "title": "[HCM] Hiring Sales Supervisor",
+
+  "tuyen-dung-KH": {
+    "category": "RECRUITMENT",
+    "categoryLink": "/recruitment",
+    "title": "[HCM] Sales Supervisor Recruitment",
     "image": {
       "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/dang-tin-tuyen-dung-360x.jpg",
       "alt": "Sales Supervisor",
@@ -734,26 +668,26 @@
     "jobDescription": {
       "title": "Job Description:",
       "items": [
-        "Maintain assigned sales targets for the team and personal targets set by the manager",
-        "Develop sales plans and provide training for new sales representatives",
+        "Track the sales targets assigned to the team and personal targets set by management",
+        "Develop sales plans, train new sales representatives",
         "Organize and coordinate sales representatives' schedules",
-        "Supervise and support sales representatives to help them meet and exceed goals",
-        "Provide freight forwarding services and core logistics solutions",
-        "Regularly seek out new clients and take care of existing customers",
-        "Build and maintain trustworthy relationships with clients",
+        "Supervise sales representatives, support them in achieving and exceeding targets",
+        "Provide transport and logistics services and core logistics services",
+        "Regularly seek new customers and take care of existing customers",
+        "Develop and maintain trusting relationships with customers",
         "Manage customer contracts and quotation processes",
-        "Handle customer issues and complaints effectively"
+        "Resolve any customer issues and complaints"
       ]
     },
     "requirements": {
       "title": "Requirements:",
       "items": [
-        "Education level: College degree or higher",
-        "2–3 years of experience in logistics/export-import sales",
-        "Having an existing client base is a plus",
-        "Good communication skills, quick and articulate",
-        "Team player with a collaborative spirit",
-        "Passionate about sales, enthusiastic, and proactive",
+        "Education: College degree or higher",
+        "2-3 years of experience in Logistics/Import-Export business activities",
+        "Having existing customer sources is an advantage",
+        "Good communication skills, quick-witted, articulate",
+        "Ability to work in a team, share with the collective",
+        "Passionate about business, enthusiastic, proactive",
         "English is a mandatory foreign language",
         "Report to the Sales Manager"
       ]
@@ -761,18 +695,18 @@
     "benefits": {
       "title": "Benefits:",
       "items": [
-        "Modern, professional, and friendly working environment",
-        "Social, Health, and Unemployment Insurance according to Vietnamese law",
-        "Allowances and 13th-month bonus, birthday gifts, annual leave, yearly company trips",
-        "Annual health check-up",
-        "Birthday bonus, holiday bonuses",
+        "Modern, professional, friendly working environment",
+        "Social insurance, health insurance, unemployment insurance according to Vietnamese law",
+        "Allowances and 13th-month bonus, birthday gifts, annual leave, annual travel",
+        "Annual health check",
+        "Birthday bonus, holiday bonus",
         "Health insurance"
       ]
     },
     "contact": {
-      "title": "Contact:",
-      "text": "Please send your CV to",
-      "email": "hcm-admin@scanwell.com"
+      "title": "Contact: 94 Bui Thanh Khiet, Tan Tuc Town, Binh Chanh District, Ho Chi Minh City, Vietnam",
+      "text": "Please send your application CV to",
+      "email": "info@kimhaotransport.com"
     }
   }
 }

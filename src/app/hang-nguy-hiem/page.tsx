@@ -92,13 +92,20 @@ const BlogPost = () => {
   const title = t("blog.title");
 
   return (
-    <main className="pt-20 pb-10 bg-gray-100">
-      <div className="container mx-auto px-4 lg:px-8">
+    <main className="pt-28 pb-10 bg-gray-100 min-h-screen">
+      {/* Tăng pt-20 lên pt-28 */}
+      <div className="container mx-auto px-4 lg:px-8 mt-4">
+      
+        {/* Thêm mt-4 để tạo khoảng cách */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content */}
           <div className="lg:w-2/3">
-            <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <header className="bg-blue-50 py-8 px-6 text-center">
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden mt-6">
+        
+              {/* Thêm mt-6 */}
+              <header className="bg-blue-50 py-8 px-6 text-center relative -top-2">
+            
+                {/* Thêm relative -top-2 */}
                 <h6 className="text-xs text-gray-500 mb-2">
                   <Link
                     href={categoryLink}
@@ -112,7 +119,6 @@ const BlogPost = () => {
                 </h1>
                 <div className="border-t border-gray-300 w-24 mx-auto"></div>
               </header>
-
               <div className="p-6">
                 <Image
                   src={t("blog.content.image1.src")}
@@ -134,7 +140,9 @@ const BlogPost = () => {
 
           {/* Sidebar */}
           <div className="lg:w-1/3">
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-white rounded-lg shadow-lg p-6 sticky top-28">
+              {" "}
+              {/* Thêm sticky top-28 */}
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sidebarTitle}
               </h3>

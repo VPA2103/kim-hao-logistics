@@ -6,8 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import logo from "../../../image/logo/logo.png";
-// import { TracingChannel } from "node:diagnostics_channel";
+import logo from "../../../image/logo/Logo.svg";
 import TrackTraceButton from "@/app/TrackTraceButton";
 
 interface NavItem {
@@ -74,7 +73,7 @@ const Header = () => {
     setActiveDropdown(null);
   }, []);
 
-  // Scroll effect - now actually used
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
@@ -90,12 +89,12 @@ const Header = () => {
     <header
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white shadow-md h-16" : "bg-white h-20" // Always white background as per design
+        isScrolled ? "bg-white backdrop-blur-sm shadow-md" : "bg-transparent"
       )}
     >
-      <div className="mx-auto h-full max-w-screen-xl px-4">
-        <div className="flex h-full items-center justify-between">
-          {/* Logo */}
+      {/* Logo Section - Shown only when not scrolled */}
+      {!isScrolled && (
+        <div className="w-full flex justify-center py-2">
           <Link
             href="/"
             className="z-10 transition-opacity hover:opacity-90"
@@ -103,20 +102,42 @@ const Header = () => {
           >
             <Image
               src={logo}
-              alt="SCANWELL LOGISTICS VIETNAM"
-              width={100}
+              alt="Kim Hảo LOGISTICS VIETNAM"
+              width={140}
               height={40}
               priority
-              className={clsx(
-                "h-auto transition-transform duration-300",
-                isScrolled ? "scale-95" : "scale-100"
-              )}
+              className="h-auto"
             />
           </Link>
+        </div>
+      )}
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex md:flex-1 md:justify-center">
-            <ul className="flex gap-6 xl:gap-8">
+      {/* Navigation Section */}
+      <div className="mx-auto w-full max-w-screen-xl px-4">
+        <div className="flex h-full items-center justify-between relative">
+          {/* Logo when scrolled - appears to the left */}
+          {isScrolled && (
+            <div className="absolute left-0">
+              <Link
+                href="/"
+                className="z-10 transition-opacity hover:opacity-90"
+                onClick={closeAllDropdowns}
+              >
+                <Image
+                  src={logo}
+                  alt="Kim Hảo LOGISTICS VIETNAM"
+                  width={120}
+                  height={35}
+                  priority
+                  className="h-auto"
+                />
+              </Link>
+            </div>
+          )}
+
+          {/* Desktop Navigation - Always centered */}
+          <nav className="hidden md:flex mx-auto">
+            <ul className="flex gap-6 xl:gap-8 ml-40">
               {navItems.map((item, index) => (
                 <li
                   key={index}
@@ -127,8 +148,10 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className={clsx(
-                      "flex items-center h-16 text-sm font-bold uppercase tracking-wide transition-colors",
-                      "text-gray-800 hover:text-blue-600", // Consistent text color
+                      "flex items-center h-12 text-sm font-bold uppercase tracking-wide transition-colors",
+                      isScrolled
+                        ? "text-gray-800 hover:text-blue-600"
+                        : "text-black hover:text-blue-600",
                       item.subItems && "pr-4"
                     )}
                     onClick={(e) => {
@@ -156,7 +179,7 @@ const Header = () => {
                         <li key={subIndex}>
                           <Link
                             href={subItem.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                            className="block px-4 py-3 text-sm text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                             onClick={closeAllDropdowns}
                           >
                             {t(subItem.label)}
@@ -171,7 +194,7 @@ const Header = () => {
           </nav>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ml-auto">
             <div className="hidden md:flex items-center gap-4">
               <LanguageSwitcher />
             </div>
@@ -181,7 +204,12 @@ const Header = () => {
 
             <button
               onClick={toggleMobileMenu}
-              className="p-2 text-gray-800 hover:text-blue-600 md:hidden"
+              className={clsx(
+                "p-2 md:hidden",
+                isScrolled
+                  ? "text-gray-800 hover:text-blue-600"
+                  : "text-black hover:text-blue-600"
+              )}
               aria-label="Toggle menu"
             >
               <span className="text-2xl">{isMobileMenuOpen ? "×" : "☰"}</span>
@@ -193,12 +221,42 @@ const Header = () => {
       {/* Mobile Menu */}
       <div
         className={clsx(
-          "fixed inset-0 z-40 bg-white transition-transform md:hidden",
+          "fixed inset-0 z-40 bg-white/90 backdrop-blur-sm transition-transform md:hidden",
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}
-        style={{ top: isScrolled ? "4rem" : "5rem" }} // Adjust based on scroll
+        style={{ top: isScrolled ? "4rem" : "6rem" }}
       >
-        <div className="flex h-[calc(100vh-5rem)] flex-col">
+        {/* Mobile menu header with close button */}
+        <div className="flex justify-between items-center p-4 border-b border-gray-200">
+          <span className="font-bold text-gray-800">Menu</span>
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="p-2 text-gray-800 hover:text-blue-600"
+            aria-label="Close menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div
+          className={clsx(
+            "flex flex-col",
+            isScrolled ? "h-[calc(100vh-4rem)]" : "h-[calc(100vh-6rem)]"
+          )}
+        >
           {/* Mobile Navigation */}
           <nav className="flex-1 overflow-y-auto p-4">
             {navItems.map((item, index) => (
@@ -207,7 +265,6 @@ const Header = () => {
                 className="border-b border-gray-200 last:border-0"
               >
                 <div className="flex flex-col">
-                  {/* Thay button bằng Link cho các mục không có submenu */}
                   {item.subItems ? (
                     <button
                       className="flex justify-between items-center w-full px-4 py-4 text-left text-gray-800 font-bold uppercase"
@@ -253,7 +310,7 @@ const Header = () => {
                 </div>
               </div>
             ))}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center pt-4">
               <span className="text-blue-600 font-medium">0903 357 988</span>
             </div>
             <LanguageSwitcher />

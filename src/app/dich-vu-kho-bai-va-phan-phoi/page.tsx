@@ -2,7 +2,7 @@
 
 import React from "react";
 import { StaticImageData } from "next/image";
-import bannerImage from "../../../public/filemanager/userfiles/kho.png";
+// import bannerImage from "../../../public/filemanager/userfiles/kho.png";
 import Image from "next/image";
 import hanhLyImage from "../../../public/filemanager/userfiles/photo-1586528116311-ad8dd3c8310d-360x.jpg";
 import vanTaiImage from "../../../public/filemanager/userfiles/pasted image 0-360x.png";
@@ -53,11 +53,19 @@ const WarehouseSection = () => {
 
   return (
     <>
-      <main id="main">
-        <div id="content" role="main">
+  
+        <div id="content" role="main" className="pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-warehouse">
-            <div className="banner-image-container">
+          {/* <div className="banner" id="banner-warehouse">
+            <div
+              className="banner-image-container"
+              style={{
+                width: "100vw",
+                height: "100vh",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
               <Image
                 src={bannerImage}
                 alt={`Banner ${content.title}`}
@@ -72,7 +80,7 @@ const WarehouseSection = () => {
                 <div className="text-content"></div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -103,7 +111,7 @@ const WarehouseSection = () => {
             ))}
           </div>
         </div>
-      </main>
+      
 
       <style jsx>{`
         /* Global Styles */

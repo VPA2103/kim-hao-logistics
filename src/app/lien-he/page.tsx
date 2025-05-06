@@ -1,35 +1,65 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Head from "next/head";
-import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
-import Image from "next/image";
+// import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
+// import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const ContactPage = () => {
-  const [activeLocation, setActiveLocation] = useState("hcm");
+
+  const [activeLocation, setActiveLocation] = useState("D5");
   const formRef = useRef<HTMLFormElement>(null);
   const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const switchLocation = useCallback((location: string) => {
     setActiveLocation(location);
   }, []);
 
-  useEffect(() => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
     const form = formRef.current;
-    if (!form) return;
+    if (!form?.checkValidity()) {
+      form?.classList.add("was-validated");
+      return;
+    }
 
-    const handler = (event: Event) => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add("was-validated");
-    };
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    form.addEventListener("submit", handler);
-    return () => form.removeEventListener("submit", handler);
-  }, []);
+      const result = await res.json();
+      alert(result.message);
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+      form?.classList.remove("was-validated");
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Gửi thông tin thất bại, vui lòng thử lại");
+    }
+  };
 
   return (
     <>
@@ -38,27 +68,27 @@ const ContactPage = () => {
       </Head>
 
       <main id="main">
-        <div id="content" role="main">
+        <div id="content" role="main" className="container mx-auto pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
-            <div className="relative w-full h-screen min-h-[600px] overflow-hidden">
-              <Image
-                src={bannerImage}
-                alt="Banner vận tải đường thủy"
-                fill
-                priority
-                className="object-cover object-center w-full h-full"
-                quality={100}
-                sizes="100vw"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-            </div>
-            <div className="banner-content">
-              <div className="text-box">
-                <div className="text-content"></div>
+            {/* <div className="banner" id="banner-water-transport">
+              <div className="relative w-full h-[70vh] min-h-[400px] overflow-hidden">
+                <Image
+                  src={bannerImage}
+                  alt="Banner vận tải đường thủy"
+                  width={1600}
+                  priority
+                  className="object-cover object-center w-full h-full"
+                  quality={100}
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
               </div>
-            </div>
-          </div>
+              <div className="banner-content">
+                <div className="text-box">
+                  <div className="text-content"></div>
+                </div>
+              </div>
+            </div> */}
 
           {/* Contact Section */}
           <section id="contact" className="py-16">
@@ -66,12 +96,12 @@ const ContactPage = () => {
               <h2 className="text-3xl font-semibold mb-2">
                 {t("lien_he.title")}
               </h2>
-              <p className="text-lg mb-6">{t("lien_he.contact.subtitle")}</p>
+              {/* <p className="text-lg mb-6">{t("lien_he.contact.subtitle")}</p> */}
               <p className="mb-8">{t("lien_he.contact.instruction")}</p>
 
               {/* Office Tabs */}
               <div className="flex justify-center gap-4 mb-8">
-                {["hcm", "hanoi", "haiphong"].map((location) => (
+                {["D5", "binh_chanh"].map((location) => (
                   <button
                     key={location}
                     className={`px-6 py-2 rounded transition ${
@@ -90,31 +120,42 @@ const ContactPage = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 {/* Left Column - Map */}
                 <div className="map-column">
-                  {["hcm", "hanoi", "haiphong"].map((location) => (
+                  {["D5", "binh_chanh"].map((location) => (
                     <div
                       key={location}
                       className={`map-container ${
                         activeLocation === location ? "active" : "hidden"
                       }`}
                     >
-                      <iframe
-                        src={
-                            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.635195751887!2d106.5739700757912!3d10.685398260864623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317532f49e6489e5%3A0x764671e48c754cc7!2zOTQgQsO5aSBUaGFuaCBLaGnhur90LCBUVC4gVMOibiBUw7pjLCBCw6xuaCBDaMOhbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1744361533722!5m2!1svi!2s"
-                        }
-                        width="100%"
-                        height="400"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        title={`${location} Office Map`}
-                      />
+                      {location === "D5" && (
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.763862775388!2d106.67322857579165!3d10.752673759629829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efdfc6e170f%3A0x5a3cca2ce31d5be3!2zMTEgTmhpw6p1IFTDom0sIFBoxrDhu51uZyA1LCBRdeG6rW4gNSwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1744814323273!5m2!1svi!2s"
+                          width="100%"
+                          height="400"
+                          style={{ border: 0 }}
+                          allowFullScreen
+                          loading="lazy"
+                          title="Bình Chánh Office Map"
+                        />
+                      )}
+                      {location === "binh_chanh" && (
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.635195751887!2d106.5739700757912!3d10.685398260864623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317532f49e6489e5%3A0x764671e48c754cc7!2zOTQgQsO5aSBUaGFuaCBLaGnhur90LCBUVC4gVMOibiBUw7pjLCBCw6xuaCBDaMOhbmgsIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1744361533722!5m2!1svi!2s"
+                          width="100%"
+                          height="400"
+                          style={{ border: 0 }}
+                          allowFullScreen
+                          loading="lazy"
+                          title="D5 Office Map"
+                        />
+                      )}
                     </div>
                   ))}
                 </div>
 
                 {/* Right Column - Contact Info */}
                 <div className="info-column">
-                  {["hcm"].map((officeId) => (
+                  {["D5", "binh_chanh"].map((officeId) => (
                     <div
                       key={officeId}
                       className={`office-info ${
@@ -155,7 +196,12 @@ const ContactPage = () => {
                 <h3 className="text-xl font-semibold mb-4">
                   {t("lien_he.contact.form.title")}
                 </h3>
-                <form ref={formRef} className="needs-validation" noValidate>
+                <form
+                  ref={formRef}
+                  className="needs-validation"
+                  noValidate
+                  onSubmit={handleSubmit}
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                     <div>
                       <label htmlFor="fullName" className="form-label">
@@ -168,6 +214,9 @@ const ContactPage = () => {
                         type="text"
                         className="form-control form-control-lg rounded-lg p-3 w-full border border-gray-300"
                         id="fullName"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         required
                       />
                     </div>
@@ -182,6 +231,9 @@ const ContactPage = () => {
                         type="tel"
                         className="form-control form-control-lg rounded-lg p-3 w-full border border-gray-300"
                         id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
                         required
                       />
                     </div>
@@ -195,6 +247,9 @@ const ContactPage = () => {
                       type="email"
                       className="form-control form-control-lg rounded-lg p-3 w-full border border-gray-300"
                       id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                     />
                   </div>
 
@@ -208,6 +263,9 @@ const ContactPage = () => {
                     <textarea
                       className="form-control form-control-lg rounded-lg p-3 w-full border border-gray-300"
                       id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       required
                     ></textarea>
                   </div>

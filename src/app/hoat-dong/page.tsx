@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
+// import Image from "next/image";
+// import bannerImage from "../../../public/filemanager/userfiles/tintuc.png";
 // import hanhLyImage from "../../../public/filemanager/userfiles/LP__7980 (1)-360x.jpg";
 import { useTranslation } from "react-i18next";
 // import vanTaiImage from "../../../public/filemanager/userfiles/hang-k.png";
@@ -20,9 +20,9 @@ const AirTransportSection: React.FC = () => {
   return (
     <>
       <main id="main">
-        <div id="content" role="main">
+        <div id="content" role="main" className="content-wrapper pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
+          {/* <div className="banner" id="banner-water-transport">
             <div className="banner-image-container">
               <Image
                 src={bannerImage}
@@ -37,7 +37,7 @@ const AirTransportSection: React.FC = () => {
                 <div className="text-content"></div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -45,6 +45,7 @@ const AirTransportSection: React.FC = () => {
           </div>
 
           {/* Services Grid */}
+          <strong>Chưa có bài viết...</strong>
           {/* <div className="services-grid">
             {(
               t("news-activities.activities", {

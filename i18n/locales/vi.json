@@ -1,4 +1,5 @@
 {
+  "map": "Xem trên bản đồ",
   "home": "Trang chủ",
   "about_us": "Về chúng tôi",
   "services": "Dịch vụ",
@@ -21,13 +22,17 @@
 
   "locations": {
     "hcm": {
-      "title": "KIM HẢO LOGISTICS VIỆT NAM",
+      "title": "QUẬN BÌNH CHÁNH",
       "address": "94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành Phố Hồ Chí Minh, Việt Nam",
-      "tel": "Tel: 0903 357 988",
-      "fax": "Fax:",
-      "email": "Email: kimhao@kimhaotransport.com"
+      "tel": "Tel:+84 903 357 988",
+      "email": "Email: info@kimhaotransport.com"
+    },
+    "D5": {
+      "title": "QUẬN 5",
+      "address": "11 Nhiêu Tâm, Phường 5, Quận 5, Thành Phố Hồ Chí Minh, Việt Nam",
+      "tel": "Tel:+84 903 357 988",
+      "email": "Email: info@kimhaotransport.com"
     }
-
   },
   "copyright": "© 2025 CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO Viet Nam. All rights reserved.",
 
@@ -47,38 +52,44 @@
         {
           "id": 1,
           "title": "VẬN TẢI BIỂN",
-          "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO là một trong những NVOCC lớn nhất tại Hong Kong, với hơn 30 năm kinh nghiệm vận tải đường thủy gồm LCL (hàng lẻ) và FCL (hàng container).",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png"
+          "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO là một trong những NVOCC lớn nhất tại Việt Nam, với hơn 30 năm kinh nghiệm vận tải đường thủy gồm LCL (hàng lẻ) và FCL (hàng container).",
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Sea-144x.png",
+          "link": "/van-tai-duong-thuy"
         },
         {
           "id": 2,
           "title": "VẬN TẢI HÀNG KHÔNG",
           "description": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO hân hạnh là thành viên của hiệp hội vận tải hàng không Quốc Tế (IATA), sở hữu dày dặn kinh nghiệm trong vận tải hàng hóa hàng không.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png"
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Air-144x.png",
+          "link": "/van-tai-hang-khong"
         },
         {
           "id": 3,
           "title": "DỊCH VỤ KHO BÃI",
           "description": "Hiện đang vận hành các kho dịch vụ và kho ngoại quan tại trung tâm TP. HCM và các vùng lân cận như Biên Hòa, Đồng Nai, Nhơn Trạch, v.v.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png"
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/Warehouse-144x.png",
+          "link": "/kho-ngoai-quan-kho-thuong"
         },
         {
           "id": 4,
           "title": "DỊCH VỤ HẢI QUAN",
           "description": "Hơn 20 năm kinh nghiệm làm việc và xử lý các thủ tục hải quan tại Việt Nam.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png"
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/customs%20brokerage-144x.png",
+          "link": "/hai-quan"
         },
         {
           "id": 5,
           "title": "VẬN TẢI NỘI ĐỊA",
           "description": "Sở hữu mạng lưới hệ thống xe tải nhỏ và containers trên Toàn Quốc.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png"
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/ICON%202023/domestic%20transportation-144x.png",
+          "link": "/van-tai-noi-dia"
         },
         {
           "id": 6,
           "title": "PHÂN LOẠI VÀ ĐÓNG GÓI",
           "description": "Scanwell được trang bị hệ thống thông tin quản lý kho toàn diện có thể cung cấp các giải pháp hậu cần chuỗi cung ứng toàn diện cho quý khách hàng.",
-          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png"
+          "iconUrl": "https://scanwelllogistics.vn/public/filemanager/userfiles/_thumbs/Tommy/Untitled%20design-144x.png",
+          "link": "/phan-loai-va-dong-goi"
         }
       ],
       "button": "ĐỌC THÊM"
@@ -107,8 +118,8 @@
   },
 
   "about": {
-    "title": "Giới thiệu - CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
-    "metaDescription": "Giới thiệu về CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
+    "title": "Giới thiệu - CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO",
+    "metaDescription": "Giới thiệu về CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO",
     "bannerAlt": "Banner giới thiệu công ty",
     "sections": {
       "intro1": "<strong>CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO</strong> được thành lập vào năm 2025, có trụ sở chính đặt tại Việt Nam. Chúng tôi đang phát triển để trở thành một trong những công ty lớn nhất về dịch vụ vận tải và giao nhận, là thành viên được hiệp hội IATA hoàn toàn tín nhiệm. Chúng tôi có hệ thống chi nhánh tại hầu hết các châu lục như: Châu Mỹ, Châu Á, Châu Âu, Châu Úc ... và hàng trăm đại lý ở các thành phố lớn trên toàn thế giới, mục đích tạo điều kiện thuận lợi nhất trong việc kiểm soát chất lượng dịch vụ và sự an toàn trong chuyên chở hàng hóa.",
@@ -123,7 +134,7 @@
       "Quản lý kho vận",
       "Thủ tục hải quan"
     ],
-    "companyName": "CÔNG TY TNHH Thương Mại Vận Tải Kim Hảo",
+    "companyName": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO",
     "logoAlt": "Logo Công ty Kim Hảo"
   },
 
@@ -180,7 +191,7 @@
   "specialTransport": {
     "header": {
       "link": "VẬN TẢI ĐƯỜNG THỦY",
-      "title": "DỊCH VỤ HÀNG DỰ ÁN"
+      "title": "DỊCH VỤ VẬN TẢI ĐƯỜNG THỦY"
     },
     "sections": {
       "titles": {
@@ -284,6 +295,23 @@
   },
   "vantaihangkhong": {
     "title": "VẬN TẢI HÀNG KHÔNG",
+    "services_air": {
+      "title": "TỔNG QUAN DỊCH VỤ VẬN TẢI HÀNG KHÔNG",
+      "sections": [
+        {
+          "id": 1,
+          "title": "CÁC ĐỐI TÁC HÃNG BAY"
+        },
+        {
+          "id": 2,
+          "title": "KHỐI LƯỢNG"
+        },
+        {
+          "id": 3,
+          "title": "CHUYÊN TUYẾN"
+        }
+      ]
+    },
     "services": [
       {
         "id": 1,
@@ -302,6 +330,7 @@
       }
     ]
   },
+
   "dichvukhobaivaphanphoi": {
     "title": "DỊCH VỤ KHO BÃI VÀ PHÂN PHỐI",
     "services": [
@@ -397,22 +426,27 @@
     ]
   },
   "lien_he": {
-    "title": "Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM",
+    "title": "CÔNG TY TNHH THƯƠNG MẠI VẬN TẢI KIM HẢO VIỆT NAM",
     "contact": {
       "title": "LIÊN HỆ VĂN PHÒNG & CHI NHÁNH",
       "subtitle": "Công ty TNHH Thương Mại Vận Tải Kim Hảo VIỆT NAM",
       "instruction": "Vui lòng chọn văn phòng Quý Khách cần liên hệ và điền đầy đủ thông tin theo bảng phía dưới.",
       "locations": {
-        "hcm": "Hồ Chí Minh",
-        "hanoi": "Hà Nội",
-        "haiphong": "Hải Phòng"
+        "D5": "Quận 5",
+        "binh_chanh": "Bình Chánh"
       },
       "offices": {
-        "hcm": {
-          "title": "Văn phòng Hồ Chí Minh",
-          "address": "94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành Phố Hồ Chí Minh, Việt Nam",
-          "phone": "0903357988",
-          "email": ""
+        "D5": {
+          "title": "Văn phòng ở Quận 5",
+          "address": "Địa chỉ: 11 Nhiêu Tâm, Phường 5, Quận 5, Thành Phố Hồ Chí Minh, Việt Nam",
+          "phone": "Số điện thoại: +84 903 357 988",
+          "email": "Email: info@kimhaotransport.com"
+        },
+        "binh_chanh": {
+          "title": "Văn phòng ở Bình Chánh",
+          "address": "Địa chỉ: 94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành Phố Hồ Chí Minh, Việt Nam",
+          "phone": "Số điện thoại: +84 903 357 988",
+          "email": "Email: info@kimhaotransport.com"
         }
       },
       "form": {
@@ -585,54 +619,7 @@
   },
   "tin-tuc-KH": {
     "category": "Tin tức",
-    "title": "HỘI THẢO MỘT VÀNH ĐAI MỘT CON ĐƯỜNG",
-    "headerImage": {
-      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORC.jpg",
-      "alt": "Hội thảo Một vành đai Một con đường"
-    },
-    "intro": [
-      "Trụ sở chính Kim Hảo ở 94 Bùi Thanh Khiết, Thị Trấn Tân Túc, Huyện Bình Chánh, Thành phố Hồ Chí Minh, Việt Nam",
-      "**Vậy Sáng kiến Một vành đai, Một con đường là gì?**"
-    ],
-    "mapImage": {
-      "src": "https://scanwelllogistics.vn/public/filemanager/userfiles/Tommy/OBORI.png",
-      "alt": "Sơ đồ Một vành đai Một con đường"
-    },
-    "oborExplanation": "Sáng kiến Một vành đai, Một con đường (OBOR) là chiến lược phát triển được Trung Quốc đưa ra vào năm 2013. Sáng kiến này nhằm mục đích kết nối châu Á, châu Phi và châu Âu thông qua mạng lưới các tuyến đường thương mại trên bộ và trên biển. Sáng kiến OBOR đã được một số người ca ngợi vì tiềm năng thúc đẩy tăng trưởng kinh tế và hợp tác trong khu vực.",
-    "impactTitle": "Tác động kinh tế và địa chính trị",
-    "impacts": [
-      {
-        "id": 1,
-        "title": "Ảnh hưởng gia tăng của Trung Quốc",
-        "content": "Sáng kiến OBOR có thể dẫn đến gia tăng ảnh hưởng của Trung Quốc trong khu vực bằng cách tạo ra gánh nặng nợ nần cho các quốc gia tham gia nhận được hỗ trợ của Trung Quốc trong việc phát triển cơ sở hạ tầng hậu cần của họ"
-      },
-      {
-        "id": 2,
-        "title": "Gia tăng thương mại",
-        "content": "Sáng kiến OBOR sẽ tạo ra các tuyến thương mại mới giữa Trung Quốc và các nước tham gia. Điều này có thể dẫn đến tăng trưởng thương mại và đầu tư trong khu vực."
-      },
-      {
-        "id": 3,
-        "title": "Cải thiện cơ sở hạ tầng",
-        "content": " Sáng kiến OBOR sẽ liên quan đến việc xây dựng đường bộ, đường sắt, bến cảng và sân bay mới. Điều này sẽ cải thiện khả năng kết nối giữa các nước tham gia và giúp thương mại và đầu tư dễ dàng hơn."
-      },
-      {
-        "id": 4,
-        "title": "Tăng cường hợp tác",
-        "content": "Sáng kiến OBOR sẽ đòi hỏi sự hợp tác giữa Trung Quốc và các nước tham gia. Điều này có thể dẫn đến mối quan hệ được cải thiện giữa các nước và một khu vực ổn định hơn."
-      }
-    ],
-    "howItWorksTitle": "Một vành đai Một con đường hoạt động như thế nào?",
-    "howItWorks": "Dự án bao gồm hai phần. Vành đai đầu tiên được gọi là Vành đai kinh tế Con đường Tơ lụa, chủ yếu dựa trên đất liền và dự kiến sẽ kết nối Trung Quốc với Trung Á, Đông Âu và Tây Âu. Con đường thứ hai được gọi là Con đường tơ lụa trên biển thế kỷ 21, dựa trên biển và dự kiến sẽ nối bờ biển phía nam của Trung Quốc đến Địa Trung Hải, Châu Phi, Đông Nam Á và Trung Á.",
-    "abc": " Chúng bao gồm sáu hành lang kinh tế sau:",
-    "economicCorridors": [
-      "Cầu đất Á-Âu mới nối miền Tây Trung Quốc với miền Tây nước Nga",
-      "Hành lang Trung Quốc-Mông Cổ-Nga, nối Bắc Trung Quốc với Đông Nga qua Mông Cổ",
-      "Hành lang Trung Quốc-Trung Á-Tây Á, nối Tây Trung Quốc với Thổ Nhĩ Kỳ qua Trung và Tây Á",
-      "Hành lang Bán đảo Trung Quốc-Đông Dương, nối miền Nam Trung Quốc với Singapore qua Ấn Độ-Trung Quốc",
-      "Hành lang Trung Quốc-Pakistan, nối Tây Nam Trung Quốc qua Pakistan đến các tuyến đường biển Ả Rập",
-      "Hành lang Bangladesh-Trung Quốc-Ấn Độ-Myanmar, nối miền Nam Trung Quốc với Ấn Độ qua Bangladesh và Myanmar"
-    ],
+
     "share": "CHIA SẺ BÀI VIẾT"
   },
   "hoat-dong-KH": {

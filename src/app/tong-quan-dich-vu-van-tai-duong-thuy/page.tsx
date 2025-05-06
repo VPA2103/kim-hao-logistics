@@ -66,24 +66,27 @@ const HangDuAn = () => {
                 ))}
               </div>
 
-              <div className="mt-10 border-t-2 border-gray-300 pt-6 text-center">
-                <h5 className="text-lg font-bold mb-6">
-                  {t("specialTransport.social.shareTitle")}
-                </h5>
-                <div className="flex justify-center gap-4">
-                  {socialPlatforms.map((platform) => (
-                    <SocialButton
-                      key={platform.name}
-                      platform={{
-                        ...platform,
-                        name: t(
-                          `specialTransport.social.platforms.${platform.name}`
-                        ),
-                      }}
-                      url="https://scanwelllogistics.vn/dich-vu-hang-du-an.html"
-                      title={t("header.title")}
-                    />
-                  ))}
+              <div className="px-4 sm:px-6 md:px-8 pb-6 sm:pb-8 border-t border-gray-200 pt-4 sm:pt-6">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <span className="text-sm sm:text-base text-gray-600 font-medium">
+                    {t("specialTransport.social.shareTitle")}
+                  </span>
+                  <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                    {socialPlatforms.map((platform) => (
+                      <SocialButton
+                        key={platform.name}
+                        platform={{
+                          name: t(
+                            `specialTransport.social.platforms.${platform.name}`
+                          ),
+                          icon: platform.icon, // Thêm dòng này nếu có property icon
+                          url: platform.url, // Thêm dòng này nếu có property url
+                        }}
+                        url="https://kimhaotransport.com/tong-quan-dich-vu-van-tai-duong-thuy"
+                        title={t("header.title")}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </article>
@@ -104,7 +107,7 @@ const SocialButton = ({ platform, url, title }: SocialButtonProps) => {
       href={shareUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 focus:ring focus:ring-blue-300 transition-colors"
+      className="p-4  text-white rounded-full hover:bg-blue-400 focus:ring focus:ring-blue-300 transition-colors"
       aria-label={`Share on ${platform.name}`}
     >
       <i className={`bi bi-${platform.icon}`}></i>

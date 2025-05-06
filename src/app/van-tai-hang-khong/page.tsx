@@ -3,7 +3,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import Head from "next/head";
-import bannerImage from "../../../public/filemanager/userfiles/hang-k.png";
+// import bannerImage from "../../../public/filemanager/userfiles/hang-k.png";
 import dichvuhangduan from "../../../public/filemanager/userfiles/hang-ly-xach-tay.jpg";
 import tongquanvanchuyen from "../../../public/filemanager/userfiles/hang-k.png";
 import hangnguyhiem from "../../../public/filemanager/userfiles/hang-nguy-hiem.jpg";
@@ -63,11 +63,10 @@ const WaterTransportPage = () => {
         />
       </Head>
 
-      <main id="main">
-        <div id="content" role="main">
+
+        <div id="content" role="main" className="pt-40">
           {/* Banner Section */}
-          <div className="banner" id="banner-water-transport">
-            jsx Copy
+          {/* <div className="banner" id="banner-water-transport">
             <div
               className="banner-image-container"
               style={{
@@ -94,7 +93,7 @@ const WaterTransportPage = () => {
                 <div className="text-content"></div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Section Title */}
           <div className="section-title-container">
@@ -125,7 +124,7 @@ const WaterTransportPage = () => {
             ))}
           </div>
         </div>
-      </main>
+
 
       <style jsx>{`
         /* Global Styles */

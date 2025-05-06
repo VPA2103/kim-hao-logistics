@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    
     "paths": {
       "@components/*": ["./src/components/*"],
       "@lib/*": ["./src/lib/*"],
@@ -24,7 +25,7 @@
     "plugins": [{ "name": "next" }],
     "forceConsistentCasingInFileNames": true, // Thêm để tránh lỗi case-sensitive
     "noUnusedLocals": true, // Bật cảnh báo code không dùng
-    "noUnusedParameters": true // Bật cảnh báo param không dùng
+    "noUnusedParameters": true, // Bật cảnh báo param không dùng
   },
   "include": [
     "next-env.d.ts",
